@@ -57,7 +57,6 @@ public class UIPauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        
         FindObjectOfType<PauseMenu>().PauseBehaviour(PauseEnum.Unpause);
     }
 

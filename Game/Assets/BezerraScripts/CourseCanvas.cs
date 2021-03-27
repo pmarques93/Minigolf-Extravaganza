@@ -40,7 +40,7 @@ public class CourseCanvas : MonoBehaviour
 
     public void SetCourseName()
     {
-        textCourse.text = courseName;
+        //textCourse.text = courseName;
     }
 
     private void UpdateFastForward()

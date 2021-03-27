@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.VFX;
 
 /// <summary>
 /// Class responsible for handling ball behaviour.
@@ -25,6 +25,7 @@ public class BallHandler : MonoBehaviour
     private Vector3 previousPosition;
     private Vector3 previousRotation;
     private Coroutine spawningCoroutine;
+    private bool victory;
 
     // Shot variables
     public bool PreparingShot { get; private set; }
@@ -38,6 +39,7 @@ public class BallHandler : MonoBehaviour
     private float stoppedTimeMax;
     private bool rotationAfterShot;
     private Vector2 direction;
+    private bool isGrounded;
 
     // Particle variables
     [SerializeField] private GameObject prefabOobParticles;
@@ -53,11 +55,14 @@ public class BallHandler : MonoBehaviour
 
     private void Start()
     {
+        lineRenderer.enabled = false;
         triggerShot = false;
         PreparingShot = false;
         spawningCoroutine = null;
         stoppedTimeMax = 0.25f;
         rotationAfterShot = false;
+        isGrounded = false;
+        victory = false;
     }
 
     private void OnEnable()
@@ -81,19 +86,30 @@ public class BallHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Updates ball's clone position
         ballPositionClone.position = transform.position;
         if (IsStopped())
         {
+            // Updates ball's clone rotation
             ballPositionClone.rotation = transform.rotation;
+
+            // After the ball stopped, after the shot
             if (rotationAfterShot)
             {
                 // Rotates the ball to the previous angle
                 transform.eulerAngles = previousRotation;
-                lineRenderer.enabled = true;
-                rotationAfterShot = false;
                 OnTypeOfMovement(BallMovementEnum.Stop);
+                rotationAfterShot = false;
             }
 
+            // If the ball is grounded)
+            if (isGrounded)
+            {
+                if (lineRenderer.enabled == false)
+                    lineRenderer.enabled = true;
+            }
+
+            // Rotates the ball with player's input
             transform.eulerAngles +=
                 new Vector3(0f, direction.x, 0f) * Time.fixedDeltaTime * rotationSpeed;
 
@@ -114,9 +130,9 @@ public class BallHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// While the player doesn't trigger shot, the power will keep changing
+    /// While the player doesn't trigger shot, the power will keep changing.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Wait for Fixed Update</returns>
     private IEnumerator PrepareShotForce(float powerTime)
     {
         yield return new WaitForFixedUpdate();
@@ -143,7 +159,7 @@ public class BallHandler : MonoBehaviour
         }
 
         // If the player pressed shot again, it executes shot.
-        if (triggerShot) Shoot();
+        if (triggerShot) Shot();
 
         // Resets power
         Power = 0;
@@ -152,21 +168,25 @@ public class BallHandler : MonoBehaviour
 
     /// <summary>
     /// If the ball is stopped, the player can shoot it.
+    /// Saves current position and rotation before shot.
     /// </summary>
-    private void Shoot()
+    private void Shot()
     {
-        lineRenderer.enabled = false;
+        VisualEffect vfx = SpawnParticles(prefabSpawnParticles, 3);
+        vfx.SetFloat("Strength", Power);
 
+        // Updates previous position
         previousPosition = new Vector3(
             transform.position.x,
             transform.position.y + 1f,
             transform.position.z);
 
+        // Updates previous rotation
         previousRotation = transform.eulerAngles;
 
         rb.AddForce(transform.forward * Power * powerMultiplier, ForceMode.Impulse);
 
-        OnTypeOfMovement(BallMovementEnum.Moving);
+        // What happens the exact moment after shoting
         StartCoroutine(RotationAfterShotToTrue());
     }
 
@@ -177,6 +197,12 @@ public class BallHandler : MonoBehaviour
     private IEnumerator RotationAfterShotToTrue()
     {
         yield return new WaitForFixedUpdate();
+        // Event method.
+        OnShotHit();
+
+        SpawnParticles(prefabOobParticles, 3);
+        OnTypeOfMovement(BallMovementEnum.Moving);
+        lineRenderer.enabled = false;
         rotationAfterShot = true;
     }
 
@@ -185,7 +211,7 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     private void DrawLine()
     {
-        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(0, transform.position + transform.forward * 0.4f);
         lineRenderer.SetPosition(1, transform.position + transform.forward * lineLength);
     }
 
@@ -195,16 +221,30 @@ public class BallHandler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator ResetBall()
     {
+        // Spawns particles when the ball hits out of bounds.
+        SpawnParticles(prefabOobParticles, 3);
+
         yield return new WaitForSeconds(2f);
 
+        // Stops ball's position and rotation
         rb.angularVelocity = Vector3.zero;
-        rb.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero; 
 
+        SpawnParticles(prefabSpawnParticles, 3);
+
+        // Resets ball's position
         transform.position = previousPosition;
         transform.eulerAngles = previousRotation;
+
+        SpawnParticles(prefabSpawnParticles, 3);
+
         spawningCoroutine = null;
     }
 
+    /// <summary>
+    /// Method that checks if the ball is stopped.
+    /// </summary>
+    /// <returns>True if it's stopped, otherwise returns false.</returns>
     private bool IsStopped()
     {
         if (rb.velocity == Vector3.zero)
@@ -226,13 +266,55 @@ public class BallHandler : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /// <summary>
+    /// Method that happens when the ball enters the final hoje.
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator FinishCourse()
     {
+        yield return new WaitForSeconds(1f);
+
+        if (victory == false)
+        {
+            SpawnParticles(prefabConfettiParticles, 6);
+            OnVictory();
+            gameObject.SetActive(false);
+            victory = true;
+        }
+    }
+
+    /// <summary>
+    /// Spawns vfx particles.
+    /// </summary>
+    /// <param name="particles">Particles to spawn</param>
+    /// <param name="duration">Duration of the particles.</param>
+    /// <returns>Visual effect from particles.</returns>
+    private VisualEffect SpawnParticles(GameObject particles, float duration)
+    {
+        GameObject particle = Instantiate(particles, transform.position, Quaternion.identity);
+        Destroy(particle, duration);
+        return particle.GetComponent<VisualEffect>();
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+            isGrounded = true;
+
+        if (collision.collider.CompareTag("Hole"))
+            StartCoroutine(FinishCourse());
+
         if (collision.collider.CompareTag("OoB"))
         {
             if (spawningCoroutine == null)
                 spawningCoroutine = StartCoroutine(ResetBall());
         }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+            isGrounded = false;
     }
 
     protected virtual void OnTypeOfMovement(BallMovementEnum movement) => 
@@ -242,4 +324,18 @@ public class BallHandler : MonoBehaviour
     /// Event registered on CinemachineTarget.
     /// </summary>
     public event Action<BallMovementEnum> TypeOfMovement;
+
+    protected virtual void OnShotHit() => ShotHit?.Invoke();
+
+    /// <summary>
+    /// Event registered on BallScore.
+    /// </summary>
+    public event Action ShotHit;
+
+    protected virtual void OnVictory() => Victory?.Invoke();
+
+    /// <summary>
+    /// Event registered on 
+    /// </summary>
+    public event Action Victory;
 }

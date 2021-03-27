@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class responsible for updating UI power bar.
+/// </summary>
 public class UIPowerBar : MonoBehaviour
 {
     // Components

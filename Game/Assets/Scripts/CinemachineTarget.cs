@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+/// <summary>
+/// Class responsible for controlling cinemachine cameras.
+/// </summary>
 public class CinemachineTarget : MonoBehaviour
 {
     // Components
@@ -17,12 +18,12 @@ public class CinemachineTarget : MonoBehaviour
 
     private void OnEnable()
     {
-        ball.TypeOfMovement += SwitchCameras;
+        if (ball != null) ball.TypeOfMovement += SwitchCameras;
     }
 
     private void OnDisable()
     {
-        ball.TypeOfMovement -= SwitchCameras;
+        if (ball != null) ball.TypeOfMovement -= SwitchCameras;
     }
 
     /// <summary>

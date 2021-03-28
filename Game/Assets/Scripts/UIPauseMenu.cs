@@ -5,6 +5,7 @@ using System.Collections;
 public class UIPauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject initialSelectedGameobject;
+    [SerializeField] private Animator blackSquare;
 
     // Menu variables
     /// <summary>
@@ -52,12 +53,28 @@ public class UIPauseMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Controls if the player is in main pause menu.
+    /// </summary>
     public void OnMainPauseMenuToFalse() => OnMainPauseMenu = false;
+    /// <summary>
+    /// Controls if the player is in main pause menu.
+    /// </summary>
     public void OnMainPauseMenuToTrue() => OnMainPauseMenu = true;
 
     public void ResumeGame()
     {
         FindObjectOfType<PauseMenu>().PauseBehaviour(PauseEnum.Unpause);
+    }
+
+    /// <summary>
+    /// Restarts current level.
+    /// </summary>
+    public void RestartLevel()
+    {
+        blackSquare.SetTrigger("Restart");
+        FindObjectOfType<PauseMenu>().UnpauseGame();
+        FindObjectOfType<PlayerInputCustom>().SwitchControlsToPauseMenu();
     }
 
     public void QuitGame()

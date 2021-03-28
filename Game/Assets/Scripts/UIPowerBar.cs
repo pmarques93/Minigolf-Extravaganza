@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 /// <summary>
 /// Class responsible for updating UI power bar.
@@ -8,12 +9,28 @@ public class UIPowerBar : MonoBehaviour
 {
     // Components
     private BallHandler ball;
-    private Image panel; 
+    private Image panel;
+
+    private bool canCopyPower;
 
     private void Awake()
     {
         ball = FindObjectOfType<BallHandler>();
         panel = GetComponent<Image>();
+    }
+
+    private IEnumerator Start()
+    {
+        canCopyPower = false;
+
+        float time = 1;
+        while (time >= 0)
+        {
+            panel.fillAmount = time;
+            time -= 0.1f * Time.fixedDeltaTime;
+            yield return null;
+        }
+        canCopyPower = true;
     }
 
     /// <summary>
@@ -24,7 +41,7 @@ public class UIPowerBar : MonoBehaviour
         if (ball == null) ball = FindObjectOfType<BallHandler>();
 
         // If player is preparing a shot, the fill bar updates with the power
-        if (ball != null)
+        if (ball != null && canCopyPower)
         {
             if (ball.PreparingShot)
             {

@@ -22,6 +22,8 @@ public class PlayerInputCustom : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        SwitchControlsToPauseMenu();
     }
 
     public void SwitchControlsToGameplay() => 

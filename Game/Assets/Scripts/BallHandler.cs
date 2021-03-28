@@ -30,7 +30,7 @@ public class BallHandler : MonoBehaviour
     // Shot variables
     public bool PreparingShot { get; private set; }
     private bool triggerShot;
-    public float Power { get; private set; }
+    public float Power { get; set; }
     public int Plays { get; private set; }
     public bool FinishedCourse { get; set; }
 

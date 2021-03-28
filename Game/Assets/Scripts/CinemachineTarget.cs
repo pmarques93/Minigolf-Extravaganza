@@ -1,5 +1,7 @@
 using UnityEngine;
 using Cinemachine;
+using System.Collections;
+using System;
 
 /// <summary>
 /// Class responsible for controlling cinemachine cameras.
@@ -9,11 +11,14 @@ public class CinemachineTarget : MonoBehaviour
     // Components
     [SerializeField] private CinemachineVirtualCamera ballCamera;
     [SerializeField] private CinemachineFreeLook afterShotCamera;
+    [SerializeField] private CinemachineVirtualCamera courseCamera;
+    private CinemachineBrain cineBrain;
     private BallHandler ball;
 
     private void Awake()
     {
         ball = FindObjectOfType<BallHandler>();
+        cineBrain = Camera.main.GetComponent<CinemachineBrain>();
     }
 
     private void OnEnable()
@@ -24,6 +29,31 @@ public class CinemachineTarget : MonoBehaviour
     private void OnDisable()
     {
         if (ball != null) ball.TypeOfMovement -= SwitchCameras;
+    }
+
+    private IEnumerator Start()
+    {
+        // Waits 0.1 seconds to let everything load first.
+        yield return new WaitForSeconds(0.25f);
+
+        courseCamera.Priority = 20;
+        cineBrain.m_DefaultBlend.m_Time = 3f;
+
+        yield return new WaitForSeconds(2f);
+
+        // Starts blending
+        courseCamera.Priority = 0;
+
+        yield return new WaitForFixedUpdate();
+        while (cineBrain.IsBlending == true) 
+        {
+            cineBrain.m_DefaultBlend.m_Time = 3f;
+            yield return null; 
+        }
+
+        // After blending is finished
+        OnCameraReady();
+        cineBrain.m_DefaultBlend.m_Time = 1f;       
     }
 
     /// <summary>
@@ -60,4 +90,11 @@ public class CinemachineTarget : MonoBehaviour
                 break;
         }
     }
+
+    protected virtual void OnCameraReady() => CameraReady?.Invoke();
+
+    /// <summary>
+    /// Event registered on BallSpawn.
+    /// </summary>
+    public event Action CameraReady;
 }

@@ -21,11 +21,6 @@ public class PauseMenu : MonoBehaviour
         ball = FindObjectOfType<BallHandler>();
     }
 
-    private void Start()
-    {
-        GamePaused = false;
-    }
-
     private void OnEnable()
     {
         input.PauseGame += PauseBehaviour;
@@ -66,16 +61,24 @@ public class PauseMenu : MonoBehaviour
                 // If the player is on the first menu on pause menu
                 if (uiPauseMenu.OnMainPauseMenu)
                 {
-                    input.SwitchControlsToGameplay();
-
-                    uiPauseMenu.gameObject.SetActive(false);
-                    // ObjectEnabledCoroutine to false so it can select resume button again
-                    uiPauseMenu.ObjectEnabledCoroutine = null;
-
-                    Time.timeScale = 1f;
-                    GamePaused = false;
+                    UnpauseGame();
                 }
                 break;
         }
+    }
+
+    /// <summary>
+    /// Unpauses game.
+    /// </summary>
+    public void UnpauseGame()
+    {
+        input.SwitchControlsToGameplay();
+
+        uiPauseMenu.gameObject.SetActive(false);
+        // ObjectEnabledCoroutine to false so it can select resume button again
+        uiPauseMenu.ObjectEnabledCoroutine = null;
+
+        Time.timeScale = 1f;
+        GamePaused = false;
     }
 }

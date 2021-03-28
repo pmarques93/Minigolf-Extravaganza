@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputControl: {fileID: 5603594572398349586}
+  inputModule: {fileID: 171657581}
 --- !u!114 &5603594572398349586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +230,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 36cb6b93-17d4-418b-ad8b-93ac4164f6af
     m_ActionName: PauseMenu/Navigate[/Keyboard/a,/Keyboard/d,/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aa2e403e-39c1-41cd-b41c-18259a2cd7ae
+    m_ActionName: DisableControls/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

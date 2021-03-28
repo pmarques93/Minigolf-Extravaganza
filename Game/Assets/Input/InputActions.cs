@@ -284,6 +284,33 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""DisableControls"",
+            ""id"": ""2d8b9fe5-b5f2-4920-94f1-e4a64f04c7e1"",
+            ""actions"": [
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""aa2e403e-39c1-41cd-b41c-18259a2cd7ae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""088861e6-0e76-4782-9d60-f4c9586c1562"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -298,6 +325,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PauseMenu_Navigate = m_PauseMenu.FindAction("Navigate", throwIfNotFound: true);
         m_PauseMenu_Confirm = m_PauseMenu.FindAction("Confirm", throwIfNotFound: true);
         m_PauseMenu_Back = m_PauseMenu.FindAction("Back", throwIfNotFound: true);
+        // DisableControls
+        m_DisableControls = asset.FindActionMap("DisableControls", throwIfNotFound: true);
+        m_DisableControls_Newaction = m_DisableControls.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -451,6 +481,39 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         }
     }
     public PauseMenuActions @PauseMenu => new PauseMenuActions(this);
+
+    // DisableControls
+    private readonly InputActionMap m_DisableControls;
+    private IDisableControlsActions m_DisableControlsActionsCallbackInterface;
+    private readonly InputAction m_DisableControls_Newaction;
+    public struct DisableControlsActions
+    {
+        private @InputActions m_Wrapper;
+        public DisableControlsActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_DisableControls_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_DisableControls; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DisableControlsActions set) { return set.Get(); }
+        public void SetCallbacks(IDisableControlsActions instance)
+        {
+            if (m_Wrapper.m_DisableControlsActionsCallbackInterface != null)
+            {
+                @Newaction.started -= m_Wrapper.m_DisableControlsActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_DisableControlsActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_DisableControlsActionsCallbackInterface.OnNewaction;
+            }
+            m_Wrapper.m_DisableControlsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
+            }
+        }
+    }
+    public DisableControlsActions @DisableControls => new DisableControlsActions(this);
     public interface IGameplayActions
     {
         void OnDirection(InputAction.CallbackContext context);
@@ -462,5 +525,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnNavigate(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
         void OnBack(InputAction.CallbackContext context);
+    }
+    public interface IDisableControlsActions
+    {
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }

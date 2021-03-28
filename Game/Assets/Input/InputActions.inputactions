@@ -262,6 +262,33 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "DisableControls",
+            "id": "2d8b9fe5-b5f2-4920-94f1-e4a64f04c7e1",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "aa2e403e-39c1-41cd-b41c-18259a2cd7ae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "088861e6-0e76-4782-9d60-f4c9586c1562",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

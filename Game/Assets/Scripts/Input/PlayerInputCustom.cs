@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.EventSystems;
 
 public class PlayerInputCustom : MonoBehaviour
 {
     // Components
     [SerializeField] private PlayerInput inputControl;
+    [SerializeField] private BaseInputModule inputModule;
 
     // Components
     private PauseMenu pauseMenu;
@@ -31,6 +33,12 @@ public class PlayerInputCustom : MonoBehaviour
 
     public void SwitchControlsToPauseMenu() =>
         inputControl.SwitchCurrentActionMap("PauseMenu");
+
+    /// <summary>
+    /// Disables UI input module.
+    /// </summary>
+    public void SwitchControlsToDisableOnMenu() =>
+        inputModule.enabled = false;
 
     /// <summary>
     /// Handles direction.

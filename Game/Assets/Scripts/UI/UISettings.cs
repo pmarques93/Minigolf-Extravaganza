@@ -36,11 +36,6 @@ public class UISettings : MonoBehaviour
         UpdateTextValues();                     // Updates text values
     }
 
-    private void Update()
-    {
-        Debug.Log(eventSys.currentSelectedGameObject);
-    }
-
     /// <summary>
     /// Resets all values and updates interfaces.
     /// </summary>

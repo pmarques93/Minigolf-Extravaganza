@@ -6,4 +6,7 @@ public enum SettingsEnum
     PowerMultiplier,
     FreeLookHorizontalRotation,
     FreeLookVerticalRotation,
+    GraphicsQuality,
+    WindowMode,
+    ScreenResolution,
 }

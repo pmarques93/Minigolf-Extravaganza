@@ -58,10 +58,35 @@ public class ConfigurationScriptableObj : ScriptableObject
     public float MinFreelookVerticalRotation => minFreelookVerticalRotation;
     public float MaxFreelookVerticalRotation => maxFreelookVerticalRotation;
 
+    [Header("Graphics Settings")]
+    [SerializeField] int defaultGraphicsQuality;
+    [SerializeField] int minGraphicsQuality;
+    [SerializeField] int maxGraphicsQuality;
+    public int GraphicsQuality { get; set; }
+    public int DefaultGraphicsQuality => defaultGraphicsQuality;
+    public int MinGraphicsQuality => minGraphicsQuality;
+    public int MaxGraphicsQuality => maxGraphicsQuality;
+
+    [SerializeField] int defaultWindowMode;
+    [SerializeField] int minWindowMode;
+    [SerializeField] int maxWindowMode;
+    public int WindowMode { get; set; }
+    public int DefaultWindowMode => defaultWindowMode;
+    public int MinWindowMode => minWindowMode;
+    public int MaxWindowMode => maxWindowMode;
+
+    [SerializeField] int defaultScreenResolution;
+    [SerializeField] int minScreenResolution;
+    [SerializeField] int maxScreenResolution;
+    public int ScreenResolution { get; set; }
+    public int DefaultScreenResolution => defaultScreenResolution;
+    public int MinScreenResolution => minScreenResolution;
+    public int MaxScreenResolution => maxScreenResolution;
+
     /// <summary>
-    /// Resets all settings to default.
+    /// Resets controls settings to default.
     /// </summary>
-    public void ResetSettings()
+    public void ResetControlsSettings()
     {
         RotationSpeed = defaultRotationSpeed;
         LineLength = defaultLineLength;
@@ -69,6 +94,24 @@ public class ConfigurationScriptableObj : ScriptableObject
         PowerMultiplier = defaultPowerMultiplier;
         FreelookHorizontalRotation = defaultFreelookHorizontalRotation;
         FreelookVerticalRotation = defaultFreelookVerticalRotation;
+    }
+
+    /// <summary>
+    /// Resets graphics settings to default.
+    /// </summary>
+    public void ResetGraphicsSettings()
+    {
+        GraphicsQuality = defaultGraphicsQuality;
+        WindowMode = defaultWindowMode;
+        ScreenResolution = defaultScreenResolution;
+    }
+
+    /// <summary>
+    /// Resets audio settings to default.
+    /// </summary>
+    public void ResetAudioSettings()
+    {
+
     }
 
     /// <summary>
@@ -82,6 +125,9 @@ public class ConfigurationScriptableObj : ScriptableObject
         PlayerPrefs.SetFloat("PowerMultiplier", PowerMultiplier);
         PlayerPrefs.SetFloat("FreelookHorizontalRotation", FreelookHorizontalRotation);
         PlayerPrefs.SetFloat("FreelookVerticalRotation", FreelookVerticalRotation);
+        PlayerPrefs.SetInt("GraphicsQuality", GraphicsQuality);
+        PlayerPrefs.SetInt("WindowMode", WindowMode);
+        PlayerPrefs.SetInt("ScreenResolution", ScreenResolution);
     }
 
     /// <summary>
@@ -95,6 +141,9 @@ public class ConfigurationScriptableObj : ScriptableObject
         PowerMultiplier = PlayerPrefs.GetFloat("PowerMultiplier", defaultPowerMultiplier);
         FreelookHorizontalRotation = PlayerPrefs.GetFloat("FreelookHorizontalRotation", defaultFreelookHorizontalRotation);
         FreelookVerticalRotation = PlayerPrefs.GetFloat("FreelookVerticalRotation", defaultFreelookVerticalRotation);
+        GraphicsQuality = PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality);
+        WindowMode = PlayerPrefs.GetInt("WindowMode", defaultWindowMode);
+        ScreenResolution = PlayerPrefs.GetInt("ScreenResolution", defaultScreenResolution);
     }
 
     public T LoadSetting<T>(SettingsEnum setting)
@@ -106,19 +155,28 @@ public class ConfigurationScriptableObj : ScriptableObject
                 t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("RotationSpeed", defaultRotationSpeed), typeof(T));
                 break;
             case SettingsEnum.LineLength:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("LineLength", defaultRotationSpeed), typeof(T));
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("LineLength", defaultLineLength), typeof(T));
                 break;
             case SettingsEnum.PowerTime:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("PowerTime", defaultRotationSpeed), typeof(T));
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("PowerTime", defaultPowerTime), typeof(T));
                 break;
             case SettingsEnum.PowerMultiplier:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("PowerMultiplier", defaultRotationSpeed), typeof(T));
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("PowerMultiplier", defaultPowerMultiplier), typeof(T));
                 break;
             case SettingsEnum.FreeLookHorizontalRotation:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("FreelookHorizontalRotation", defaultRotationSpeed), typeof(T));
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("FreelookHorizontalRotation", defaultFreelookHorizontalRotation), typeof(T));
                 break;
             case SettingsEnum.FreeLookVerticalRotation:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("FreelookVerticalRotation", defaultRotationSpeed), typeof(T));
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("FreelookVerticalRotation", defaultFreelookVerticalRotation), typeof(T));
+                break;
+            case SettingsEnum.GraphicsQuality:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality), typeof(T));
+                break;
+            case SettingsEnum.WindowMode:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetInt("WindowMode", defaultWindowMode), typeof(T));
+                break;
+            case SettingsEnum.ScreenResolution:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetInt("ScreenResolution", defaultScreenResolution), typeof(T));
                 break;
         }
         return t;

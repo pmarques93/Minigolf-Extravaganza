@@ -30,3 +30,12 @@ MonoBehaviour:
   defaultFreelookVerticalRotation: 2
   minFreelookVerticalRotation: 0
   maxFreelookVerticalRotation: 4
+  defaultGraphicsQuality: 2
+  minGraphicsQuality: 0
+  maxGraphicsQuality: 2
+  defaultWindowMode: 2
+  minWindowMode: 0
+  maxWindowMode: 2
+  defaultScreenResolution: 2
+  minScreenResolution: 0
+  maxScreenResolution: 2

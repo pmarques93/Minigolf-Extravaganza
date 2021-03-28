@@ -6,8 +6,11 @@ using System;
 /// <summary>
 /// Class responsible for controlling cinemachine cameras.
 /// </summary>
-public class CinemachineTarget : MonoBehaviour
+public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
 {
+    // Values
+    [SerializeField] private ConfigurationScriptableObj config;
+
     // Components
     [SerializeField] private CinemachineVirtualCamera ballCamera;
     [SerializeField] private CinemachineFreeLook afterShotCamera;
@@ -36,6 +39,7 @@ public class CinemachineTarget : MonoBehaviour
         // Waits 0.1 seconds to let everything load first.
         yield return new WaitForSeconds(0.25f);
 
+        // Sets course camera as first camera
         courseCamera.Priority = 20;
         cineBrain.m_DefaultBlend.m_Time = 3f;
 
@@ -44,7 +48,7 @@ public class CinemachineTarget : MonoBehaviour
         // Starts blending
         courseCamera.Priority = 0;
 
-        yield return new WaitForFixedUpdate();
+        yield return new WaitForSeconds(0.25f);
         while (cineBrain.IsBlending == true) 
         {
             cineBrain.m_DefaultBlend.m_Time = 3f;
@@ -89,6 +93,15 @@ public class CinemachineTarget : MonoBehaviour
                 ballCamera.Priority = afterShotCamera.Priority + 1;
                 break;
         }
+    }
+
+    /// <summary>
+    /// Updates freelook camera rotation speeds.
+    /// </summary>
+    public void UpdateValues()
+    {
+        afterShotCamera.m_YAxis.m_MaxSpeed = config.FreelookVerticalRotation;
+        afterShotCamera.m_XAxis.m_MaxSpeed = config.FreelookHorizontalRotation;
     }
 
     protected virtual void OnCameraReady() => CameraReady?.Invoke();

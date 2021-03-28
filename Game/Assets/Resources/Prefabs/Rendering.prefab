@@ -684,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c1f0f1537d8994d9efb951b1256769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: a7ded1277c95ed3449e4de2e62f445af, type: 2}
   ballCamera: {fileID: 1055163251165567337}
   afterShotCamera: {fileID: 1055163250964350519}
   courseCamera: {fileID: 1055163250990803082}

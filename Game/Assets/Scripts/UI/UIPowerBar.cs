@@ -27,7 +27,7 @@ public class UIPowerBar : MonoBehaviour
         while (time >= 0)
         {
             panel.fillAmount = time;
-            time -= 0.1f * Time.fixedDeltaTime;
+            time -= 0.2f * Time.fixedUnscaledDeltaTime;
             yield return null;
         }
         canCopyPower = true;

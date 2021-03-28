@@ -126,10 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243735378813fce42bb1fef072bbf934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 50
-  lineLength: 2
-  powerTime: 0.5
-  powerMultiplier: 20
+  config: {fileID: 11400000, guid: a7ded1277c95ed3449e4de2e62f445af, type: 2}
   ballPositionClone: {fileID: 5734897640487178671}
   prefabOobParticles: {fileID: 8023260312436803294, guid: 9e63b9d0f127e6d4bbf7b27b0bdaff39, type: 3}
   prefabSpawnParticles: {fileID: 19617751753561711, guid: e0436f3d0d5e7df46bdc1c0cae4bfa1e, type: 3}

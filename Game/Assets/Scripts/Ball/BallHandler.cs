@@ -8,11 +8,10 @@ using UnityEngine.VFX;
 /// </summary>
 public class BallHandler : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed;
-    [SerializeField] private float lineLength;
-    [SerializeField] private float powerTime;
-    [SerializeField] private float powerMultiplier;
+    // Values
+    [SerializeField] ConfigurationScriptableObj config;
 
+    // Ball clone for cinemachine cameras
     [SerializeField] private Transform ballPositionClone;
     public Transform BallPositionClone => ballPositionClone;
 
@@ -111,7 +110,7 @@ public class BallHandler : MonoBehaviour
 
             // Rotates the ball with player's input
             transform.eulerAngles +=
-                new Vector3(0f, direction.x, 0f) * Time.fixedDeltaTime * rotationSpeed;
+                new Vector3(0f, direction.x, 0f) * Time.fixedDeltaTime * config.RotationSpeed;
 
             // Renders line renderer
             DrawLine();
@@ -125,7 +124,7 @@ public class BallHandler : MonoBehaviour
     {
         if (PreparingShot == false && rb.velocity == Vector3.zero)
         {
-            StartCoroutine(PrepareShotForce(powerTime));
+            StartCoroutine(PrepareShotForce(config.PowerTime));
         }
     }
 
@@ -184,7 +183,7 @@ public class BallHandler : MonoBehaviour
         // Updates previous rotation
         previousRotation = transform.eulerAngles;
 
-        rb.AddForce(transform.forward * Power * powerMultiplier, ForceMode.Impulse);
+        rb.AddForce(transform.forward * Power * config.PowerMultiplier, ForceMode.Impulse);
 
         // What happens the exact moment after shoting
         StartCoroutine(RotationAfterShotToTrue());
@@ -212,7 +211,7 @@ public class BallHandler : MonoBehaviour
     private void DrawLine()
     {
         lineRenderer.SetPosition(0, transform.position + transform.forward * 0.4f);
-        lineRenderer.SetPosition(1, transform.position + transform.forward * lineLength);
+        lineRenderer.SetPosition(1, transform.position + transform.forward * config.LineLength);
     }
 
     /// <summary>

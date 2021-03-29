@@ -199,7 +199,6 @@ public class BallHandler : MonoBehaviour
         // Event method.
         OnShotHit();
 
-        SpawnParticles(prefabOobParticles, 3);
         OnTypeOfMovement(BallMovementEnum.Moving);
         lineRenderer.enabled = false;
         rotationAfterShot = true;

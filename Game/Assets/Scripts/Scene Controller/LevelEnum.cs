@@ -1,5 +1,6 @@
 public enum LevelEnum
 {
+    MainMenu,
     Flatland1,
     Flatland2,
     Flatland3,

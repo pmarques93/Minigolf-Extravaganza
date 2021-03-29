@@ -334,7 +334,7 @@ public class BallHandler : MonoBehaviour
     protected virtual void OnVictory() => Victory?.Invoke();
 
     /// <summary>
-    /// Event registered on 
+    /// Event registered on LevelPassed.
     /// </summary>
     public event Action Victory;
 }

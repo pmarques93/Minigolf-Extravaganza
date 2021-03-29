@@ -9,7 +9,7 @@ using UnityEngine.VFX;
 public class BallHandler : MonoBehaviour
 {
     // Values
-    [SerializeField] ConfigurationScriptableObj config;
+    [SerializeField] private ConfigurationScriptableObj config;
 
     // Ball clone for cinemachine cameras
     [SerializeField] private Transform ballPositionClone;
@@ -19,6 +19,7 @@ public class BallHandler : MonoBehaviour
     private PlayerInputCustom input;
     private LineRenderer lineRenderer;
     private Rigidbody rb;
+    private CinemachineTarget cinemachine;
 
     // Spawn Variables
     private Vector3 previousPosition;
@@ -50,6 +51,7 @@ public class BallHandler : MonoBehaviour
         input = FindObjectOfType<PlayerInputCustom>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
         rb = GetComponent<Rigidbody>();
+        cinemachine = FindObjectOfType<CinemachineTarget>();
     }
 
     private void Start()
@@ -87,7 +89,7 @@ public class BallHandler : MonoBehaviour
     {
         // Updates ball's clone position
         ballPositionClone.position = transform.position;
-        if (IsStopped())
+        if (IsStopped() && cinemachine.IsCameraBlending() == false)
         {
             // Updates ball's clone rotation
             ballPositionClone.rotation = transform.rotation;

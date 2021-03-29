@@ -96,6 +96,16 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     }
 
     /// <summary>
+    /// Method that checks if camera is blending.
+    /// </summary>
+    /// <returns>True if it's blending.</returns>
+    public bool IsCameraBlending()
+    {
+        if (cineBrain.IsBlending) return true;
+        return false;
+    }
+
+    /// <summary>
     /// Updates freelook camera rotation speeds.
     /// </summary>
     public void UpdateValues()

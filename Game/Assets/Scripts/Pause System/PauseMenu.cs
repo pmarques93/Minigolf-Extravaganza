@@ -21,6 +21,11 @@ public class PauseMenu : MonoBehaviour
         ball = FindObjectOfType<BallHandler>();
     }
 
+    private void Start()
+    {
+        UnpauseGame();
+    }
+
     private void OnEnable()
     {
         input.PauseGame += PauseBehaviour;

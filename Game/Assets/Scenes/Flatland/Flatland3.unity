@@ -1072,6 +1072,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoleWallSimpleDeadEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 1575087672589799698, guid: 7544dd5328f167a4783fb3b0106d8204, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515727346216538608, guid: 7544dd5328f167a4783fb3b0106d8204, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7544dd5328f167a4783fb3b0106d8204, type: 3}
 --- !u!4 &1482054641 stripped
@@ -1347,15 +1355,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001078, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.09
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001078, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.46
+      value: 17.64
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001078, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.24
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001078, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalRotation.w

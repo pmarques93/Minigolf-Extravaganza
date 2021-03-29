@@ -335,6 +335,7 @@ public class BallHandler : MonoBehaviour
 
     /// <summary>
     /// Event registered on LevelPassed.
+    /// Event registered on BlackSquareAnimationEvent.
     /// </summary>
     public event Action Victory;
 }

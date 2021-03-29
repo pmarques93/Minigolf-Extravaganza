@@ -77,6 +77,15 @@ public class UIPauseMenu : MonoBehaviour
         FindObjectOfType<PlayerInputCustom>().SwitchControlsToPauseMenu();
     }
 
+    public void GoToMainMenu()
+    {
+        // Current level being passed to select it on main menu
+        PlayerPrefs.SetString(
+            "LastLevelPassed", FindObjectOfType<LevelPassed>().CurrentLevel.ToString());
+
+        blackSquare.SetTrigger("MainMenu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

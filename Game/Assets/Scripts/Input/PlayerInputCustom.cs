@@ -37,8 +37,11 @@ public class PlayerInputCustom : MonoBehaviour
     /// <summary>
     /// Disables UI input module.
     /// </summary>
-    public void SwitchControlsToDisableOnMenu() =>
+    public void SwitchControlsToDisableOnMenu()
+    {
+        inputControl.SwitchCurrentActionMap("DisableControls");
         inputModule.enabled = false;
+    }
 
     /// <summary>
     /// Handles direction.

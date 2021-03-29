@@ -8,6 +8,7 @@ using UnityEngine;
 public class LevelPassed : MonoBehaviour
 {
     [SerializeField] private LevelEnum currentLevel;
+    public LevelEnum CurrentLevel => currentLevel;
 
     // Components
     private BallHandler ball;
@@ -37,6 +38,10 @@ public class LevelPassed : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Updates levels passed and updates playerprefs with the last level passed,
+    /// so it can select that button in main menu.
+    /// </summary>
     private void UpdateLevelsPassed()
     {
         // Adds current level to levels passed

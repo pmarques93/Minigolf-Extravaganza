@@ -17,6 +17,8 @@ public class UIPowerBar : MonoBehaviour
     {
         ball = FindObjectOfType<BallHandler>();
         panel = GetComponent<Image>();
+
+        canCopyPower = false;
     }
 
     private IEnumerator Start()
@@ -27,7 +29,7 @@ public class UIPowerBar : MonoBehaviour
         while (time >= 0)
         {
             panel.fillAmount = time;
-            time -= 0.2f * Time.fixedUnscaledDeltaTime;
+            time -= 0.2f * Time.fixedDeltaTime;
             yield return null;
         }
         canCopyPower = true;

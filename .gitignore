@@ -5,11 +5,9 @@
 [Bb]uilds/
 [Ll]ogs/
 
-# Save files
-*.savefile
-*.savefile/
-*.configfile
-*.configfile/
+# Blender files
+*.blend
+*.blend/
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 85a76c6fdfbdd3c4c97f83c2f6673ee0
+guid: e39dae60db2835b4e87321f140e93383
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -10,7 +10,7 @@ ModelImporter:
       name: CommonMaterial
     second: {fileID: 2100000, guid: 4f4b3553e76b1f14dac207fb904e846a, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -100,7 +100,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

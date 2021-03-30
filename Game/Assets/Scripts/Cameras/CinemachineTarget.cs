@@ -18,10 +18,16 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     private CinemachineBrain cineBrain;
     private BallHandler ball;
 
+    private float xSpeedRotation;
+    private float ySpeedRotation;
+
     private void Awake()
     {
         ball = FindObjectOfType<BallHandler>();
         cineBrain = Camera.main.GetComponent<CinemachineBrain>();
+
+        xSpeedRotation = 0;
+        ySpeedRotation = 0;
     }
 
     private void OnEnable()
@@ -49,7 +55,7 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         courseCamera.Priority = 0;
 
         yield return new WaitForSeconds(0.25f);
-        while (cineBrain.IsBlending == true) 
+        while (IsCameraBlending()) 
         {
             cineBrain.m_DefaultBlend.m_Time = 3f;
             yield return null; 
@@ -87,9 +93,13 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         switch (typeOfMovement)
         {
             case BallMovementEnum.Moving:
+                afterShotCamera.m_YAxis.m_MaxSpeed = ySpeedRotation;
+                afterShotCamera.m_XAxis.m_MaxSpeed = xSpeedRotation;
                 afterShotCamera.Priority = ballCamera.Priority + 1;
                 break;
             case BallMovementEnum.Stop:
+                afterShotCamera.m_YAxis.m_MaxSpeed = 0;
+                afterShotCamera.m_XAxis.m_MaxSpeed = 0;
                 ballCamera.Priority = afterShotCamera.Priority + 1;
                 break;
         }
@@ -110,8 +120,8 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     /// </summary>
     public void UpdateValues()
     {
-        afterShotCamera.m_YAxis.m_MaxSpeed = config.FreelookVerticalRotation;
-        afterShotCamera.m_XAxis.m_MaxSpeed = config.FreelookHorizontalRotation;
+        ySpeedRotation = config.FreelookVerticalRotation;
+        xSpeedRotation = config.FreelookHorizontalRotation;
     }
 
     protected virtual void OnCameraReady() => CameraReady?.Invoke();

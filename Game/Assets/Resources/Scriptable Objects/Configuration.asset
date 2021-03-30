@@ -33,7 +33,7 @@ MonoBehaviour:
   defaultGraphicsQuality: 2
   minGraphicsQuality: 0
   maxGraphicsQuality: 2
-  defaultWindowMode: 2
+  defaultWindowMode: 1
   minWindowMode: 0
   maxWindowMode: 2
   defaultScreenResolution: 2

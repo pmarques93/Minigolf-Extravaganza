@@ -82,19 +82,21 @@ public class BallHandler : MonoBehaviour
 
     private void Update()
     {
-        direction = input.Direction;
+        // Only if the boll is stopped and the camera is not blending
+        if (cinemachine.IsCameraBlending() == false)
+            direction = input.Direction;
     }
 
     private void FixedUpdate()
     {
         // Updates ball's clone position
         ballPositionClone.position = transform.position;
-        if (IsStopped() && cinemachine.IsCameraBlending() == false)
+        if (IsStopped())
         {
             // Updates ball's clone rotation
             ballPositionClone.rotation = transform.rotation;
 
-            // After the ball stopped, after the shot
+            // Only after the ball stopped, after the shot
             if (rotationAfterShot)
             {
                 // Rotates the ball to the previous angle

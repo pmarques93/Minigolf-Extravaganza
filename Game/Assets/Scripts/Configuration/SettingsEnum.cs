@@ -9,4 +9,7 @@ public enum SettingsEnum
     GraphicsQuality,
     WindowMode,
     ScreenResolution,
+    MasterVolume,
+    AmbienceVolume,
+    SfxVolume,
 }

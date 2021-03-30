@@ -83,6 +83,31 @@ public class ConfigurationScriptableObj : ScriptableObject
     public int MinScreenResolution => minScreenResolution;
     public int MaxScreenResolution => maxScreenResolution;
 
+    [Header("Audio Settings")]
+    [SerializeField] float defaultMasterVolume;
+    [SerializeField] float minMasterVolume;
+    [SerializeField] float maxMasterVolume;
+    public float MasterVolume { get; set; }
+    public float DefaultMasterVolume => defaultMasterVolume;
+    public float MinMasterVolume => minMasterVolume;
+    public float MaxMasterVolume => maxMasterVolume;
+
+    [SerializeField] float defaultAmbienceVolume;
+    [SerializeField] float minAmbienceVolume;
+    [SerializeField] float maxAmbienceVolume;
+    public float AmbienceVolume { get; set; }
+    public float DefaultAmbienceVolume => defaultAmbienceVolume;
+    public float MinAmbienceVolume => minAmbienceVolume;
+    public float MaxAmbienceVolume => maxAmbienceVolume;
+
+    [SerializeField] float defaultSfxVolume;
+    [SerializeField] float minSfxVolume;
+    [SerializeField] float maxSfxVolume;
+    public float SfxVolume { get; set; }
+    public float DefaultSfxVolume => defaultSfxVolume;
+    public float MinSfxVolume => minSfxVolume;
+    public float MaxSfxVolume => maxSfxVolume;
+
     /// <summary>
     /// Resets controls settings to default.
     /// </summary>
@@ -111,7 +136,9 @@ public class ConfigurationScriptableObj : ScriptableObject
     /// </summary>
     public void ResetAudioSettings()
     {
-
+        MasterVolume = defaultMasterVolume;
+        AmbienceVolume = defaultAmbienceVolume;
+        SfxVolume = defaultSfxVolume;
     }
 
     /// <summary>
@@ -128,6 +155,9 @@ public class ConfigurationScriptableObj : ScriptableObject
         PlayerPrefs.SetInt("GraphicsQuality", GraphicsQuality);
         PlayerPrefs.SetInt("WindowMode", WindowMode);
         PlayerPrefs.SetInt("ScreenResolution", ScreenResolution);
+        PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
+        PlayerPrefs.SetFloat("AmbienceVolume", AmbienceVolume);
+        PlayerPrefs.SetFloat("SfxVolume", SfxVolume);
     }
 
     /// <summary>
@@ -144,8 +174,17 @@ public class ConfigurationScriptableObj : ScriptableObject
         GraphicsQuality = PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality);
         WindowMode = PlayerPrefs.GetInt("WindowMode", defaultWindowMode);
         ScreenResolution = PlayerPrefs.GetInt("ScreenResolution", defaultScreenResolution);
+        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", defaultMasterVolume);
+        AmbienceVolume = PlayerPrefs.GetFloat("AmbienceVolume", defaultAmbienceVolume);
+        SfxVolume = PlayerPrefs.GetFloat("SfxVolume", defaultSfxVolume);
     }
 
+    /// <summary>
+    /// Loads a determined setting.
+    /// </summary>
+    /// <typeparam name="T">Type of value.</typeparam>
+    /// <param name="setting">Setting to load.</param>
+    /// <returns>Type of value.</returns>
     public T LoadSetting<T>(SettingsEnum setting)
     {
         T t = default;
@@ -177,6 +216,15 @@ public class ConfigurationScriptableObj : ScriptableObject
                 break;
             case SettingsEnum.ScreenResolution:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetInt("ScreenResolution", defaultScreenResolution), typeof(T));
+                break;
+            case SettingsEnum.MasterVolume:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("MasterVolume", defaultMasterVolume), typeof(T));
+                break;
+            case SettingsEnum.AmbienceVolume:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("AmbienceVolume", defaultAmbienceVolume), typeof(T));
+                break;
+            case SettingsEnum.SfxVolume:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("SfxVolume", defaultSfxVolume), typeof(T));
                 break;
         }
         return t;

@@ -39,3 +39,12 @@ MonoBehaviour:
   defaultScreenResolution: 2
   minScreenResolution: 0
   maxScreenResolution: 2
+  defaultMasterVolume: -5
+  minMasterVolume: -20
+  maxMasterVolume: 5
+  defaultAmbienceVolume: -5
+  minAmbienceVolume: -20
+  maxAmbienceVolume: 5
+  defaultSfxVolume: -5
+  minSfxVolume: -20
+  maxSfxVolume: 5

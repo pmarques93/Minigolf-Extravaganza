@@ -15,6 +15,7 @@ public class UIMainMenu : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1f;
         eventSys = FindObjectOfType<EventSystem>();
     }
 

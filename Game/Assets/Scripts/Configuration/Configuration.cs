@@ -20,7 +20,6 @@ public class Configuration : MonoBehaviour
         // If the values don't exists, it gives them their default value
         config.LoadSettings();
 
-
         // Updates values for every class that implements IUpdateConfigurations
         UpdateValuesForInterfaces();
     }

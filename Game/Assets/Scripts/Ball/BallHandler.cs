@@ -20,6 +20,7 @@ public class BallHandler : MonoBehaviour
     private LineRenderer lineRenderer;
     private Rigidbody rb;
     private CinemachineTarget cinemachine;
+    private AudioSource audioSource;
 
     // Spawn Variables
     private Vector3 previousPosition;
@@ -46,12 +47,20 @@ public class BallHandler : MonoBehaviour
     [SerializeField] private GameObject prefabSpawnParticles;
     [SerializeField] private GameObject prefabConfettiParticles;
 
+    // Sounds
+    [Header("Sounds")]
+    [SerializeField] private AudioClip[] hitSounds;
+    [SerializeField] private AudioClip groundHitSound;
+    [SerializeField] private AudioClip confetiSound;
+    private Coroutine playGroundHitSound;
+
     private void Awake()
     {
         input = FindObjectOfType<PlayerInputCustom>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
         rb = GetComponent<Rigidbody>();
         cinemachine = FindObjectOfType<CinemachineTarget>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -186,7 +195,8 @@ public class BallHandler : MonoBehaviour
         // Updates previous rotation
         previousRotation = transform.eulerAngles;
 
-        rb.AddForce(transform.forward * Power * config.PowerMultiplier, ForceMode.Impulse);
+        PlayHitSound();
+        rb.AddForce(transform.forward * Power * config.PowerMultiplier, ForceMode.Impulse);   
 
         // What happens the exact moment after shoting
         StartCoroutine(BehaviourAfterShot());
@@ -275,13 +285,13 @@ public class BallHandler : MonoBehaviour
     private IEnumerator FinishCourse()
     {
         yield return new WaitForSeconds(1f);
-
         // Only happens once
         if (victory == false)
         {
+            audioSource.pitch = 1f;
+            audioSource.PlayOneShot(confetiSound);
             SpawnParticles(prefabConfettiParticles, 6);
             OnVictory();
-            gameObject.SetActive(false);
             victory = true;
         }
     }
@@ -299,14 +309,39 @@ public class BallHandler : MonoBehaviour
         return particle.GetComponent<VisualEffect>();
     }
 
+    /// <summary>
+    /// Plays hit sound.
+    /// </summary>
+    private void PlayHitSound()
+    {
+        int randomNumber = UnityEngine.Random.Range(0, hitSounds.Length);
+        audioSource.pitch = 1f;
+        audioSource.PlayOneShot(hitSounds[randomNumber]);
+    }
+
+    /// <summary>
+    /// Plays ground hit sound. Has a delay so the sound doesn't repeat too often.
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator PlayGroundHitSound()
+    {
+        float randomNumber = UnityEngine.Random.Range(0.5f, 1f);
+        audioSource.pitch = randomNumber;
+        audioSource.PlayOneShot(groundHitSound);
+        yield return new WaitForSeconds(1f);
+        playGroundHitSound = null;
+    }
+
     private void OnCollisionStay(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))
             isGrounded = true;
 
         if (collision.collider.CompareTag("Hole"))
+        {
             StartCoroutine(FinishCourse());
-
+        }
+            
         if (collision.collider.CompareTag("OoB"))
         {
             if (spawningCoroutine == null)
@@ -314,10 +349,25 @@ public class BallHandler : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground") ||
+            collision.collider.CompareTag("OoB"))
+        {
+            // Only happens after a while, so the sound doesn't spam
+            if (playGroundHitSound == null)
+            {
+                playGroundHitSound = StartCoroutine(PlayGroundHitSound());
+            }
+        }
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))
+        {
             isGrounded = false;
+        }    
     }
 
     protected virtual void OnTypeOfMovement(BallMovementEnum movement) => 

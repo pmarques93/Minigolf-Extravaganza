@@ -19,6 +19,9 @@ public class UISettings : MonoBehaviour
     [SerializeField] private TextMeshProUGUI graphicsQuality;
     [SerializeField] private TextMeshProUGUI windowMode;
     [SerializeField] private TextMeshProUGUI screenResolution;
+    [SerializeField] private Slider masterVolume;
+    [SerializeField] private Slider ambienceVolume;
+    [SerializeField] private Slider sfxVolume;
 
     // Components
     private Configuration configurationOptions;
@@ -30,8 +33,10 @@ public class UISettings : MonoBehaviour
         eventSys = FindObjectOfType<EventSystem>();
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
         UpdateSliderValuesToMatchRealValues();  // Updates slider values
         UpdateTextValues();                     // Updates text values
     }
@@ -66,7 +71,7 @@ public class UISettings : MonoBehaviour
     {
         config.ResetAudioSettings();
         UpdateAllValuesWithInterfaces();
-        // UPDATE AUDIO VALUES
+        UpdateSliderValuesToMatchRealValues();
     }
 
     /// <summary>
@@ -92,6 +97,60 @@ public class UISettings : MonoBehaviour
         freelookVerticalRotation.value = config.LoadSetting<float>(SettingsEnum.FreeLookVerticalRotation);
         freelookVerticalRotation.minValue = config.MinFreelookVerticalRotation;
         freelookVerticalRotation.maxValue = config.MaxFreelookVerticalRotation;
+        masterVolume.value = config.LoadSetting<float>(SettingsEnum.MasterVolume);
+        masterVolume.minValue = config.MinMasterVolume;
+        masterVolume.maxValue = config.MaxMasterVolume;
+        ambienceVolume.value = config.LoadSetting<float>(SettingsEnum.AmbienceVolume);
+        ambienceVolume.minValue = config.MinAmbienceVolume;
+        ambienceVolume.maxValue = config.MaxAmbienceVolume;
+        sfxVolume.value = config.LoadSetting<float>(SettingsEnum.SfxVolume);
+        sfxVolume.minValue = config.MinSfxVolume;
+        sfxVolume.maxValue = config.MaxSfxVolume;
+
+        config.SaveSettings();
+    }
+
+    /// <summary>
+    /// Updates all text values in settings.
+    /// </summary>
+    private void UpdateTextValues()
+    {
+        switch (config.GraphicsQuality)
+        {
+            case 0:
+                graphicsQuality.text = "Baixo";
+                break;
+            case 1:
+                graphicsQuality.text = "Médio";
+                break;
+            case 2:
+                graphicsQuality.text = "Alto";
+                break;
+        }
+        switch (config.WindowMode)
+        {
+            case 0:
+                windowMode.text = "Janela";
+                break;
+            case 1:
+                windowMode.text = "Sem Bordas";
+                break;
+            case 2:
+                windowMode.text = "Ecrã Inteiro";
+                break;
+        }
+        switch (config.ScreenResolution)
+        {
+            case 0:
+                screenResolution.text = "1280 x 720";
+                break;
+            case 1:
+                screenResolution.text = "1600 × 900";
+                break;
+            case 2:
+                screenResolution.text = "1920 x 1080";
+                break;
+        }
 
         config.SaveSettings();
     }
@@ -136,6 +195,27 @@ public class UISettings : MonoBehaviour
     public void FreeLookVerticalRotationValue(float value)
     {
         config.FreelookVerticalRotation = value;
+        config.SaveSettings();
+        UpdateAllValuesWithInterfaces();
+    }
+
+    public void MasterVolumeValue(float value)
+    {
+        config.MasterVolume = value;
+        config.SaveSettings();
+        UpdateAllValuesWithInterfaces();
+    }
+
+    public void AmbienceVolumeValue(float value)
+    {
+        config.AmbienceVolume = value;
+        config.SaveSettings();
+        UpdateAllValuesWithInterfaces();
+    }
+
+    public void SfxVolumeValue(float value)
+    {
+        config.SfxVolume = value;
         config.SaveSettings();
         UpdateAllValuesWithInterfaces();
     }
@@ -223,50 +303,6 @@ public class UISettings : MonoBehaviour
                 break;
         }
     }
-
-    /// <summary>
-    /// Updates all text values in settings.
-    /// </summary>
-    private void UpdateTextValues()
-    {
-        switch (config.GraphicsQuality)
-        {
-            case 0:
-                graphicsQuality.text = "Baixo";
-                break;
-            case 1:
-                graphicsQuality.text = "Médio";
-                break;
-            case 2:
-                graphicsQuality.text = "Alto";
-                break;
-        }
-        switch (config.WindowMode)
-        {
-            case 0:
-                windowMode.text = "Janela";
-                break;
-            case 1:
-                windowMode.text = "Sem Bordas";
-                break;
-            case 2:
-                windowMode.text = "Ecrã Inteiro";
-                break;
-        }
-        switch (config.ScreenResolution)
-        {
-            case 0:
-                screenResolution.text = "1280 x 720";
-                break;
-            case 1:
-                screenResolution.text = "1600 × 900";
-                break;
-            case 2:
-                screenResolution.text = "1920 x 1080";
-                break;
-        }
-    }
-
 
     /// <summary>
     /// Selects the button before clicking the arrow after clicking the arrow.

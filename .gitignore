@@ -8,6 +8,8 @@
 # Blender files
 *.blend
 *.blend/
+*.blend.meta
+*.blend.meta/
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta

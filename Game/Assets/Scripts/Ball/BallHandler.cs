@@ -82,7 +82,7 @@ public class BallHandler : MonoBehaviour
 
     private void Update()
     {
-        // Only if the boll is stopped and the camera is not blending
+        // Only if the camera is not blending
         if (cinemachine.IsCameraBlending() == false)
             direction = input.Direction;
     }
@@ -91,6 +91,7 @@ public class BallHandler : MonoBehaviour
     {
         // Updates ball's clone position
         ballPositionClone.position = transform.position;
+        // Only if the ball is stopped
         if (IsStopped())
         {
             // Updates ball's clone rotation
@@ -156,8 +157,6 @@ public class BallHandler : MonoBehaviour
                 Power -= Time.fixedDeltaTime * powerTime;
                 if (Power <= 0) powerGrowing = true;
             }
-            
-            Mathf.PingPong(Power, 1f);
             yield return null;
         }
 
@@ -190,14 +189,15 @@ public class BallHandler : MonoBehaviour
         rb.AddForce(transform.forward * Power * config.PowerMultiplier, ForceMode.Impulse);
 
         // What happens the exact moment after shoting
-        StartCoroutine(RotationAfterShotToTrue());
+        StartCoroutine(BehaviourAfterShot());
     }
 
     /// <summary>
     /// Turns rotation to true, so it can change to previous rotation after shoting.
+    /// Invokes event defining the type of movement of the ball.
     /// </summary>
     /// <returns>Null.</returns>
-    private IEnumerator RotationAfterShotToTrue()
+    private IEnumerator BehaviourAfterShot()
     {
         yield return new WaitForFixedUpdate();
         // Event method.
@@ -276,6 +276,7 @@ public class BallHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
+        // Only happens once
         if (victory == false)
         {
             SpawnParticles(prefabConfettiParticles, 6);

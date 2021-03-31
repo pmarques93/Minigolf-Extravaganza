@@ -20,22 +20,22 @@ public class UICurrentLevel : MonoBehaviour
     {
         switch (currentScene.CurrentLevel)
         {
-            case LevelEnum.Flatland1:
+            case LevelEnum.Park1:
                 currentLevelText.text = "Nível 1-1";
                 break;
-            case LevelEnum.Flatland2:
+            case LevelEnum.Park2:
                 currentLevelText.text = "Nível 1-2";
                 break;
-            case LevelEnum.Flatland3:
+            case LevelEnum.Park3:
                 currentLevelText.text = "Nível 1-3";
                 break;
-            case LevelEnum.Flatland4:
+            case LevelEnum.Park4:
                 currentLevelText.text = "Nível 1-4";
                 break;
-            case LevelEnum.Flatland5:
+            case LevelEnum.Park5:
                 currentLevelText.text = "Nível 1-5";
                 break;
-            case LevelEnum.Flatland6:
+            case LevelEnum.Park6:
                 currentLevelText.text = "Nível 1-6";
                 break;
         }

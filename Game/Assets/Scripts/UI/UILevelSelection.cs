@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 
 /// <summary>
 /// Class responsible for handling level selection UI.
@@ -22,23 +23,35 @@ public class UILevelSelection : MonoBehaviour
         {
             splashScreen.SetActive(false);
 
-            switch (PlayerPrefs.GetString("LastLevelPassed"))
+            // Converts level passed to an enum
+            LevelEnum lastLevelPassedName;
+            Enum.TryParse(PlayerPrefs.GetString("LastLevelPassed"), out lastLevelPassedName);
+
+            switch (lastLevelPassedName)
             {
-                case "Flatland1":
+                case LevelEnum.Park1:
                     allWorlds[0].SetActive(true);
                     eventSys.SetSelectedGameObject(allLevels[0]);
                     break;
-                case "Flatland2":
+                case LevelEnum.Park2:
                     allWorlds[0].SetActive(true);
                     eventSys.SetSelectedGameObject(allLevels[1]);
                     break;
-                case "Flatland3":
+                case LevelEnum.Park3:
                     allWorlds[0].SetActive(true);
                     eventSys.SetSelectedGameObject(allLevels[2]);
                     break;
-                case "Flatland4":
+                case LevelEnum.Park4:
                     allWorlds[0].SetActive(true);
                     eventSys.SetSelectedGameObject(allLevels[3]);
+                    break;
+                case LevelEnum.Park5:
+                    allWorlds[0].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[4]);
+                    break;
+                case LevelEnum.Park6:
+                    allWorlds[0].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[5]);
                     break;
             }
         }

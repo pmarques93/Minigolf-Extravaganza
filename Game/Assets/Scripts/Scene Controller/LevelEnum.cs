@@ -1,10 +1,10 @@
 public enum LevelEnum
 {
     MainMenu,
-    Flatland1,
-    Flatland2,
-    Flatland3,
-    Flatland4,
-    Flatland5,
-    Flatland6,
+    Park1,
+    Park2,
+    Park3,
+    Park4,
+    Park5,
+    Park6,
 }

@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b517c2ea00fa71e4980e2af50e8e95e3
   - enabled: 1
-    path: Assets/Scenes/Flatland/Flatland1.unity
+    path: Assets/Scenes/Park/Park1.unity
     guid: e0a51b5ab554ec749bcb5d55981e0ebd
   - enabled: 1
-    path: Assets/Scenes/Flatland/Flatland2.unity
+    path: Assets/Scenes/Park/Park2.unity
     guid: 173cf5f07b9061a469b4bb9acdfbaac7
   - enabled: 1
-    path: Assets/Scenes/Flatland/Flatland3.unity
+    path: Assets/Scenes/Park/Park3.unity
     guid: 81fd1d55d5b428946adb4deb088fea73
   - enabled: 1
-    path: Assets/Scenes/Flatland/Flatland4.unity
+    path: Assets/Scenes/Park/Park4.unity
     guid: aa9b01887d38f2f439d884cf2f0b8808
   m_configObjects: {}

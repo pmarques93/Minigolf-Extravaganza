@@ -57,3 +57,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 0
+  scoresEvaluation: 000000

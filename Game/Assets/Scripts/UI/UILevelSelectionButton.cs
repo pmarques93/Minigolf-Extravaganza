@@ -16,7 +16,7 @@ public class UILevelSelectionButton : MonoBehaviour
         myButton = GetComponent<Button>();
 
         // Player didn't pass this level yet
-        if (PlayerPrefs.GetInt(levelRequired.ToString()) == 0)
+        if (PlayerPrefs.GetInt(levelRequired.ToString() + "passedLevels") == 0)
         {
             myButton.enabled = false;
             blockedText.gameObject.SetActive(true);

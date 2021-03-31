@@ -2618,6 +2618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166954381}
   - component: {fileID: 166954380}
+  - component: {fileID: 166954383}
   - component: {fileID: 166954382}
   - component: {fileID: 166954378}
   - component: {fileID: 166954379}
@@ -2830,6 +2831,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockedText: {fileID: 2015408972}
   levelRequired: 1
+--- !u!114 &166954383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166954377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138a67e88e281f42b2de88f448b56d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 2
+  scoresEvaluation: 030000000400000005000000
+  starGroups:
+  - {fileID: 1941951365}
+  - {fileID: 480265300}
+  - {fileID: 698424263}
+  - {fileID: 549803003}
 --- !u!1 &169011233
 GameObject:
   m_ObjectHideFlags: 0
@@ -21091,6 +21111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256517075}
   - component: {fileID: 1256517074}
+  - component: {fileID: 1256517077}
   - component: {fileID: 1256517076}
   - component: {fileID: 1256517072}
   - component: {fileID: 1256517073}
@@ -21303,6 +21324,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockedText: {fileID: 1247435465}
   levelRequired: 3
+--- !u!114 &1256517077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256517071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138a67e88e281f42b2de88f448b56d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 4
+  scoresEvaluation: 030000000400000005000000
+  starGroups:
+  - {fileID: 1670092596}
+  - {fileID: 845489205}
+  - {fileID: 1424427073}
+  - {fileID: 317805860}
 --- !u!1 &1264258226
 GameObject:
   m_ObjectHideFlags: 0
@@ -21529,6 +21569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270872785}
   - component: {fileID: 1270872784}
+  - component: {fileID: 1270872787}
   - component: {fileID: 1270872786}
   - component: {fileID: 1270872782}
   - component: {fileID: 1270872783}
@@ -21741,6 +21782,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockedText: {fileID: 2075212138}
   levelRequired: 4
+--- !u!114 &1270872787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270872781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138a67e88e281f42b2de88f448b56d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 5
+  scoresEvaluation: 030000000400000005000000
+  starGroups:
+  - {fileID: 265422564}
+  - {fileID: 1945257884}
+  - {fileID: 448729338}
+  - {fileID: 926980069}
 --- !u!1 &1271977106
 GameObject:
   m_ObjectHideFlags: 0
@@ -30478,6 +30538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850557178}
   - component: {fileID: 1850557177}
+  - component: {fileID: 1850557179}
   - component: {fileID: 1850557175}
   - component: {fileID: 1850557176}
   m_Layer: 5
@@ -30674,6 +30735,25 @@ RectTransform:
   m_AnchoredPosition: {x: 364.99994, y: -357}
   m_SizeDelta: {x: 512, y: 288}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1850557179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850557174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138a67e88e281f42b2de88f448b56d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 1
+  scoresEvaluation: 030000000400000005000000
+  starGroups:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1853237726
 GameObject:
   m_ObjectHideFlags: 0
@@ -33198,6 +33278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029916393}
   - component: {fileID: 2029916396}
+  - component: {fileID: 2029916398}
   - component: {fileID: 2029916397}
   - component: {fileID: 2029916395}
   - component: {fileID: 2029916394}
@@ -33410,6 +33491,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockedText: {fileID: 541038727}
   levelRequired: 5
+--- !u!114 &2029916398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029916392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138a67e88e281f42b2de88f448b56d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 6
+  scoresEvaluation: 030000000400000005000000
+  starGroups:
+  - {fileID: 1036767901}
+  - {fileID: 185905030}
+  - {fileID: 1774344425}
+  - {fileID: 2020709179}
 --- !u!1 &2037294618
 GameObject:
   m_ObjectHideFlags: 0
@@ -35496,6 +35596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145210707}
   - component: {fileID: 2145210706}
+  - component: {fileID: 2145210709}
   - component: {fileID: 2145210708}
   - component: {fileID: 2145210704}
   - component: {fileID: 2145210705}
@@ -35708,6 +35809,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockedText: {fileID: 506387836}
   levelRequired: 2
+--- !u!114 &2145210709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145210703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c138a67e88e281f42b2de88f448b56d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 3
+  scoresEvaluation: 030000000400000005000000
+  starGroups:
+  - {fileID: 477783044}
+  - {fileID: 33079653}
+  - {fileID: 638680612}
+  - {fileID: 1525346115}
 --- !u!1001 &7125641362036315141
 PrefabInstance:
   m_ObjectHideFlags: 0

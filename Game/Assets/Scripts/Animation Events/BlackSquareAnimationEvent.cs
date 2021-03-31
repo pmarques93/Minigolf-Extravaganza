@@ -43,6 +43,7 @@ public class BlackSquareAnimationEvent : MonoBehaviour
 
     /// <summary>
     /// Loads main menu after victory.
+    /// Triggered by UIPauseMenu.
     /// </summary>
     private void TriggerAnimationToMainMenu() =>
         GetComponent<Animator>().SetTrigger("MainMenu");

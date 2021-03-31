@@ -30,10 +30,10 @@ public class BallHandler : MonoBehaviour
 
     // Shot variables
     public bool PreparingShot { get; private set; }
-    private bool triggerShot;
     public float Power { get; set; }
-    public int Plays { get; private set; }
     public bool FinishedCourse { get; set; }
+    private bool triggerShot;
+    private int plays;
 
     // Movement Variables
     private float stoppedTime;
@@ -73,6 +73,7 @@ public class BallHandler : MonoBehaviour
         rotationAfterShot = false;
         isGrounded = false;
         victory = false;
+        plays = 0;
     }
 
     private void OnEnable()
@@ -183,6 +184,9 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     private void Shot()
     {
+        plays++;
+        OnHit(plays);
+
         VisualEffect vfx = SpawnParticles(prefabSpawnParticles, 3);
         vfx.SetFloat("Strength", Power);
 
@@ -291,6 +295,7 @@ public class BallHandler : MonoBehaviour
             audioSource.pitch = 1f;
             audioSource.PlayOneShot(confetiSound);
             SpawnParticles(prefabConfettiParticles, 6);
+            OnVictoryWithPlays(plays);
             OnVictory();
             victory = true;
         }
@@ -385,11 +390,25 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     public event Action ShotHit;
 
-    protected virtual void OnVictory() => Victory?.Invoke();
+    protected virtual void OnVictoryWithPlays(int numOfPlays) => 
+        VictoryWithPlays?.Invoke(numOfPlays);
 
     /// <summary>
     /// Event registered on LevelPassed.
+    /// </summary>
+    public event Action<int> VictoryWithPlays;
+
+    protected virtual void OnVictory() => Victory?.Invoke();
+
+    /// <summary>
     /// Event registered on BlackSquareAnimationEvent.
     /// </summary>
     public event Action Victory;
+
+    protected virtual void OnHit(int score) => Hit?.Invoke(score);
+
+    /// <summary>
+    /// Event registered on UIShots;
+    /// </summary>
+    public event Action<int> Hit;
 }

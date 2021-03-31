@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class LevelPassed : MonoBehaviour
 {
+    [Header("Which level is this")]
     [SerializeField] private LevelEnum currentLevel;
     public LevelEnum CurrentLevel => currentLevel;
 
@@ -20,12 +21,12 @@ public class LevelPassed : MonoBehaviour
 
     private void OnEnable()
     {
-        if (ball != null) ball.Victory += UpdateLevelsPassed; 
+        if (ball != null) ball.VictoryWithPlays += UpdateLevelsPassed; 
     }
 
     private void OnDisable()
     {
-        if (ball != null) ball.Victory -= UpdateLevelsPassed;
+        if (ball != null) ball.VictoryWithPlays -= UpdateLevelsPassed;
     }
 
     private void Update()
@@ -34,7 +35,7 @@ public class LevelPassed : MonoBehaviour
         if (ball == null)
         {
             ball = FindObjectOfType<BallHandler>();
-            if (ball != null) ball.Victory += UpdateLevelsPassed;
+            if (ball != null) ball.VictoryWithPlays += UpdateLevelsPassed;
         }
     }
 
@@ -42,13 +43,31 @@ public class LevelPassed : MonoBehaviour
     /// Updates levels passed and updates playerprefs with the last level passed,
     /// so it can select that button in main menu.
     /// </summary>
-    private void UpdateLevelsPassed()
+    private void UpdateLevelsPassed(int numberOfPlays)
     {
-        // Adds current level to levels passed
-        PlayerPrefs.SetInt(currentLevel.ToString(), 1);
-
         // Last level being passed to select it on main menu
         PlayerPrefs.SetString("LastLevelPassed", currentLevel.ToString());
+
+        // Adds current level to levels passed
+        PlayerPrefs.SetInt(currentLevel.ToString() + "passedLevels", 1);
+
+        // If the player has no highScore yet
+        if (PlayerPrefs.HasKey(currentLevel.ToString() + "highScore") == false)
+        {
+            // Creates highscore
+            PlayerPrefs.SetInt(currentLevel.ToString() + "highScore", numberOfPlays);
+        }
+        // Else if the player has a highScore
+        else
+        {
+            // If number of plays was less than that highscore (which is good)
+            if (numberOfPlays < PlayerPrefs.GetInt(currentLevel.ToString() + "highScore"))
+            {
+                // Sets new highScore
+                PlayerPrefs.SetInt(currentLevel.ToString() + "highScore", numberOfPlays);
+            }
+            else { }
+        }
     }
 
     private void OnApplicationQuit()

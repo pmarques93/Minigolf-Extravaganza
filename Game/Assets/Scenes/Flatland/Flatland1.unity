@@ -442,6 +442,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e39dae60db2835b4e87321f140e93383, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e39dae60db2835b4e87321f140e93383, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4f4b3553e76b1f14dac207fb904e846a, type: 2}
@@ -449,6 +453,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: a5e086fbfa0231042950546707b61bf6, type: 2}
+    - target: {fileID: -7511558181221131132, guid: e39dae60db2835b4e87321f140e93383, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a74aae99797816418cba3776d7bafa1, type: 2}
     - target: {fileID: 919132149155446097, guid: e39dae60db2835b4e87321f140e93383, type: 3}
       propertyPath: m_Name
       value: Fountain

@@ -56,6 +56,9 @@
         },
         {
             "m_Id": "8d182bb604014c87becc6e1115834686"
+        },
+        {
+            "m_Id": "5c3795180f964b6cb442d69e7af0cab7"
         }
     ],
     "m_GroupDatas": [],
@@ -227,6 +230,9 @@
         "m_Blocks": [
             {
                 "m_Id": "9f0a4a7d80d54fcc8188b904ccee1d2c"
+            },
+            {
+                "m_Id": "5c3795180f964b6cb442d69e7af0cab7"
             }
         ]
     },
@@ -770,6 +776,38 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "5c3795180f964b6cb442d69e7af0cab7",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Alpha",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "e3d3a2d0bad241eaa3fc86ab359e77cd"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "60e068a787ef468da65c712116824c21",
     "m_Id": 2,
@@ -799,7 +837,7 @@
     "m_ActiveSubTarget": {
         "m_Id": "fd65619f9f6f4c5eac19120219f9a0de"
     },
-    "m_SurfaceType": 0,
+    "m_SurfaceType": 1,
     "m_AlphaMode": 0,
     "m_TwoSided": false,
     "m_AlphaClip": false,
@@ -1239,7 +1277,22 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_ScreenSpaceType": 0
+    "m_ScreenSpaceType": 1
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "e3d3a2d0bad241eaa3fc86ab359e77cd",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Alpha",
+    "m_StageCapability": 2,
+    "m_Value": 1.0,
+    "m_DefaultValue": 1.0,
+    "m_Labels": []
 }
 
 {

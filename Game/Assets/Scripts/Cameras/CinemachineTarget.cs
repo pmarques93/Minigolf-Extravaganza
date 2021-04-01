@@ -108,6 +108,15 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     }
 
     /// <summary>
+    /// Switches to course camera.
+    /// </summary>
+    private void VictoryCamera()
+    {
+        cineBrain.m_DefaultBlend.m_Time = 5;
+        courseCamera.Priority = 100;
+    }
+
+    /// <summary>
     /// Method that checks if camera is blending.
     /// </summary>
     /// <returns>True if it's blending.</returns>

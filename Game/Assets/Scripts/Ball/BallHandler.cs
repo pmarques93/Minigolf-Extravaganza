@@ -118,7 +118,7 @@ public class BallHandler : MonoBehaviour
             }
 
             // If the ball is grounded)
-            if (isGrounded)
+            if (isGrounded && victory == false)
             {
                 if (lineRenderer.enabled == false)
                     lineRenderer.enabled = true;

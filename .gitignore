@@ -11,6 +11,17 @@
 *.blend.meta
 *.blend.meta/
 
+# Maya files
+*.mb
+*.mb/
+*.mel
+*.mel/
+
+*.mb.meta
+*.mb.meta/
+*.mel.meta
+*.mel.meta/
+
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
 

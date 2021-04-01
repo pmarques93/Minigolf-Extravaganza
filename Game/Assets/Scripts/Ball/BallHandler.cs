@@ -293,12 +293,16 @@ public class BallHandler : MonoBehaviour
         // Only happens once
         if (victory == false)
         {
-            audioSource.pitch = 1f;
             audioSource.PlayOneShot(confetiSound);
             SpawnParticles(prefabConfettiParticles, 6);
             OnVictoryWithPlays(plays);
             OnVictory();
             victory = true;
+        }
+        while (true)
+        {
+            audioSource.pitch = 1f;
+            yield return null;
         }
     }
 
@@ -390,13 +394,15 @@ public class BallHandler : MonoBehaviour
 
     /// <summary>
     /// Event registered on LevelPassed.
+    /// Event registered on HighscoreHandler.
     /// </summary>
     public event Action<int> VictoryWithPlays;
 
-    protected virtual void OnVictory() => Victory?.Invoke();
+    protected virtual void OnVictory() =>
+        Victory?.Invoke();
 
     /// <summary>
-    /// Event registered on BlackSquareAnimationEvent.
+    /// Event registered on CinemachineTarget.
     /// </summary>
     public event Action Victory;
 

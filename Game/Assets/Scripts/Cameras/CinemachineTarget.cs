@@ -33,11 +33,13 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     private void OnEnable()
     {
         if (ball != null) ball.TypeOfMovement += SwitchCameras;
+        if (ball != null) ball.Victory += VictoryCamera;
     }
 
     private void OnDisable()
     {
         if (ball != null) ball.TypeOfMovement -= SwitchCameras;
+        if (ball != null) ball.Victory -= VictoryCamera;
     }
 
     private IEnumerator Start()

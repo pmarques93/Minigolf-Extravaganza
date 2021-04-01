@@ -7,32 +7,33 @@ public class BlackSquareAnimationEvent : MonoBehaviour
 {
     // Components
     private SceneController sceneController;
-    private BallHandler ball;
     private PlayerInputCustom input;
+    private Animator anim;
+    private HighscoreHandler highScoreHandler;
 
     private void Awake()
     {
         sceneController = FindObjectOfType<SceneController>();
-        ball = FindObjectOfType<BallHandler>();
         input = FindObjectOfType<PlayerInputCustom>();
+        anim = GetComponent<Animator>();
+        highScoreHandler = FindObjectOfType<HighscoreHandler>();
     }
 
     private void OnEnable()
     {
-        if (ball != null) ball.Victory += TriggerAnimationToMainMenu;
+        if (highScoreHandler != null)
+        {
+            highScoreHandler.BeatHighscore += () => anim.SetTrigger("BeatHighScore");
+            highScoreHandler.NoBeatHighscore += () => anim.SetTrigger("NoBeatHighScore");
+        }
     }
 
     private void OnDisable()
     {
-        if (ball != null) ball.Victory -= TriggerAnimationToMainMenu;
-    }
-
-    private void Update()
-    {
-        if (ball == null)
+        if (highScoreHandler != null)
         {
-            ball = FindObjectOfType<BallHandler>();
-            if (ball != null) ball.Victory += TriggerAnimationToMainMenu;
+            highScoreHandler.BeatHighscore -= () => anim.SetTrigger("BeatHighScore");
+            highScoreHandler.NoBeatHighscore -= () => anim.SetTrigger("NoBeatHighScore");
         }
     }
 
@@ -45,8 +46,7 @@ public class BlackSquareAnimationEvent : MonoBehaviour
     /// Loads main menu after victory.
     /// Triggered by UIPauseMenu.
     /// </summary>
-    private void TriggerAnimationToMainMenu() =>
-        GetComponent<Animator>().SetTrigger("MainMenu");
+    public void MainMenu() => anim.SetTrigger("MainMenu");
 
     public void RestartScene() =>
         sceneController.RestartCurrentScene();
@@ -55,6 +55,4 @@ public class BlackSquareAnimationEvent : MonoBehaviour
     /// Loads a level on animation event.
     /// </summary>
     /// <param name="lvl">Level to load</param>
-    public void LoadLevel(LevelEnum lvl) => sceneController.LoadLevel(lvl);
-       
-}
+    public void LoadLevel(LevelEnum lvl) => sceneController.LoadLevel(lvl);}

@@ -42,9 +42,9 @@ MonoBehaviour:
   defaultMasterVolume: -5
   minMasterVolume: -20
   maxMasterVolume: 5
-  defaultAmbienceVolume: -5
+  defaultAmbienceVolume: -10
   minAmbienceVolume: -20
   maxAmbienceVolume: 5
-  defaultSfxVolume: -5
+  defaultSfxVolume: 0
   minSfxVolume: -20
   maxSfxVolume: 5

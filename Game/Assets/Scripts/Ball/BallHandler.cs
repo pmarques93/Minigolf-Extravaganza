@@ -74,6 +74,7 @@ public class BallHandler : MonoBehaviour
         isGrounded = false;
         victory = false;
         plays = 0;
+        OnHit(plays);
     }
 
     private void OnEnable()
@@ -215,7 +216,7 @@ public class BallHandler : MonoBehaviour
     {
         yield return new WaitForFixedUpdate();
         // Event method.
-        OnShotHit();
+        OnHit(plays);
 
         OnTypeOfMovement(BallMovementEnum.Moving);
         lineRenderer.enabled = false;
@@ -383,12 +384,6 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     public event Action<BallMovementEnum> TypeOfMovement;
 
-    protected virtual void OnShotHit() => ShotHit?.Invoke();
-
-    /// <summary>
-    /// Event registered on BallScore.
-    /// </summary>
-    public event Action ShotHit;
 
     protected virtual void OnVictoryWithPlays(int numOfPlays) => 
         VictoryWithPlays?.Invoke(numOfPlays);

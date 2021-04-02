@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CommonCheckers
+  m_Name: ParkCheckers
   m_Shader: {fileID: -6465566751694194690, guid: d57def664f92b2f4cadd3deb5f70d9f4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

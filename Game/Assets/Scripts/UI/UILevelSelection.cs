@@ -56,4 +56,16 @@ public class UILevelSelection : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Called from UI main menu buttons.
+    /// </summary>
+    /// <param name="levelToLoad">Level to load.</param>
+    public void LoadLevel(string levelToLoad)
+    {
+        if (Enum.TryParse(levelToLoad, out LevelEnum level))
+            FindObjectOfType<SceneController>().LoadLevel(level);
+        else
+            throw new NotSupportedException();
+    }
 }

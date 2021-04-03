@@ -72,7 +72,7 @@ public class UIPauseMenu : MonoBehaviour
     /// </summary>
     public void RestartLevel()
     {
-        blackSquare.SetTrigger("Restart");
+        FindObjectOfType<SceneController>().RestartCurrentScene();
         FindObjectOfType<PauseMenu>().UnpauseGame();
         FindObjectOfType<PlayerInputCustom>().SwitchControlsToPauseMenu();
     }
@@ -83,7 +83,7 @@ public class UIPauseMenu : MonoBehaviour
         PlayerPrefs.SetString(
             "LastLevelPassed", FindObjectOfType<LevelPassed>().CurrentLevel.ToString());
 
-        blackSquare.SetTrigger("MainMenu");
+        FindObjectOfType<SceneController>().LoadLevel(LevelEnum.MainMenu);
     }
 
     public void QuitGame()

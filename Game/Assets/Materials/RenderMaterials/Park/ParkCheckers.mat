@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1fa4c067c24f4e34e8f7c6a3d03b64af, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PatternTex:
@@ -54,7 +54,7 @@ Material:
     m_Floats:
     - Vector1_5a47539918984b0d8a325d75acdb5efb: 1
     - Vector1_6396C324: 0.4
-    - Vector1_B022ED4: 9.52
+    - Vector1_B022ED4: 11.53
     - _Metallic: 0
     - _Smoothness: 0
     - _useTriplanar: 0

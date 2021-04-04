@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60ea8ee73af770a41923ffefbddc3523
+guid: 1f3254c1021e8ce4186f6cd3d30c2c8a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -15,7 +15,7 @@ ModelImporter:
       name: Flag
     second: {fileID: 2100000, guid: 34ae0120ae0bb7948878460914995d78, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -105,7 +105,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

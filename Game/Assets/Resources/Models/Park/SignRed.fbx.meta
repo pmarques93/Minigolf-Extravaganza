@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: ColorRandom
+    second: {fileID: 2100000, guid: cb7a607ab2f3f2d49b5a5c15cd5d14b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: CommonMaterial
     second: {fileID: 2100000, guid: 4f4b3553e76b1f14dac207fb904e846a, type: 2}
   materials:

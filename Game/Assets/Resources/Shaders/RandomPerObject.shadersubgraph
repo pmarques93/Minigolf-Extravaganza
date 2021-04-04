@@ -193,7 +193,7 @@
             "m_Guid": ""
         }
     },
-    "m_Path": "Sub Graphs",
+    "m_Path": "MGE Shaders/Subgraphs",
     "m_ConcretePrecision": 0,
     "m_OutputNode": {
         "m_Id": "667b8d09017c4aceb9d84e13021c47e4"

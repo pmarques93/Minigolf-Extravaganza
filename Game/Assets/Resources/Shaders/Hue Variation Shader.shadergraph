@@ -246,7 +246,7 @@
             "m_Guid": ""
         }
     },
-    "m_Path": "Shader Graphs",
+    "m_Path": "MGE Shaders/Objects",
     "m_ConcretePrecision": 0,
     "m_OutputNode": {
         "m_Id": ""

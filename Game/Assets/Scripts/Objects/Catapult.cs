@@ -1,14 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+/// <summary>
+/// Class responsible for handling catapult control.
+/// </summary>
 public class Catapult : MonoBehaviour
 {
     [SerializeField] private ConfigurationScriptableObj config;
     [SerializeField] private CinemachineVirtualCamera cam;
     [SerializeField] private Transform ballPosition;
-    [Range(0.1f,2f)][SerializeField] private float ballForce;
+    [Range(0.25f,2f)][SerializeField] private float ballForce;
+    public float EndBallForce { get; private set; }
 
     // Components
     private PlayerInputCustom input;
@@ -16,7 +18,7 @@ public class Catapult : MonoBehaviour
     private Animator anim;
 
     // Ball control variables
-    private bool hasBall;
+    public bool HasBall { get; private set; }
     private BallHandler ball;
     private Vector2 direction;
 
@@ -38,7 +40,9 @@ public class Catapult : MonoBehaviour
 
     private void Start()
     {
-        hasBall = false;
+        HasBall = false;
+
+        EndBallForce = ballForce * config.PowerMultiplier;
     }
 
     private void Update()
@@ -52,7 +56,7 @@ public class Catapult : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
-        if (hasBall)
+        if (HasBall)
         {
             ball.StopBall();
             ball.transform.position = ballPosition.position;
@@ -80,9 +84,12 @@ public class Catapult : MonoBehaviour
         if (other.TryGetComponent<BallHandler>(out BallHandler ball))
         {
             cam.Priority = 100;
-            input.SwitchControlsToCatapult();
+            
+            HasBall = true;
             ball.CanShot = false;
-            hasBall = true;
+
+            input.SwitchControlsToCatapult();
+
             this.ball = ball;
         }
     }
@@ -95,12 +102,12 @@ public class Catapult : MonoBehaviour
     {
         cam.Priority = 0;
 
-        hasBall = false;
+        HasBall = false;
+        ball.CanShot = true;
         
         ball.RB.AddForce(transform.forward * ballForce * config.PowerMultiplier, ForceMode.Impulse);
 
         input.SwitchControlsToGameplay();
 
-        ball.CanShot = true;
     }
 }

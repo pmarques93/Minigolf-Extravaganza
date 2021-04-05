@@ -142,7 +142,7 @@ public class BallHandler : MonoBehaviour
     /// <summary>
     /// If player isn't preparing a shot and not moving, it starts preparing a shot
     /// </summary>
-    public void PrepareShot()
+    private void PrepareShot()
     {
         if (PreparingShot == false && RB.velocity == Vector3.zero)
         {

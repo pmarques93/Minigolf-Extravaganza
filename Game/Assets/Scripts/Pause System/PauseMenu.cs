@@ -77,7 +77,14 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void UnpauseGame()
     {
-        input.SwitchControlsToGameplay();
+        if (FindObjectOfType<BallHandler>().CanShot == true)
+        {
+            input.SwitchControlsToGameplay();
+        }
+        else
+        {
+            input.SwitchControlsToCatapult();
+        }
 
         uiPauseMenu.gameObject.SetActive(false);
         // ObjectEnabledCoroutine to false so it can select resume button again

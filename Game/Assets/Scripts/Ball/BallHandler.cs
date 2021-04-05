@@ -18,7 +18,7 @@ public class BallHandler : MonoBehaviour
     // Components
     private PlayerInputCustom input;
     private LineRenderer lineRenderer;
-    private Rigidbody rb;
+    public Rigidbody RB { get; set; }
     private CinemachineTarget cinemachine;
     private AudioSource audioSource;
 
@@ -29,11 +29,12 @@ public class BallHandler : MonoBehaviour
     private bool victory;
 
     // Shot variables
-    public bool PreparingShot { get; private set; }
+    public bool PreparingShot { get; set; }
     public float Power { get; set; }
     public bool FinishedCourse { get; set; }
-    private bool triggerShot;
+    public bool TriggerShot { get; set; }
     private int plays;
+    public bool CanShot { get; set; }
 
     // Movement Variables
     private float stoppedTime;
@@ -58,7 +59,7 @@ public class BallHandler : MonoBehaviour
     {
         input = FindObjectOfType<PlayerInputCustom>();
         lineRenderer = GetComponentInChildren<LineRenderer>();
-        rb = GetComponent<Rigidbody>();
+        RB = GetComponent<Rigidbody>();
         cinemachine = FindObjectOfType<CinemachineTarget>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -66,13 +67,14 @@ public class BallHandler : MonoBehaviour
     private void Start()
     {
         lineRenderer.enabled = false;
-        triggerShot = false;
+        TriggerShot = false;
         PreparingShot = false;
         spawningCoroutine = null;
         stoppedTimeMax = 0.25f;
         rotationAfterShot = false;
         isGrounded = false;
         victory = false;
+        CanShot = true;
         plays = 0;
         OnHit(plays);
     }
@@ -80,14 +82,14 @@ public class BallHandler : MonoBehaviour
     private void OnEnable()
     {
         input.Shot += PrepareShot;
-        input.TriggerShot += () => triggerShot = PreparingShot ? true : false;
+        input.TriggerShot += () => TriggerShot = PreparingShot;
         input.CancelShot += () => PreparingShot = false;
     }
 
     private void OnDisable()
     {
         input.Shot -= PrepareShot;
-        input.TriggerShot -= () => triggerShot = PreparingShot ? true : false;
+        input.TriggerShot -= () => TriggerShot = PreparingShot;
         input.CancelShot -= () => PreparingShot = false;
     }
 
@@ -108,37 +110,41 @@ public class BallHandler : MonoBehaviour
             // Updates ball's clone rotation
             ballPositionClone.rotation = transform.rotation;
 
-            // Only after the ball stopped, after the shot
-            if (rotationAfterShot)
+            // If the ball isn't being controller by something else
+            if (CanShot)
             {
-                // Rotates the ball to the previous angle
-                transform.eulerAngles = previousRotation;
-                OnTypeOfMovement(BallMovementEnum.Stop);
-                rotationAfterShot = false;
+                // Only after the ball stopped, after the shot
+                if (rotationAfterShot)
+                {
+                    // Rotates the ball to the previous angle
+                    transform.eulerAngles = previousRotation;
+                    OnTypeOfMovement(BallMovementEnum.Stop);
+                    rotationAfterShot = false;
+                }
+
+                // If the ball is grounded)
+                if (isGrounded && victory == false)
+                {
+                    if (lineRenderer.enabled == false)
+                        lineRenderer.enabled = true;
+                }
+
+                // Rotates the ball with player's input
+                transform.eulerAngles +=
+                    new Vector3(0f, direction.x, 0f) * Time.fixedDeltaTime * config.RotationSpeed;
+
+                // Renders line renderer
+                DrawLine();
             }
-
-            // If the ball is grounded)
-            if (isGrounded && victory == false)
-            {
-                if (lineRenderer.enabled == false)
-                    lineRenderer.enabled = true;
-            }
-
-            // Rotates the ball with player's input
-            transform.eulerAngles +=
-                new Vector3(0f, direction.x, 0f) * Time.fixedDeltaTime * config.RotationSpeed;
-
-            // Renders line renderer
-            DrawLine();
         }
     }
 
     /// <summary>
     /// If player isn't preparing a shot and not moving, it starts preparing a shot
     /// </summary>
-    private void PrepareShot()
+    public void PrepareShot()
     {
-        if (PreparingShot == false && rb.velocity == Vector3.zero)
+        if (PreparingShot == false && RB.velocity == Vector3.zero)
         {
             StartCoroutine(PrepareShotForce(config.PowerTime));
         }
@@ -154,7 +160,7 @@ public class BallHandler : MonoBehaviour
         PreparingShot = true;
 
         bool powerGrowing = true;
-        while (triggerShot == false && PreparingShot == true)
+        while (TriggerShot == false && PreparingShot == true)
         {
             // Increments the power value
             if (powerGrowing)
@@ -172,7 +178,8 @@ public class BallHandler : MonoBehaviour
         }
 
         // If the player pressed shot again, it executes shot.
-        if (triggerShot) Shot();
+        // If the ball isn't being controller by something else
+        if (TriggerShot && CanShot) Shot();
 
         // Resets power
         Power = 0;
@@ -183,7 +190,7 @@ public class BallHandler : MonoBehaviour
     /// If the ball is stopped, the player can shoot it.
     /// Saves current position and rotation before shot.
     /// </summary>
-    private void Shot()
+    public void Shot()
     {
         plays++;
         OnHit(plays);
@@ -201,7 +208,7 @@ public class BallHandler : MonoBehaviour
         previousRotation = transform.eulerAngles;
 
         PlayHitSound();
-        rb.AddForce(transform.forward * Power * config.PowerMultiplier, ForceMode.Impulse);   
+        RB.AddForce(transform.forward * Power * config.PowerMultiplier, ForceMode.Impulse);   
 
         // What happens the exact moment after shoting
         StartCoroutine(BehaviourAfterShot());
@@ -244,9 +251,7 @@ public class BallHandler : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         // Stops ball's position and rotation
-        rb.angularVelocity = Vector3.zero;
-        rb.velocity = Vector3.zero; 
-
+        StopBall();
         SpawnParticles(prefabSpawnParticles, 3);
 
         // Resets ball's position
@@ -259,12 +264,21 @@ public class BallHandler : MonoBehaviour
     }
 
     /// <summary>
+    /// Stops ball velocity and rotation.
+    /// </summary>
+    public void StopBall()
+    {
+        RB.angularVelocity = Vector3.zero;
+        RB.velocity = Vector3.zero;
+    }
+
+    /// <summary>
     /// Method that checks if the ball is stopped.
     /// </summary>
     /// <returns>True if it's stopped, otherwise returns false.</returns>
     private bool IsStopped()
     {
-        if (rb.velocity == Vector3.zero)
+        if (RB.velocity.magnitude < 0.2f && isGrounded)
         {
             stoppedTime += Time.time;
         }
@@ -275,6 +289,7 @@ public class BallHandler : MonoBehaviour
 
         if (stoppedTime >= stoppedTimeMax)
         {
+            StopBall();
             return true;
         }
         else

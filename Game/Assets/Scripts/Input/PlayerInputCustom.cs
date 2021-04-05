@@ -34,6 +34,14 @@ public class PlayerInputCustom : MonoBehaviour
     public void SwitchControlsToPauseMenu() =>
         inputControl.SwitchCurrentActionMap("PauseMenu");
 
+    public void SwitchControlsToCatapult() =>
+        inputControl.SwitchCurrentActionMap("Catapult");
+
+    protected virtual void OnChangeControlsToCatapult() =>
+        ChangeControlsToCatapult?.Invoke();
+
+    public event Action ChangeControlsToCatapult;
+
     /// <summary>
     /// Disables UI input module.
     /// </summary>
@@ -108,6 +116,74 @@ public class PlayerInputCustom : MonoBehaviour
     /// Event registered on BallHandler.
     /// </summary>
     public event Action CancelShot;
+
+    //////////////////////////////// CATAPULT //////////////////////////////////
+    /// Handles direction.
+    /// </summary>
+    /// <param name="context"></param>
+    public void HandleDirectionCatapult(InputAction.CallbackContext context)
+    {
+        if (context.performed) Direction = context.ReadValue<Vector2>();
+        if (context.canceled)
+        {
+            Direction = new Vector2Int(0, 0);
+        }
+    }
+
+    /// <summary>
+    /// Handles shot.
+    /// </summary>
+    /// <param name="context"></param>
+    public void HandleShotCatapult(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnShotCatapult();
+            OnTriggerShotCatapult();
+        }
+    }
+
+    protected virtual void OnTriggerShotCatapult() => TriggerShotCatapult?.Invoke();
+    protected virtual void OnShotCatapult() => ShotCatapult?.Invoke();
+
+    /// <summary>
+    /// Event registered on BallHandler.
+    /// </summary>
+    public event Action TriggerShotCatapult;
+
+    /// <summary>
+    /// Event registered on BallHandler.
+    /// </summary>
+    public event Action ShotCatapult;
+
+    /// <summary>
+    /// Handles shot.
+    /// </summary>
+    /// <param name="context"></param>
+    public void HandleCancelCatapult(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            // Check has to happen before canceling shot, so it doesn't cancel
+            // and pause at the same time
+            if (pauseMenu.GamePaused == false)
+            {
+                OnPauseGame(PauseEnum.Pause);
+            }
+
+            // Then it cancels shot, if player is preparing a shot
+            OnCancelShotCatapult();
+        }
+    }
+
+    protected virtual void OnCancelShotCatapult() => CancelShotCatapult?.Invoke();
+
+    /// <summary>
+    /// Event registered on BallHandler.
+    /// </summary>
+    public event Action CancelShotCatapult;
+
+    ////////////////////////////////// UI //////////////////////////////////////
 
     /// <summary>
     /// Handles confirmation.

@@ -311,6 +311,137 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Catapult"",
+            ""id"": ""04885119-2eff-4743-9bd7-382e6bfce5d3"",
+            ""actions"": [
+                {
+                    ""name"": ""Direction"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""be2ead72-5cb4-4fe1-8e5d-a38ca9d8c745"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shot"",
+                    ""type"": ""Button"",
+                    ""id"": ""ea82cc78-d933-4910-9904-4f4ff6d8471c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""f72bd3af-f406-4bc9-9db4-5452bd2085f1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Direction"",
+                    ""id"": ""c5abf842-c787-4517-b879-76e81f9bd9a6"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Direction"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""cd71f617-9333-47d1-94ce-6a727220b1f4"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Direction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""7cff2952-32fc-4323-97d3-e1be21e31668"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Direction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""6126914d-485a-4aa8-9833-8efb510ca106"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Direction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""8da4f048-18b7-4ff1-a46a-d105a8b227a6"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Direction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00b8a311-96c0-4509-b038-8cf29aa772a5"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5503799b-31d4-4af8-9a9c-d3b4761e43e3"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04d0c174-9872-49ca-b793-d27f12a5f6a0"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dac2b41d-4f05-478f-8fd1-dc7f32457854"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -328,6 +459,11 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         // DisableControls
         m_DisableControls = asset.FindActionMap("DisableControls", throwIfNotFound: true);
         m_DisableControls_Newaction = m_DisableControls.FindAction("New action", throwIfNotFound: true);
+        // Catapult
+        m_Catapult = asset.FindActionMap("Catapult", throwIfNotFound: true);
+        m_Catapult_Direction = m_Catapult.FindAction("Direction", throwIfNotFound: true);
+        m_Catapult_Shot = m_Catapult.FindAction("Shot", throwIfNotFound: true);
+        m_Catapult_Cancel = m_Catapult.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -514,6 +650,55 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         }
     }
     public DisableControlsActions @DisableControls => new DisableControlsActions(this);
+
+    // Catapult
+    private readonly InputActionMap m_Catapult;
+    private ICatapultActions m_CatapultActionsCallbackInterface;
+    private readonly InputAction m_Catapult_Direction;
+    private readonly InputAction m_Catapult_Shot;
+    private readonly InputAction m_Catapult_Cancel;
+    public struct CatapultActions
+    {
+        private @InputActions m_Wrapper;
+        public CatapultActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Direction => m_Wrapper.m_Catapult_Direction;
+        public InputAction @Shot => m_Wrapper.m_Catapult_Shot;
+        public InputAction @Cancel => m_Wrapper.m_Catapult_Cancel;
+        public InputActionMap Get() { return m_Wrapper.m_Catapult; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CatapultActions set) { return set.Get(); }
+        public void SetCallbacks(ICatapultActions instance)
+        {
+            if (m_Wrapper.m_CatapultActionsCallbackInterface != null)
+            {
+                @Direction.started -= m_Wrapper.m_CatapultActionsCallbackInterface.OnDirection;
+                @Direction.performed -= m_Wrapper.m_CatapultActionsCallbackInterface.OnDirection;
+                @Direction.canceled -= m_Wrapper.m_CatapultActionsCallbackInterface.OnDirection;
+                @Shot.started -= m_Wrapper.m_CatapultActionsCallbackInterface.OnShot;
+                @Shot.performed -= m_Wrapper.m_CatapultActionsCallbackInterface.OnShot;
+                @Shot.canceled -= m_Wrapper.m_CatapultActionsCallbackInterface.OnShot;
+                @Cancel.started -= m_Wrapper.m_CatapultActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_CatapultActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_CatapultActionsCallbackInterface.OnCancel;
+            }
+            m_Wrapper.m_CatapultActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Direction.started += instance.OnDirection;
+                @Direction.performed += instance.OnDirection;
+                @Direction.canceled += instance.OnDirection;
+                @Shot.started += instance.OnShot;
+                @Shot.performed += instance.OnShot;
+                @Shot.canceled += instance.OnShot;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
+            }
+        }
+    }
+    public CatapultActions @Catapult => new CatapultActions(this);
     public interface IGameplayActions
     {
         void OnDirection(InputAction.CallbackContext context);
@@ -529,5 +714,11 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     public interface IDisableControlsActions
     {
         void OnNewaction(InputAction.CallbackContext context);
+    }
+    public interface ICatapultActions
+    {
+        void OnDirection(InputAction.CallbackContext context);
+        void OnShot(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }

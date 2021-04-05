@@ -3,7 +3,12 @@ guid: dc17ed142548b2b45af92729b1fa0ce6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medieval
+    second: {fileID: 2100000, guid: 2aa2d288bd8f35e4fbfc4ea0b3e9f0f6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

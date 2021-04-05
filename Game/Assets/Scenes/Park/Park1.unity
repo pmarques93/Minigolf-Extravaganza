@@ -16861,6 +16861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 215925034406271621, guid: 65f67a6f867b48a43b641c45335fa145, type: 3}
+      propertyPath: ballForce
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 393405061832326498, guid: 65f67a6f867b48a43b641c45335fa145, type: 3}
       propertyPath: m_RootOrder
       value: 1

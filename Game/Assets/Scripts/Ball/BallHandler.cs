@@ -270,6 +270,7 @@ public class BallHandler : MonoBehaviour
     {
         RB.angularVelocity = Vector3.zero;
         RB.velocity = Vector3.zero;
+        OnTypeOfMovement(BallMovementEnum.Stop);
     }
 
     /// <summary>
@@ -376,8 +377,7 @@ public class BallHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Ground") ||
-            collision.collider.CompareTag("OoB"))
+        if (collision.collider.CompareTag("Ground") == false)
         {
             // Only happens after a while, so the sound doesn't spam
             if (playGroundHitSound == null)

@@ -21,9 +21,9 @@ MonoBehaviour:
   defaultPowerTime: 0.35
   minPowerTime: 0.1
   maxPowerTime: 1
-  defaultPowerMultiplier: 25
-  minPowerMultiplier: 20
-  maxPowerMultiplier: 30
+  defaultPowerMultiplier: 22.5
+  minPowerMultiplier: 17
+  maxPowerMultiplier: 27
   defaultFreelookHorizontalRotation: 250
   minFreelookHorizontalRotation: 0
   maxFreelookHorizontalRotation: 400

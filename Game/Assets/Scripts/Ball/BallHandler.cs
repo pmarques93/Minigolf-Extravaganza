@@ -305,7 +305,6 @@ public class BallHandler : MonoBehaviour
     /// <returns></returns>
     private IEnumerator FinishCourse()
     {
-        yield return new WaitForSeconds(1f);
         // Only happens once
         if (victory == false)
         {

@@ -423,7 +423,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: a7ded1277c95ed3449e4de2e62f445af, type: 2}
   cam: {fileID: 215925034739376160}
   ballPosition: {fileID: 215925034224895360}
-  ballForce: 0.45
+  ballForce: 0.3
 --- !u!65 &215925034406271622
 BoxCollider:
   m_ObjectHideFlags: 0

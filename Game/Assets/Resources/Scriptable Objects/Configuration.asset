@@ -18,10 +18,10 @@ MonoBehaviour:
   defaultLineLength: 2
   minLineLength: 0.5
   maxLineLength: 5
-  defaultPowerTime: 0.35
-  minPowerTime: 0.1
-  maxPowerTime: 1
-  defaultPowerMultiplier: 22.5
+  defaultPowerTime: 0.15
+  minPowerTime: 0.05
+  maxPowerTime: 0.3
+  defaultPowerMultiplier: 22
   minPowerMultiplier: 17
   maxPowerMultiplier: 27
   defaultFreelookHorizontalRotation: 250

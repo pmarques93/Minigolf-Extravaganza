@@ -17047,6 +17047,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 762840734}
     m_Modifications:
+    - target: {fileID: 1055163250623418663, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
+      propertyPath: tempBallCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055163250720460369, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
+      propertyPath: m_BlendUpdateMethod
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1055163250814903417, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -17094,6 +17102,10 @@ PrefabInstance:
     - target: {fileID: 1055163250814903418, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
       propertyPath: m_Name
       value: Rendering
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055163250964350519, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
+      propertyPath: m_YAxis.m_InvertInput
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}

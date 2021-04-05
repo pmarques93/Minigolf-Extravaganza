@@ -13,18 +13,24 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
 
     // Components
     [SerializeField] private CinemachineVirtualCamera ballCamera;
+    private CinemachineComposer ballCameraComposer;
     [SerializeField] private CinemachineFreeLook afterShotCamera;
     [SerializeField] private CinemachineVirtualCamera courseCamera;
     private CinemachineBrain cineBrain;
     private BallHandler ball;
+    private PlayerInputCustom input;
 
     private float xSpeedRotation;
     private float ySpeedRotation;
+
+    // Ball fixed camera direction vertical
+    private float verticalPosition;
 
     private void Awake()
     {
         ball = FindObjectOfType<BallHandler>();
         cineBrain = Camera.main.GetComponent<CinemachineBrain>();
+        input = FindObjectOfType<PlayerInputCustom>();
 
         xSpeedRotation = 0;
         ySpeedRotation = 0;
@@ -78,9 +84,32 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         {
             ballCamera.m_Follow = ball.BallPositionClone.transform;
             ballCamera.m_LookAt = ball.BallPositionClone.transform;
+            ballCameraComposer = ballCamera.GetCinemachineComponent<CinemachineComposer>();
             afterShotCamera.m_Follow = ball.BallPositionClone.transform;
             afterShotCamera.m_LookAt = ball.BallPositionClone.transform;
             ball.TypeOfMovement += SwitchCameras;
+        }
+
+        // Clamps value of vertical pos y
+        if (verticalPosition + input.Direction.y * config.RotationSpeed * 0.05f * Time.deltaTime < 3 &&
+            verticalPosition + input.Direction.y * config.RotationSpeed * 0.05f * Time.deltaTime > 0)
+        {
+            verticalPosition +=
+            input.Direction.y * config.RotationSpeed * 0.05f * Time.deltaTime;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        // Adds target offset to ballcamera's composer
+        if (ballCameraComposer != null)
+        {
+            if (ballCameraComposer.m_TrackedObjectOffset.y <= 3.5f &&
+            ballCameraComposer.m_TrackedObjectOffset.y >= -0.5f)
+            {
+                ballCameraComposer.m_TrackedObjectOffset =
+                    new Vector3(0, verticalPosition, 0);
+            }
         }
     }
 

@@ -6156,6 +6156,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2775025316405480783, guid: 74a74d8043fba5540b99af0d6d0eb13e, type: 3}
   m_PrefabInstance: {fileID: 861535525}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &880821215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1070495054887416007, guid: 7544dd5328f167a4783fb3b0106d8204, type: 3}
+  m_PrefabInstance: {fileID: 1298255785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &880821217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880821215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e8e45523bbcda46b3c711a9936768c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &880821218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880821215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9fc862c14ab33784eb3d1e63e734ed43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &883627320
 GameObject:
   m_ObjectHideFlags: 0
@@ -9411,6 +9447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 543450652812094243, guid: 7544dd5328f167a4783fb3b0106d8204, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1070495054887416007, guid: 7544dd5328f167a4783fb3b0106d8204, type: 3}
       propertyPath: m_Name
       value: HoleWallSimpleDeadEnd
@@ -12510,7 +12550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4565551235195563819, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.72
+      value: 7.06
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001077, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_Name

@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 3620650753814635992}
   - component: {fileID: 1575087672589799698}
   - component: {fileID: 1070495054887416006}
+  - component: {fileID: 2623237545285416009}
   m_Layer: 0
   m_Name: HoleWallSimpleDeadEnd
   m_TagString: Untagged
@@ -275,6 +276,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8378537203786546162, guid: 1e0d106eeeb961648815ed7ccb7f85f1, type: 3}
+--- !u!65 &2623237545285416009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070495054887416007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0000014, y: 0.73493314, z: 10.262476}
+  m_Center: {x: 0, y: 1.1326298, z: 2.1312327}
 --- !u!1 &4121815757949313033
 GameObject:
   m_ObjectHideFlags: 0

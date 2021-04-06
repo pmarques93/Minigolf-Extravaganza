@@ -90,7 +90,10 @@ public class PauseMenu : MonoBehaviour
         // ObjectEnabledCoroutine to false so it can select resume button again
         uiPauseMenu.ObjectEnabledCoroutine = null;
 
-        Time.timeScale = 1f;
+        // ONLY FOR TESTING
+        if (TEMPFORWARD.FastForward) Time.timeScale = 2f;
+        else Time.timeScale = 1f;
+
         GamePaused = false;
     }
 }

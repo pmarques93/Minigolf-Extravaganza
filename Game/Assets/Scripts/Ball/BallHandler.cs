@@ -70,7 +70,7 @@ public class BallHandler : MonoBehaviour
         TriggerShot = false;
         PreparingShot = false;
         spawningCoroutine = null;
-        stoppedTimeMax = 0.25f;
+        stoppedTimeMax = 0.5f;
         rotationAfterShot = false;
         isGrounded = false;
         victory = false;
@@ -279,7 +279,7 @@ public class BallHandler : MonoBehaviour
     /// <returns>True if it's stopped, otherwise returns false.</returns>
     private bool IsStopped()
     {
-        if (RB.velocity.magnitude < 0.2f && isGrounded)
+        if (RB.velocity.magnitude < 0.3f && RB.velocity.y == 0 && isGrounded)
         {
             stoppedTime += Time.time;
         }

@@ -1256,6 +1256,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4565551235195563817, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
+      propertyPath: m_Drag
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565551235195563817, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565551235195563817, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001077, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_Name
       value: BallParent
@@ -1266,7 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001078, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.99
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 5734897638844001078, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.y

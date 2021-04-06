@@ -144,7 +144,7 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     private void PrepareShot()
     {
-        if (PreparingShot == false && RB.velocity == Vector3.zero)
+        if (PreparingShot == false && IsStopped())
         {
             StartCoroutine(PrepareShotForce(config.PowerTime));
         }
@@ -268,6 +268,7 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     public void StopBall()
     {
+        transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
         RB.angularVelocity = Vector3.zero;
         RB.velocity = Vector3.zero;
         OnTypeOfMovement(BallMovementEnum.Stop);
@@ -279,9 +280,11 @@ public class BallHandler : MonoBehaviour
     /// <returns>True if it's stopped, otherwise returns false.</returns>
     private bool IsStopped()
     {
-        if (RB.velocity.magnitude < 0.3f && RB.velocity.y == 0 && isGrounded)
+        if (RB.velocity.magnitude < 0.2f && 
+            Mathf.Abs(RB.velocity.y) < 0.025f &&
+            isGrounded)
         {
-            stoppedTime += Time.time;
+            stoppedTime += Time.fixedDeltaTime;
         }
         else
         {

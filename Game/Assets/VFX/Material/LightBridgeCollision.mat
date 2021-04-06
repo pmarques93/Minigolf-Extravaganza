@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LightBridgeCollision
+  m_Shader: {fileID: -6465566751694194690, guid: 76e26b049ff7d7742ad93272124f50fa, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_0aaae2c19988416fbd004a949b6e4433:
+        m_Texture: {fileID: 2800000, guid: 2efc98fe463d31c42abb900060efab28, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_b0738d4ed2344ff4be63bf0c4c148f26:
+        m_Texture: {fileID: 2800000, guid: a032d31220236a245b6c97240c95b4e7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_46a82d8b6daa4859a0e654a24da7c700: -0.29
+    - Vector1_473d15daa41b492d9faef9f7fa7643e5: 0.63
+    - Vector1_f6d886e5cd0743d2a87107ef7875f4b3: 0.73
+    - Vector1_f6d886e5cd0743d2a87107ef7875f4b3_1: 0
+    - Vector1_f6d886e5cd0743d2a87107ef7875f4b3_2: -1.11
+    m_Colors:
+    - Color_785bdc36a4464528ac4b601c8e2167a4: {r: 4.594794, g: 4.594794, b: 4.594794, a: 1}
+    - Vector2_5c23601af1bc406a8b9d226944befe23: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - Vector3_fbbcf502dd6a40269199653c2b0c7b93: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

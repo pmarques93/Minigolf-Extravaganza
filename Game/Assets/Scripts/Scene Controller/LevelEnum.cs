@@ -7,4 +7,10 @@ public enum LevelEnum
     Park4,
     Park5,
     Park6,
+    SciFi1,
+    SciFi2,
+    SciFi3,
+    SciFi4,
+    SciFi5,
+    SciFi6,
 }

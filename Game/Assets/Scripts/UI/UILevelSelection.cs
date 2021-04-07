@@ -53,6 +53,32 @@ public class UILevelSelection : MonoBehaviour
                     allWorlds[0].SetActive(true);
                     eventSys.SetSelectedGameObject(allLevels[5]);
                     break;
+                    /*
+                case LevelEnum.SciFi1:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[0]);
+                    break;
+                case LevelEnum.SciFi2:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[1]);
+                    break;
+                case LevelEnum.SciFi3:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[2]);
+                    break;
+                case LevelEnum.SciFi4:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[3]);
+                    break;
+                case LevelEnum.SciFi5:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[4]);
+                    break;
+                case LevelEnum.SciFi6:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[5]);
+                    break;
+                    */
             }
         }
     }

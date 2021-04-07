@@ -12582,7 +12582,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 576174930988839701, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: BezerraTempParticles
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565551235195563819, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.x

@@ -52,6 +52,7 @@ public class BallHandler : MonoBehaviour
     
     [Header("Turn on on space levels")]
     [SerializeField] private bool BezerraTempParticles;
+    [Range(0.1f, 10)][SerializeField] private float particlesTime;
 
     // Sounds
     [Header("Sounds")]
@@ -200,7 +201,7 @@ public class BallHandler : MonoBehaviour
         plays++;
         OnHit(plays);
 
-        VisualEffect vfx = SpawnParticles(prefabSpawnParticles, 3);
+        VisualEffect vfx = SpawnParticles(prefabSpawnParticles, 3, transform.position);
         vfx.SetFloat("Strength", Power);
 
         // Updates previous position
@@ -251,19 +252,19 @@ public class BallHandler : MonoBehaviour
     private IEnumerator ResetBall()
     {
         // Spawns particles when the ball hits out of bounds.
-        SpawnParticles(prefabOobParticles, 3);
+        SpawnParticles(prefabOobParticles, 3, transform.position);
 
         yield return new WaitForSeconds(2f);
 
         // Stops ball's position and rotation
         StopBall();
-        SpawnParticles(prefabSpawnParticles, 3);
+        SpawnParticles(prefabSpawnParticles, 3, transform.position);
 
         // Resets ball's position
         transform.position = previousPosition;
         transform.eulerAngles = previousRotation;
 
-        SpawnParticles(prefabSpawnParticles, 3);
+        SpawnParticles(prefabSpawnParticles, 3, transform.position);
 
         spawningCoroutine = null;
     }
@@ -317,7 +318,7 @@ public class BallHandler : MonoBehaviour
         if (victory == false)
         {
             audioSource.PlayOneShot(confetiSound);
-            SpawnParticles(prefabConfettiParticles, 6);
+            SpawnParticles(prefabConfettiParticles, 6, transform.position);
             OnVictoryWithPlays(plays);
             OnVictory();
             victory = true;
@@ -335,9 +336,9 @@ public class BallHandler : MonoBehaviour
     /// <param name="particles">Particles to spawn</param>
     /// <param name="duration">Duration of the particles.</param>
     /// <returns>Visual effect from particles.</returns>
-    private VisualEffect SpawnParticles(GameObject particles, float duration)
+    private VisualEffect SpawnParticles(GameObject particles, float duration, Vector3 pos)
     {
-        GameObject particle = Instantiate(particles, transform.position, Quaternion.identity);
+        GameObject particle = Instantiate(particles, pos, Quaternion.identity);
         Destroy(particle, duration);
         return particle.GetComponent<VisualEffect>();
     }
@@ -405,10 +406,10 @@ public class BallHandler : MonoBehaviour
 
                 if (BezerraTempParticles)
                 {
-                    Instantiate(
-                        hitSpaceFloorParticles, 
-                        collision.contacts[0].point, 
-                        Quaternion.identity);
+                    SpawnParticles(
+                        hitSpaceFloorParticles,
+                        particlesTime, 
+                        collision.contacts[0].point);
                 }
             }
         }

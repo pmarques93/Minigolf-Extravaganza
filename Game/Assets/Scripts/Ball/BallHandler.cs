@@ -396,20 +396,20 @@ public class BallHandler : MonoBehaviour
 
         if (collision.collider.CompareTag("Ground"))
         {
-            if (collision.relativeVelocity.y > 0.3f)
+            if (collision.relativeVelocity.y > 3f)
             {
                 // Only happens after a while, so the sound doesn't spam
                 if (playGroundHitSound == null)
                 {
                     playGroundHitSound = StartCoroutine(PlayGroundHitSound());
-                }
 
-                if (BezerraTempParticles)
-                {
-                    SpawnParticles(
-                        hitSpaceFloorParticles,
-                        particlesTime, 
-                        collision.contacts[0].point);
+                    if (BezerraTempParticles)
+                    {
+                        SpawnParticles(
+                            hitSpaceFloorParticles,
+                            particlesTime,
+                            collision.contacts[0].point);
+                    }
                 }
             }
         }

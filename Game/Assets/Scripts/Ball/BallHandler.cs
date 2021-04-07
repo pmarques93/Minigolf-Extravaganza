@@ -374,6 +374,7 @@ public class BallHandler : MonoBehaviour
 
         if (collision.collider.CompareTag("Hole"))
         {
+            Debug.Log("Hole");
             StartCoroutine(FinishCourse());
         }
             

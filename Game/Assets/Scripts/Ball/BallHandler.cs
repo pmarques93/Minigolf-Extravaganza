@@ -53,6 +53,7 @@ public class BallHandler : MonoBehaviour
     [Header("Turn on on space levels")]
     [SerializeField] private bool BezerraTempParticles;
     [Range(0.1f, 10)][SerializeField] private float particlesTime;
+    [Range(0f, 3f)] [SerializeField] private float minimumCollisionSpeed;
 
     // Sounds
     [Header("Sounds")]
@@ -394,23 +395,35 @@ public class BallHandler : MonoBehaviour
             }
         }
 
+        // Ground bounce particles
         if (collision.collider.CompareTag("Ground"))
         {
-            if (collision.relativeVelocity.y > 3f)
+            if (collision.relativeVelocity.y >= minimumCollisionSpeed)
             {
                 // Only happens after a while, so the sound doesn't spam
                 if (playGroundHitSound == null)
-                {
                     playGroundHitSound = StartCoroutine(PlayGroundHitSound());
 
-                    if (BezerraTempParticles)
-                    {
-                        SpawnParticles(
-                            hitSpaceFloorParticles,
-                            particlesTime,
-                            collision.contacts[0].point);
-                    }
+                if (BezerraTempParticles)
+                {
+                    SpawnParticles(
+                        hitSpaceFloorParticles,
+                        particlesTime,
+                        collision.contacts[0].point);
                 }
+                
+            }
+        }
+
+        // Invisible wall particles
+        if (collision.collider.CompareTag("InvisWall"))
+        {
+            if (BezerraTempParticles)
+            {
+                SpawnParticles(
+                    hitSpaceFloorParticles,
+                    particlesTime,
+                    collision.contacts[0].point);
             }
         }
     }

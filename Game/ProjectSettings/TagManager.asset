@@ -8,6 +8,7 @@ TagManager:
   - OoB
   - Ground
   - Wall
+  - InvisWall
   layers:
   - Default
   - TransparentFX

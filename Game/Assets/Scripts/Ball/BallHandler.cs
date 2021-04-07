@@ -48,12 +48,10 @@ public class BallHandler : MonoBehaviour
     [SerializeField] private GameObject prefabOobParticles;
     [SerializeField] private GameObject prefabSpawnParticles;
     [SerializeField] private GameObject prefabConfettiParticles;
-    [SerializeField] private GameObject hitSpaceFloorParticles;
+    [SerializeField] private GameObject lightBridgeCollision;
     
     [Header("Turn on on space levels")]
     [SerializeField] private bool BezerraTempParticles;
-    [Range(0.1f, 10)][SerializeField] private float particlesTime;
-    [Range(0f, 3f)] [SerializeField] private float minimumCollisionSpeed;
 
     // Sounds
     [Header("Sounds")]
@@ -313,7 +311,7 @@ public class BallHandler : MonoBehaviour
     /// Method that happens when the ball enters the final hoje.
     /// </summary>
     /// <returns></returns>
-    private IEnumerator FinishCourse()
+    public IEnumerator FinishCourse()
     {
         // Only happens once
         if (victory == false)
@@ -374,7 +372,6 @@ public class BallHandler : MonoBehaviour
 
         if (collision.collider.CompareTag("Hole"))
         {
-            Debug.Log("Hole");
             StartCoroutine(FinishCourse());
         }
             
@@ -399,7 +396,7 @@ public class BallHandler : MonoBehaviour
         // Ground bounce particles
         if (collision.collider.CompareTag("Ground"))
         {
-            if (collision.relativeVelocity.y >= minimumCollisionSpeed)
+            if (collision.relativeVelocity.y >= 3)
             {
                 // Only happens after a while, so the sound doesn't spam
                 if (playGroundHitSound == null)
@@ -407,10 +404,14 @@ public class BallHandler : MonoBehaviour
 
                 if (BezerraTempParticles)
                 {
-                    SpawnParticles(
-                        hitSpaceFloorParticles,
-                        particlesTime,
-                        collision.contacts[0].point);
+                    Vector3 dir = collision.contacts[0].normal * 100 - collision.contacts[0].point;
+
+                    GameObject hitParticles = Instantiate(
+                        lightBridgeCollision,
+                        collision.contacts[0].point,
+                        Quaternion.identity);
+
+                    hitParticles.transform.LookAt(dir, Vector3.up);
                 }
                 
             }
@@ -421,10 +422,14 @@ public class BallHandler : MonoBehaviour
         {
             if (BezerraTempParticles)
             {
-                SpawnParticles(
-                    hitSpaceFloorParticles,
-                    particlesTime,
-                    collision.contacts[0].point);
+                Vector3 dir = collision.contacts[0].normal * 100 - collision.contacts[0].point;
+
+                GameObject hitParticles = Instantiate(
+                    lightBridgeCollision,
+                    collision.contacts[0].point,
+                    Quaternion.identity);
+
+                hitParticles.transform.LookAt(dir, Vector3.up);
             }
         }
     }

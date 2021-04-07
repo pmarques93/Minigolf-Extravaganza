@@ -44,9 +44,14 @@ public class BallHandler : MonoBehaviour
     private bool isGrounded;
 
     // Particle variables
+    [Header("Particles")]
     [SerializeField] private GameObject prefabOobParticles;
     [SerializeField] private GameObject prefabSpawnParticles;
     [SerializeField] private GameObject prefabConfettiParticles;
+    [SerializeField] private GameObject hitSpaceFloorParticles;
+    
+    [Header("Turn on on space levels")]
+    [SerializeField] private bool BezerraTempParticles;
 
     // Sounds
     [Header("Sounds")]
@@ -356,7 +361,7 @@ public class BallHandler : MonoBehaviour
         float randomNumber = UnityEngine.Random.Range(0.5f, 1f);
         audioSource.pitch = randomNumber;
         audioSource.PlayOneShot(groundHitSound);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         playGroundHitSound = null;
     }
 
@@ -385,6 +390,26 @@ public class BallHandler : MonoBehaviour
             if (playGroundHitSound == null)
             {
                 playGroundHitSound = StartCoroutine(PlayGroundHitSound());
+            }
+        }
+
+        if (collision.collider.CompareTag("Ground"))
+        {
+            if (collision.relativeVelocity.y > 0.3f)
+            {
+                // Only happens after a while, so the sound doesn't spam
+                if (playGroundHitSound == null)
+                {
+                    playGroundHitSound = StartCoroutine(PlayGroundHitSound());
+                }
+
+                if (BezerraTempParticles)
+                {
+                    Instantiate(
+                        hitSpaceFloorParticles, 
+                        collision.contacts[0].point, 
+                        Quaternion.identity);
+                }
             }
         }
     }

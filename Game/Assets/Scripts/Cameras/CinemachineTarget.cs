@@ -135,8 +135,8 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         switch (typeOfMovement)
         {
             case BallMovementEnum.Moving:
-                afterShotCamera.m_YAxis.m_MaxSpeed = ySpeedRotation;
-                afterShotCamera.m_XAxis.m_MaxSpeed = xSpeedRotation;
+                afterShotCamera.m_YAxis.m_MaxSpeed = config.RotationSpeed * 0.02f;
+                afterShotCamera.m_XAxis.m_MaxSpeed = config.RotationSpeed * 2f;
                 afterShotCamera.Priority = ballCamera.Priority + 1;
                 break;
             case BallMovementEnum.Stop:
@@ -171,7 +171,7 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     /// </summary>
     public void UpdateValues()
     {
-        ySpeedRotation = config.FreelookVerticalRotation;
-        xSpeedRotation = config.FreelookHorizontalRotation;
+        ySpeedRotation = config.RotationSpeed * 0.02f;
+        xSpeedRotation = config.RotationSpeed * 2f;
     }
 }

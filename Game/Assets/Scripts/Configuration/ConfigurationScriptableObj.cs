@@ -41,22 +41,13 @@ public class ConfigurationScriptableObj : ScriptableObject
     public float MinPowerMultiplier => minPowerMultiplier;
     public float MaxPowerMultiplier => maxPowerMultiplier;
 
-    [Header("Freelook Camera Rotation Settings")]
-    [SerializeField] float defaultFreelookHorizontalRotation;
-    [SerializeField] float minFreelookHorizontalRotation;
-    [SerializeField] float maxFreelookHorizontalRotation;
-    public float FreelookHorizontalRotation { get; set; }
-    public float DefaultFreelookHorizontalRotation => defaultFreelookHorizontalRotation;
-    public float MinFreelookHorizontalRotation => minFreelookHorizontalRotation;
-    public float MaxFreelookHorizontalRotation => maxFreelookHorizontalRotation;
-
-    [SerializeField] float defaultFreelookVerticalRotation;
-    [SerializeField] float minFreelookVerticalRotation;
-    [SerializeField] float maxFreelookVerticalRotation;
-    public float FreelookVerticalRotation { get; set; }
-    public float DefaultFreelookVerticalRotation => defaultFreelookVerticalRotation;
-    public float MinFreelookVerticalRotation => minFreelookVerticalRotation;
-    public float MaxFreelookVerticalRotation => maxFreelookVerticalRotation;
+    [SerializeField] float defaultWorldObstaclesSpeed;
+    [SerializeField] float minWorldObstaclesSpeed;
+    [SerializeField] float maxWorldObstaclesSpeed;
+    public float WorldObstaclesSpeed { get; set; }
+    public float DefaultWorldObstaclesSpeed => defaultWorldObstaclesSpeed;
+    public float MinWorldObstaclesSpeed => minWorldObstaclesSpeed;
+    public float MaxWorldObstaclesSpeed => maxWorldObstaclesSpeed;
 
     [Header("Graphics Settings")]
     [SerializeField] int defaultGraphicsQuality;
@@ -117,8 +108,7 @@ public class ConfigurationScriptableObj : ScriptableObject
         LineLength = defaultLineLength;
         PowerTime = defaultPowerTime;
         PowerMultiplier = defaultPowerMultiplier;
-        FreelookHorizontalRotation = defaultFreelookHorizontalRotation;
-        FreelookVerticalRotation = defaultFreelookVerticalRotation;
+        WorldObstaclesSpeed = defaultWorldObstaclesSpeed;
     }
 
     /// <summary>
@@ -150,8 +140,7 @@ public class ConfigurationScriptableObj : ScriptableObject
         PlayerPrefs.SetFloat("LineLength", LineLength);
         PlayerPrefs.SetFloat("PowerTime", PowerTime);
         PlayerPrefs.SetFloat("PowerMultiplier", PowerMultiplier);
-        PlayerPrefs.SetFloat("FreelookHorizontalRotation", FreelookHorizontalRotation);
-        PlayerPrefs.SetFloat("FreelookVerticalRotation", FreelookVerticalRotation);
+        PlayerPrefs.SetFloat("WorldObstaclesSpeed", WorldObstaclesSpeed);
         PlayerPrefs.SetInt("GraphicsQuality", GraphicsQuality);
         PlayerPrefs.SetInt("WindowMode", WindowMode);
         PlayerPrefs.SetInt("ScreenResolution", ScreenResolution);
@@ -169,8 +158,7 @@ public class ConfigurationScriptableObj : ScriptableObject
         LineLength = PlayerPrefs.GetFloat("LineLength", defaultLineLength);
         PowerTime = PlayerPrefs.GetFloat("PowerTime", defaultPowerTime);
         PowerMultiplier = PlayerPrefs.GetFloat("PowerMultiplier", defaultPowerMultiplier);
-        FreelookHorizontalRotation = PlayerPrefs.GetFloat("FreelookHorizontalRotation", defaultFreelookHorizontalRotation);
-        FreelookVerticalRotation = PlayerPrefs.GetFloat("FreelookVerticalRotation", defaultFreelookVerticalRotation);
+        WorldObstaclesSpeed = PlayerPrefs.GetFloat("WorldObstaclesSpeed", defaultWorldObstaclesSpeed);
         GraphicsQuality = PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality);
         WindowMode = PlayerPrefs.GetInt("WindowMode", defaultWindowMode);
         ScreenResolution = PlayerPrefs.GetInt("ScreenResolution", defaultScreenResolution);
@@ -202,11 +190,8 @@ public class ConfigurationScriptableObj : ScriptableObject
             case SettingsEnum.PowerMultiplier:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("PowerMultiplier", defaultPowerMultiplier), typeof(T));
                 break;
-            case SettingsEnum.FreeLookHorizontalRotation:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("FreelookHorizontalRotation", defaultFreelookHorizontalRotation), typeof(T));
-                break;
-            case SettingsEnum.FreeLookVerticalRotation:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("FreelookVerticalRotation", defaultFreelookVerticalRotation), typeof(T));
+            case SettingsEnum.WorldObstaclesSpeed:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("WorldObstaclesSpeed", defaultWorldObstaclesSpeed), typeof(T));
                 break;
             case SettingsEnum.GraphicsQuality:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality), typeof(T));

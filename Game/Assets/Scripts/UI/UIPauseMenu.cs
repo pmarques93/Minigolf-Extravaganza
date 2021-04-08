@@ -5,7 +5,6 @@ using System.Collections;
 public class UIPauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject initialSelectedGameobject;
-    [SerializeField] private Animator blackSquare;
 
     // Menu variables
     /// <summary>

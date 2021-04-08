@@ -14,8 +14,7 @@ public class UISettings : MonoBehaviour
     [SerializeField] private Slider lineLength;
     [SerializeField] private Slider powerTime;
     [SerializeField] private Slider powerMultiplier;
-    [SerializeField] private Slider freelookHorizontalRotation;
-    [SerializeField] private Slider freelookVerticalRotation;
+    [SerializeField] private Slider worldObstaclesSpeed;
     [SerializeField] private TextMeshProUGUI graphicsQuality;
     [SerializeField] private TextMeshProUGUI windowMode;
     [SerializeField] private TextMeshProUGUI screenResolution;
@@ -91,12 +90,9 @@ public class UISettings : MonoBehaviour
         powerMultiplier.value = config.LoadSetting<float>(SettingsEnum.PowerMultiplier);
         powerMultiplier.minValue = config.MinPowerMultiplier;
         powerMultiplier.maxValue = config.MaxPowerMultiplier;
-        freelookHorizontalRotation.value = config.LoadSetting<float>(SettingsEnum.FreeLookHorizontalRotation);
-        freelookHorizontalRotation.minValue = config.MinFreelookHorizontalRotation;
-        freelookHorizontalRotation.maxValue = config.MaxFreelookHorizontalRotation;
-        freelookVerticalRotation.value = config.LoadSetting<float>(SettingsEnum.FreeLookVerticalRotation);
-        freelookVerticalRotation.minValue = config.MinFreelookVerticalRotation;
-        freelookVerticalRotation.maxValue = config.MaxFreelookVerticalRotation;
+        worldObstaclesSpeed.value = config.LoadSetting<float>(SettingsEnum.WorldObstaclesSpeed);
+        worldObstaclesSpeed.minValue = config.MinWorldObstaclesSpeed;
+        worldObstaclesSpeed.maxValue = config.MaxWorldObstaclesSpeed;
         masterVolume.value = config.LoadSetting<float>(SettingsEnum.MasterVolume);
         masterVolume.minValue = config.MinMasterVolume;
         masterVolume.maxValue = config.MaxMasterVolume;
@@ -185,16 +181,9 @@ public class UISettings : MonoBehaviour
         config.SaveSettings();
     }
 
-    public void FreeLookHorizontalRotationValue(float value)
+    public void WorldObstaclesSpeedValue(float value)
     {
-        config.FreelookHorizontalRotation = value;
-        config.SaveSettings();
-        UpdateAllValuesWithInterfaces();
-    }
-
-    public void FreeLookVerticalRotationValue(float value)
-    {
-        config.FreelookVerticalRotation = value;
+        config.WorldObstaclesSpeed = value;
         config.SaveSettings();
         UpdateAllValuesWithInterfaces();
     }

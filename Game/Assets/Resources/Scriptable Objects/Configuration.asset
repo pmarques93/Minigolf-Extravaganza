@@ -24,12 +24,9 @@ MonoBehaviour:
   defaultPowerMultiplier: 22
   minPowerMultiplier: 17
   maxPowerMultiplier: 27
-  defaultFreelookHorizontalRotation: 250
-  minFreelookHorizontalRotation: 0
-  maxFreelookHorizontalRotation: 400
-  defaultFreelookVerticalRotation: 2
-  minFreelookVerticalRotation: 0
-  maxFreelookVerticalRotation: 4
+  defaultWorldObstaclesSpeed: 1
+  minWorldObstaclesSpeed: 0.1
+  maxWorldObstaclesSpeed: 1.5
   defaultGraphicsQuality: 2
   minGraphicsQuality: 0
   maxGraphicsQuality: 2

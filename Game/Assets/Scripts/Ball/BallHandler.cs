@@ -404,7 +404,7 @@ public class BallHandler : MonoBehaviour
 
                 if (BezerraTempParticles)
                 {
-                    Vector3 dir = collision.contacts[0].normal * 100 - collision.contacts[0].point;
+                    Vector3 dir = collision.contacts[0].normal * 500 - collision.contacts[0].point;
 
                     GameObject hitParticles = Instantiate(
                         lightBridgeCollision,

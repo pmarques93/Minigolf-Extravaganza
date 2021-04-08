@@ -13,11 +13,14 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
 
     // Components
     [SerializeField] private CinemachineVirtualCamera ballCamera;
+    public CinemachineVirtualCamera BallCamera => ballCamera;
     private CinemachineComposer ballCameraComposer;
     [SerializeField] private CinemachineFreeLook afterShotCamera;
+    public CinemachineFreeLook AfterShotCamera => afterShotCamera;
     [SerializeField] private CinemachineVirtualCamera courseCamera;
     private CinemachineBrain cineBrain;
     private BallHandler ball;
+    private BallMovement ballMovement;
     private PlayerInputCustom input;
 
     private float xSpeedRotation;
@@ -38,20 +41,26 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
 
     private void OnEnable()
     {
-        if (ball != null) ball.TypeOfMovement += SwitchCameras;
-        if (ball != null) ball.Victory += VictoryCamera;
+        if (ballMovement != null) ballMovement.TypeOfMovement += SwitchCameras;
+        if (ball != null) ball.VictoryEvent += VictoryCamera;
     }
 
     private void OnDisable()
     {
-        if (ball != null) ball.TypeOfMovement -= SwitchCameras;
-        if (ball != null) ball.Victory -= VictoryCamera;
+        if (ballMovement != null) ballMovement.TypeOfMovement -= SwitchCameras;
+        if (ball != null) ball.VictoryEvent -= VictoryCamera;
     }
 
+    /// <summary>
+    /// Disables controls, blends camera, enables controls.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Start()
     {
+        input.SwitchControlsToDisable();
+
         // Waits 0.1 seconds to let everything load first.
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
 
         // Sets course camera as first camera
         courseCamera.Priority = 20;
@@ -70,7 +79,7 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         }
 
         // After blending is finished
-        OnCameraReady();
+        input.SwitchControlsToGameplay();
         cineBrain.m_DefaultBlend.m_Time = 1f;       
     }
 
@@ -79,15 +88,17 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     /// </summary>
     private void Update()
     {
+        if (ballMovement == null) ballMovement = FindObjectOfType<BallMovement>();
         if (ball == null) ball = FindObjectOfType<BallHandler>();
-        if (ballCamera.m_Follow == null && ball != null)
+        if (ballCamera.m_Follow == null && ballMovement != null)
         {
-            ballCamera.m_Follow = ball.BallPositionClone.transform;
-            ballCamera.m_LookAt = ball.BallPositionClone.transform;
+            ballCamera.m_Follow = ballMovement.BallPositionClone.transform;
+            ballCamera.m_LookAt = ballMovement.BallPositionClone.transform;
             ballCameraComposer = ballCamera.GetCinemachineComponent<CinemachineComposer>();
-            afterShotCamera.m_Follow = ball.BallPositionClone.transform;
-            afterShotCamera.m_LookAt = ball.BallPositionClone.transform;
-            ball.TypeOfMovement += SwitchCameras;
+            afterShotCamera.m_Follow = ballMovement.BallPositionClone.transform;
+            afterShotCamera.m_LookAt = ballMovement.BallPositionClone.transform;
+            ballMovement.TypeOfMovement += SwitchCameras;
+            ball.VictoryEvent += VictoryCamera;
         }
 
         // Clamps value of vertical pos y
@@ -163,11 +174,4 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         ySpeedRotation = config.FreelookVerticalRotation;
         xSpeedRotation = config.FreelookHorizontalRotation;
     }
-
-    protected virtual void OnCameraReady() => CameraReady?.Invoke();
-
-    /// <summary>
-    /// Event registered on BallSpawn.
-    /// </summary>
-    public event Action CameraReady;
 }

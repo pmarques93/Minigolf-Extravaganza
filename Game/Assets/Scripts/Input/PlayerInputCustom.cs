@@ -37,10 +37,8 @@ public class PlayerInputCustom : MonoBehaviour
     public void SwitchControlsToCatapult() =>
         inputControl.SwitchCurrentActionMap("Catapult");
 
-    protected virtual void OnChangeControlsToCatapult() =>
-        ChangeControlsToCatapult?.Invoke();
-
-    public event Action ChangeControlsToCatapult;
+    public void SwitchControlsToDisable() =>
+        inputControl.SwitchCurrentActionMap("DisableControls");
 
     /// <summary>
     /// Disables UI input module.

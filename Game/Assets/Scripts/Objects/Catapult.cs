@@ -19,7 +19,8 @@ public class Catapult : MonoBehaviour
 
     // Ball control variables
     public bool HasBall { get; private set; }
-    private BallHandler ball;
+    private BallMovement ballMovement;
+    private BallShot ballShot;
     private Vector2 direction;
 
     private void Awake()
@@ -58,8 +59,8 @@ public class Catapult : MonoBehaviour
     {
         if (HasBall)
         {
-            ball.StopBall();
-            ball.transform.position = ballPosition.position;
+            ballMovement.StopBall();
+            ballMovement.transform.position = ballPosition.position;
 
             // Rotates the catapult with player's input
             transform.eulerAngles +=
@@ -81,16 +82,17 @@ public class Catapult : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<BallHandler>(out BallHandler ball))
+        if (other.TryGetComponent<BallCollisions>(out BallCollisions ball))
         {
+            ballMovement = ball.gameObject.GetComponent<BallMovement>();
+            ballShot = ball.gameObject.GetComponent<BallShot>();
+
             cam.Priority = 100;
             
             HasBall = true;
-            ball.CanShot = false;
+            ballShot.CanShot = false;
 
-            input.SwitchControlsToCatapult();
-
-            this.ball = ball;
+            input.SwitchControlsToCatapult();   
         }
     }
 
@@ -103,9 +105,11 @@ public class Catapult : MonoBehaviour
         cam.Priority = 0;
 
         HasBall = false;
-        ball.CanShot = true;
-        
-        ball.RB.AddForce(transform.forward * ballForce * config.PowerMultiplier, ForceMode.Impulse);
+        ballShot.CanShot = true;
+
+        ballMovement.Rb.AddForce(transform.forward * ballForce * config.PowerMultiplier, ForceMode.Impulse);
+
+        ballMovement.OnTypeOfMovement(BallMovementEnum.Moving);
 
         input.SwitchControlsToGameplay();
 

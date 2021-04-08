@@ -7,25 +7,25 @@ using TMPro;
 public class UIShots : MonoBehaviour
 {
     // Components
-    private BallHandler ballScore;
+    private BallShot ballShot;
 
     // Text Components
     private TextMeshProUGUI uiShots;
 
     private void Awake()
     {
-        ballScore = FindObjectOfType<BallHandler>();
+        ballShot = FindObjectOfType<BallShot>();
         uiShots = GetComponent<TextMeshProUGUI>();
     }
 
     private void OnEnable()
     {
-        if (ballScore != null) ballScore.Hit += UpdateUI;
+        if (ballShot != null) ballShot.Hit += UpdateUI;
     }
 
     private void OnDisable()
     {
-        if (ballScore != null) ballScore.Hit -= UpdateUI;
+        if (ballShot != null) ballShot.Hit -= UpdateUI;
     }
 
     /// <summary>
@@ -39,10 +39,10 @@ public class UIShots : MonoBehaviour
 
     private void Update()
     {
-        if (ballScore == null)
+        if (ballShot == null)
         {
-            ballScore = FindObjectOfType<BallHandler>();
-            if (ballScore != null) ballScore.Hit += UpdateUI;
+            ballShot = FindObjectOfType<BallShot>();
+            if (ballShot != null) ballShot.Hit += UpdateUI;
         }
     }
 }

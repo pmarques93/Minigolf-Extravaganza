@@ -57,7 +57,7 @@ public class CatapultProjection : MonoBehaviour
         Vector3 position = (Vector3)
             projectionStartPos.position +
             (direction.normalized * catapult.EndBallForce * t) +
-            0.1575f * Physics.gravity *
+            0.15f * Physics.gravity *
             (t * t);
 
         return position;

@@ -330,10 +330,10 @@ GameObject:
   - component: {fileID: 393405061832326498}
   - component: {fileID: 3664377880555827911}
   - component: {fileID: 1530813813170161165}
+  - component: {fileID: 215925034368909375}
   - component: {fileID: 215925034406271621}
   - component: {fileID: 215925034406271622}
   - component: {fileID: 215925034406271741}
-  - component: {fileID: 215925034368909375}
   m_Layer: 0
   m_Name: Catapult
   m_TagString: Untagged
@@ -408,6 +408,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &215925034368909375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026389145350268888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a6e590146521f439d1332be994ee78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineRender: {fileID: 573012994}
+  projectionStartPos: {fileID: 573012993}
+  numberOfProjections: 20
+  spaceBetweenProjections: 0.15
 --- !u!114 &215925034406271621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,22 +472,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &215925034368909375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026389145350268888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a6e590146521f439d1332be994ee78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineRender: {fileID: 573012994}
-  projectionStartPos: {fileID: 573012993}
-  numberOfProjections: 20
-  spaceBetweenProjections: 0.15
 --- !u!1 &5392575042659834494
 GameObject:
   m_ObjectHideFlags: 0

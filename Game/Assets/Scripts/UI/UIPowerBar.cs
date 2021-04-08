@@ -8,14 +8,14 @@ using System.Collections;
 public class UIPowerBar : MonoBehaviour
 {
     // Components
-    private BallHandler ball;
+    private BallShot ballShot;
     private Image panel;
 
     private bool canCopyPower;
 
     private void Awake()
     {
-        ball = FindObjectOfType<BallHandler>();
+        ballShot = FindObjectOfType<BallShot>();
         panel = GetComponent<Image>();
 
         canCopyPower = false;
@@ -23,14 +23,15 @@ public class UIPowerBar : MonoBehaviour
 
     private IEnumerator Start()
     {
+        YieldInstruction wffu = new WaitForFixedUpdate();
         canCopyPower = false;
 
         float time = 1;
         while (time >= 0)
         {
             panel.fillAmount = time;
-            time -= 0.2f * Time.fixedDeltaTime;
-            yield return null;
+            time -= 0.3f * Time.fixedDeltaTime;
+            yield return wffu;
         }
         canCopyPower = true;
     }
@@ -40,14 +41,14 @@ public class UIPowerBar : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (ball == null) ball = FindObjectOfType<BallHandler>();
+        if (ballShot == null) ballShot = FindObjectOfType<BallShot>();
 
         // If player is preparing a shot, the fill bar updates with the power
-        if (ball != null && canCopyPower)
+        if (ballShot != null && canCopyPower)
         {
-            if (ball.PreparingShot)
+            if (ballShot.PreparingShot)
             {
-                panel.fillAmount = ball.Power;
+                panel.fillAmount = ballShot.Power;
             }
             else
             {

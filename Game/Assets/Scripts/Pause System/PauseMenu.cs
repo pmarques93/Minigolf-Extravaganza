@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
 {
     // Components
     private PlayerInputCustom input;
-    private BallHandler ball;
+    private BallShot ballShot;
     [SerializeField] private UIPauseMenu uiPauseMenu;
 
     // Pause variables
@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         input = FindObjectOfType<PlayerInputCustom>();
-        ball = FindObjectOfType<BallHandler>();
+        ballShot = FindObjectOfType<BallShot>();
     }
 
     private void Start()
@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (ball == null) ball = FindObjectOfType<BallHandler>();
+        if (ballShot == null) ballShot = FindObjectOfType<BallShot>();
     }
 
     /// <summary>
@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
             case PauseEnum.Pause:
 
                 // Only happens if the player isn't in the middle of a shot       
-                if (ball.PreparingShot == false)
+                if (ballShot.PreparingShot == false)
                 {
                     input.SwitchControlsToPauseMenu();
                     uiPauseMenu.gameObject.SetActive(true);
@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void UnpauseGame()
     {
-        if (FindObjectOfType<BallHandler>().CanShot == true)
+        if (FindObjectOfType<BallShot>().CanShot == true)
         {
             input.SwitchControlsToGameplay();
         }

@@ -14,6 +14,10 @@ GameObject:
   - component: {fileID: 4565551235195563822}
   - component: {fileID: 4565551235195563817}
   - component: {fileID: 576174930988839701}
+  - component: {fileID: 3920451552233936615}
+  - component: {fileID: 5399946897318451536}
+  - component: {fileID: 3357277814360547143}
+  - component: {fileID: 2546598954513681021}
   - component: {fileID: 619835323}
   m_Layer: 8
   m_Name: Ball
@@ -128,16 +132,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: a7ded1277c95ed3449e4de2e62f445af, type: 2}
-  ballPositionClone: {fileID: 5734897640487178671}
   prefabOobParticles: {fileID: 8023260312436803294, guid: 9e63b9d0f127e6d4bbf7b27b0bdaff39, type: 3}
   prefabSpawnParticles: {fileID: 19617751753561711, guid: e0436f3d0d5e7df46bdc1c0cae4bfa1e, type: 3}
   prefabConfettiParticles: {fileID: 188874850793244539, guid: 86b7fa8da7e886d49b72b5ba3d257d09, type: 3}
+  prefabLightBridgeCollision: {fileID: 0}
+  bezerraTempParticles: 0
+--- !u!114 &3920451552233936615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4565551235195563823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3a13b0bd34144abfbe72d3d146c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5399946897318451536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4565551235195563823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54977186b1017ae48826b348ec31f472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPositionClone: {fileID: 5734897640487178671}
+--- !u!114 &3357277814360547143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4565551235195563823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc10212ceb3003f438646a10b0e1f75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   hitSounds:
   - {fileID: 8300000, guid: c3cd7106443f02a4aa5c0f8b29b4b286, type: 3}
   - {fileID: 8300000, guid: b3c3fd0ffca304f41a102c993cc8b6fa, type: 3}
   - {fileID: 8300000, guid: 2fc498a025f8ab64694c87d908dc8fe9, type: 3}
   groundHitSound: {fileID: 8300000, guid: 3f7237cedb641e740a0d412c08634597, type: 3}
   confetiSound: {fileID: 8300000, guid: 24fe6073ed2b27846afdc0a3b3823115, type: 3}
+--- !u!114 &2546598954513681021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4565551235195563823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d7a8b8ef52e524ea6ffa3830797f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &619835323
 AudioSource:
   m_ObjectHideFlags: 0

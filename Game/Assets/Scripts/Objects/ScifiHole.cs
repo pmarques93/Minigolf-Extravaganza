@@ -7,7 +7,7 @@ public class ScifiHole : MonoBehaviour
     [SerializeField] private Transform holeFinishPosition;
 
     private bool endLevel;
-    private BallHandler ball;
+    private BallMovement ballMovement;
 
     private void Start()
     {
@@ -18,35 +18,37 @@ public class ScifiHole : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ball = other.GetComponent<BallHandler>();
-            StartCoroutine(MoveBall(ball));
+            ballMovement = other.GetComponent<BallMovement>();
+            StartCoroutine(MoveBall(ballMovement));
         }
     }
 
-    private IEnumerator MoveBall(BallHandler ball)
+    private IEnumerator MoveBall(BallMovement ballMovement)
     {
         YieldInstruction wffu = new WaitForFixedUpdate();
-        ball.StopBall();
-        ball.RB.isKinematic = true;
+        ballMovement.StopBall();
+        ballMovement.Rb.isKinematic = true;
 
-        while(Vector3.Distance(ball.transform.position, holeFinishPosition.position) > 0.1f)
+        while(Vector3.Distance(ballMovement.transform.position, holeFinishPosition.position) > 0.1f)
         {
-            ball.transform.position = 
+            ballMovement.transform.position = 
                 Vector3.MoveTowards(
-                    ball.transform.position, 
+                    ballMovement.transform.position, 
                     holeFinishPosition.position, 
                     Time.fixedDeltaTime * 0.3f);
 
             yield return wffu;
         }
         endLevel = true;
-        StartCoroutine(ball.FinishCourse());
+
+        BallHandler ballHandler = ballMovement.GetComponent<BallHandler>();
+        StartCoroutine(ballHandler.FinishCourse());
 
         GetComponent<Animator>().SetTrigger("EndLevel");
     }
 
     private void FixedUpdate()
     {
-        if (endLevel) ball.transform.position = holeFinishPosition.position;
+        if (endLevel) ballMovement.transform.position = holeFinishPosition.position;
     }
 }

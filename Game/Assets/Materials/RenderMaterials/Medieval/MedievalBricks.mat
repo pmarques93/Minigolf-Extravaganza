@@ -24,15 +24,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: baa5f7aa40f69b345a7d86c476b579db, type: 3}
+        m_Texture: {fileID: 2800000, guid: 186d1113edade794492c2a97e1b3d768, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: 1fa4c067c24f4e34e8f7c6a3d03b64af, type: 3}
+        m_Texture: {fileID: 2800000, guid: e7607e7012431fd4bbd32a05f74b3222, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PatternTex:
-        m_Texture: {fileID: 2800000, guid: b159c7299966f3f48809e0f02f86bf83, type: 3}
+        m_Texture: {fileID: 2800000, guid: 00f29fd75d9410144aa6e5ccbb856306, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Triplanar_2F74CA8B_Texture_1:
@@ -53,11 +53,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_5a47539918984b0d8a325d75acdb5efb: 1
-    - Vector1_6396C324: 0.4
+    - Vector1_6396C324: 0.2
     - Vector1_B022ED4: 11.53
+    - Vector1_e913263121814c578d7f9039a391774e: 0.42
     - _Metallic: 0
     - _Smoothness: 0
-    - _useTriplanar: 0
+    - _useTriplanar: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}

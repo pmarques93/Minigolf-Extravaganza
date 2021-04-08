@@ -19,6 +19,7 @@ Files/
 *.mb/
 *.mel
 *.mel/
+*.mayaSwatches
 
 *.mb.meta
 *.mb.meta/

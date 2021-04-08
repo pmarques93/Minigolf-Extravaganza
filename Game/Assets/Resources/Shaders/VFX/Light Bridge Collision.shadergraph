@@ -327,7 +327,7 @@
             "m_Guid": ""
         }
     },
-    "m_Path": "Shader Graphs",
+    "m_Path": "MGE Shaders/Particles",
     "m_ConcretePrecision": 0,
     "m_OutputNode": {
         "m_Id": ""
@@ -1257,7 +1257,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_CustomColors": {
         "m_SerializableColors": []
     },

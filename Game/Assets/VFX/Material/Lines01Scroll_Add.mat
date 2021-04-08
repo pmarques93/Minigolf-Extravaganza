@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Circle06_Add
+  m_Name: Lines01Scroll_Add
   m_Shader: {fileID: -6465566751694194690, guid: 0de139b2e8b17d44fa4aa77de39d3527, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,11 +20,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_b980a523330046328359393af2688ffb:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 52128b47b5f0b7f489acde311319e044, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 707b6263f0e618c469639552f2cd2c09, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2fc8ee70176221549a88c2aeb2f7a6bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -41,6 +41,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Vector2_b9fa163c575542a78933138e855b8df6: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - Vector2_b9fa163c575542a78933138e855b8df6: {r: 0, g: -1, b: 0, a: 0}
+    - _Color: {r: 3.2111173, g: 3.2111173, b: 3.2111173, a: 1}
   m_BuildTextureStacks: []

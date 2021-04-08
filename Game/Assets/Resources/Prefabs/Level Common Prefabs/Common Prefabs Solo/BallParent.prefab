@@ -111,7 +111,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565551235195563823}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0.2
   m_AngularDrag: 1
   m_UseGravity: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
   prefabOobParticles: {fileID: 8023260312436803294, guid: 9e63b9d0f127e6d4bbf7b27b0bdaff39, type: 3}
   prefabSpawnParticles: {fileID: 19617751753561711, guid: e0436f3d0d5e7df46bdc1c0cae4bfa1e, type: 3}
   prefabConfettiParticles: {fileID: 188874850793244539, guid: 86b7fa8da7e886d49b72b5ba3d257d09, type: 3}
-  prefabLightBridgeCollision: {fileID: 0}
+  prefabLightBridgeCollision: {fileID: 7839088885294078314, guid: c64a3850aa3523f4db4dbda2f441e0a6, type: 3}
   bezerraTempParticles: 0
 --- !u!114 &3920451552233936615
 MonoBehaviour:
@@ -444,7 +444,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5734897638844001078}
-  - component: {fileID: 1031681931}
   m_Layer: 0
   m_Name: BallParent
   m_TagString: Untagged
@@ -468,18 +467,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1031681931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5734897638844001077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3feebad4678f4434aa5edecea3c9055d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5734897640487178670
 GameObject:
   m_ObjectHideFlags: 0

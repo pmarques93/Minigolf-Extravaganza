@@ -12485,14 +12485,6 @@ PrefabInstance:
       propertyPath: BezerraTempParticles
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 576174930988839701, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
-      propertyPath: prefabLightBridgeCollision
-      value: 
-      objectReference: {fileID: 7839088885294078314, guid: c64a3850aa3523f4db4dbda2f441e0a6, type: 3}
-    - target: {fileID: 4565551235195563817, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
-      propertyPath: m_Mass
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4565551235195563819, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.61
@@ -12553,7 +12545,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1031681931, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
 --- !u!1 &1689695059
 GameObject:

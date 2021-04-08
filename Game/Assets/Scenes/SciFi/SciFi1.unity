@@ -834,6 +834,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 576174930988839701, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
+      propertyPath: bezerraTempParticles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 576174930988839701, guid: 2ac1e72cd24b2df44afc0ab3017eead6, type: 3}
       propertyPath: lightBridgeCollision
       value: 
       objectReference: {fileID: 7839088885294078314, guid: c64a3850aa3523f4db4dbda2f441e0a6, type: 3}

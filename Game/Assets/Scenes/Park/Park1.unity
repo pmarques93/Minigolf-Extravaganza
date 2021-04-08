@@ -17686,10 +17686,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7479080726603769234, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
-      propertyPath: m_YAxis.m_InvertInput
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7479080727466094648, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_RootOrder
       value: 0

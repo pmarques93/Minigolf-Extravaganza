@@ -17686,6 +17686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2136062689603828922, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7479080726712877362, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -17701,6 +17705,10 @@ PrefabInstance:
     - target: {fileID: 7479080727228789455, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479080727368936947, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: near clip plane
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7479080727466094648, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_RootOrder

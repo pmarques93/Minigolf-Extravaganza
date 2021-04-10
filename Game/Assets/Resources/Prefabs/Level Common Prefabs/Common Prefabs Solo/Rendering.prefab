@@ -1773,10 +1773,6 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Scale.z
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 2214341623944598271, guid: 274cbf9b7fabbcd4b91a36365f55529f, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.05
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274cbf9b7fabbcd4b91a36365f55529f, type: 3}
 --- !u!4 &8415935345844805400 stripped

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454894619868340807}
   - component: {fileID: 3602817761580035554}
+  - component: {fileID: 33129689}
   m_Layer: 0
   m_Name: WallSimpleCross
   m_TagString: Wall
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944573481713760509}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -44,6 +45,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944573481713760509}
   m_Mesh: {fileID: 3930508328521883223, guid: 41d6ee09226b57049aae47e656c7f315, type: 3}
+--- !u!64 &33129689
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944573481713760509}
+  m_Material: {fileID: 13400000, guid: 7205ec1ab356153439c5576f47441a49, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9151659893433039526, guid: c43f0f87db55a1d4a8216114fbbbb22f, type: 3}
 --- !u!1 &4938593339520616206
 GameObject:
   m_ObjectHideFlags: 0

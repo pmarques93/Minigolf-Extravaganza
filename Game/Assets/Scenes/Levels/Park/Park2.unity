@@ -9747,7 +9747,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1555147527397729320, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479080727466094648, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_RootOrder
@@ -9800,6 +9800,10 @@ PrefabInstance:
     - target: {fileID: 7479080727466094651, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465451384641138037, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: currentLevel
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}

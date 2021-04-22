@@ -47,15 +47,25 @@ Material:
     - Vector1_96220ae49bf540f381a682dcaf7c36ef: 6.53
     - Vector1_b82654be05844edaae3b7486fa5ed324: 0
     - _AlphaCutoff: 0.5
+    - _Emission: 0
     - _EmissionStrength: 0
     - _Fresnel: 0
     - _FresnelAmount: 0
-    - _Seed: 0
+    - _Seed: 6.35
     - _Static: 1
-    - _UVOffset: 0
+    - _TransAmbient: 0.1
+    - _TransDirect: 0.9
+    - _TransNormal: 0.5
+    - _TransScattering: 2
+    - _TransShadow: 0.5
+    - _TransStrength: 1
+    - _UVOffset: 0.153
     - _WaveFrequency: 6.53
     - _WaveIntensity: 0.09
     - _WaveSpeed: -4.34
+    - _WindIntensity: 0.65
+    - _WindScale: 5
+    - _WindSpeed: 0
     - _uvoffset: 0.84
     m_Colors:
     - Vector2_37ba6c9aee794fd7b9a1162d899029bb: {r: 0, g: 0.05, b: 0, a: 0}

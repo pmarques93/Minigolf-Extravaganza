@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Flag
-  m_Shader: {fileID: -6465566751694194690, guid: a0177e17635fa6e429fb061d2df91ff8, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: ab84e9659b3b408439bc686fb0c1559f, type: 3}
+  m_ShaderKeywords: _STATIC_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,6 +20,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_0e10def8895d4dc596bb4d336c0f6164:
+        m_Texture: {fileID: 2800000, guid: 516bbd32379d35b47b7b5b7f0444dc55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 516bbd32379d35b47b7b5b7f0444dc55, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -42,9 +46,21 @@ Material:
     - Vector1_38451521ff3e49bb9ef1de7587a73ed8: 5
     - Vector1_96220ae49bf540f381a682dcaf7c36ef: 6.53
     - Vector1_b82654be05844edaae3b7486fa5ed324: 0
+    - _AlphaCutoff: 0.5
+    - _EmissionStrength: 0
+    - _Fresnel: 0
+    - _FresnelAmount: 0
+    - _Seed: 0
+    - _Static: 1
+    - _UVOffset: 0
+    - _WaveFrequency: 6.53
+    - _WaveIntensity: 0.09
+    - _WaveSpeed: -4.34
     - _uvoffset: 0.84
     m_Colors:
     - Vector2_37ba6c9aee794fd7b9a1162d899029bb: {r: 0, g: 0.05, b: 0, a: 0}
     - Vector2_6dc1b30d43a249ed894dbe99d32922fe: {r: 1, g: 0, b: 0, a: 0}
     - Vector2_bf0cde1437c44bf2b848ade505891cf9: {r: -0.5, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FresnelColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

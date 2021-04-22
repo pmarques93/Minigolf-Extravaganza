@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Light Bridge
-  m_Shader: {fileID: 4800000, guid: 35f13b1a2edb66a47828d918ac45a085, type: 3}
-  m_ShaderKeywords: _PATTERN_ON
+  m_Name: LEGLight Bridge
+  m_Shader: {fileID: -6465566751694194690, guid: b60520713e2625847b39e637bb86d2db, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,10 +30,6 @@ Material:
     - Texture2D_b88fd2ca872246d789a02599e7986903:
         m_Texture: {fileID: 2800000, guid: b4d35fe5d9c0d1c4f9c0331707524d46, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _PatternTex:
-        m_Texture: {fileID: 2800000, guid: 2efc98fe463d31c42abb900060efab28, type: 3}
-        m_Scale: {x: 0.63, y: 0.63}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
@@ -64,12 +60,6 @@ Material:
     - Vector1_b60f42f8499b4d86a461dc951dbeb6d5: 2.44
     - Vector1_c219cbd358a84507a448bf2f18b77d58: 3.49
     - Vector1_f42da508a1fd405ab517a63729618c6b: -1
-    - _AlphaCutoff: 0.5
-    - _Distance: 10.6
-    - _Pattern: 1
-    - _PatternMask: 0
-    - _PatternMaskDIstance: 4.83
-    - _PatternTiling: 0.63
     m_Colors:
     - Color_1: {r: 2.3958437, g: 4.914919, b: 16.94838, a: 1}
     - Color_29b3d6850874407a8069e0f616cf00bb: {r: 0, g: 0.65199214, b: 0.98833734, a: 0.6117647}
@@ -82,9 +72,4 @@ Material:
     - Vector2_5c23601af1bc406a8b9d226944befe23: {r: 0.1, g: 0.1, b: 0, a: 0}
     - Vector2_66f3a7aa87d34470885df34a023018e7: {r: 1, g: 0.01, b: 0, a: 0}
     - Vector2_c4e5e8babc9a4b0caaaf3564f7e20478: {r: 0, g: 0.3, b: 0, a: 0}
-    - _ColorBase: {r: 0, g: 0.3450503, b: 0.9882353, a: 0.6117647}
-    - _ColorBright: {r: 0.90785515, g: 5.245385, b: 6.4222345, a: 1}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _PatternColor: {r: 1, g: 1, b: 1, a: 0}
-    - _PatternSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a21166b1ffef44449b89a52e3ac13cb
+guid: dd9ff132e2fc47a4e97eebd37f65bbc1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: CommonMaterial
     second: {fileID: 2100000, guid: 4f4b3553e76b1f14dac207fb904e846a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Random color
+    second: {fileID: 2100000, guid: c8a58da35dcdea9469d84b0f3e55cd53, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UFO Beam
-  m_Shader: {fileID: -6465566751694194690, guid: aceee6639ffac2c449539986442c9cfd, type: 3}
+  m_Shader: {fileID: 4800000, guid: 333870eeb73d8e747982887c19583c91, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -34,6 +34,11 @@ Material:
     m_Floats:
     - Vector1_6eaea43dfa7d4c9eb2da1c26f7e2b73f: 5.21
     - Vector1_e5318bea82984fd49c740479fc4b5ec0: 3.88
+    - _AlphaCutoff: 0.5
+    - _Distance: 3.5
+    - _Fade: 4
     m_Colors:
     - Color_645bf40f70b0450ebc5958549fcfed29: {r: 3.031433, g: 1.268231, b: 0, a: 1}
+    - _Color: {r: 3.031433, g: 1.268231, b: 0, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6921957331672732053}
   - component: {fileID: 6749120929605630078}
   - component: {fileID: 3320045970572686662}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassHole
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 838367587754656268}
   - component: {fileID: 3190393142914430662}
   - component: {fileID: 3982996096471144212}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleHole
   m_TagString: Wall
   m_Icon: {fileID: 0}

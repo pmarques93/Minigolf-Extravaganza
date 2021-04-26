@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3678149910771647103}
   - component: {fileID: 7927861593158596697}
   - component: {fileID: 147098851091941517}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassRamp1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 3366873510419455369}
   - component: {fileID: 674834982705408323}
   - component: {fileID: 1323357520706013337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleRamp1
   m_TagString: Wall
   m_Icon: {fileID: 0}

@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 7321700884800657114}
   - component: {fileID: 641759951863692918}
   - component: {fileID: 4803779110656029734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor SciFi Corner
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 7704609981520154885}
   - component: {fileID: 5550883065340945871}
   - component: {fileID: 6199291528474477597}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi Corner
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 2275741507172875984}
   - component: {fileID: 405918249738097579}
   - component: {fileID: 8094228180688335346}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall Scifi CornerInner
   m_TagString: Wall
   m_Icon: {fileID: 0}

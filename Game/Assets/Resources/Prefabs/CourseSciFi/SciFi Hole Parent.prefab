@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9008338492275269145}
   - component: {fileID: 9008338492275269146}
   - component: {fileID: 9008338492275269144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi Hole Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7987497173788920640}
   - component: {fileID: 3806533617174650188}
   - component: {fileID: 677854496096409972}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Traction Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4956,7 +4956,7 @@ GameObject:
   - component: {fileID: 3419492566606802920}
   - component: {fileID: 5642962573298735611}
   - component: {fileID: 2147624891955454690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi Hole Beam
   m_TagString: Hole
   m_Icon: {fileID: 0}
@@ -5037,7 +5037,7 @@ GameObject:
   - component: {fileID: 3835031505754743769}
   - component: {fileID: 2403532050617961325}
   - component: {fileID: 1203857205149475803}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dust Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9841,7 +9841,7 @@ GameObject:
   - component: {fileID: 887330359950120944}
   - component: {fileID: 8158680396535075098}
   - component: {fileID: 1749595451980045220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14703,7 +14703,7 @@ GameObject:
   - component: {fileID: 8831195326525847222}
   - component: {fileID: 5557845226290592019}
   - component: {fileID: 7693724316549402073}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scifi Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14785,7 +14785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9008338491140148378}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: holeFinishPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}

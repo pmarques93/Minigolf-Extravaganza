@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9076133348667762628}
   - component: {fileID: 6489705173298696974}
   - component: {fileID: 2893521142498516687}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleSplit
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 6677409920427385008}
   - component: {fileID: 2051449845929965024}
   - component: {fileID: 5860918605977273206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassSplit
   m_TagString: Ground
   m_Icon: {fileID: 0}

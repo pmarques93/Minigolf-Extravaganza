@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1265204359430700583}
   - component: {fileID: 3920981475569470189}
   - component: {fileID: 7231514563042987589}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallBump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4717168140197912715}
   - component: {fileID: 6942893186172784295}
   - component: {fileID: 7491192688966437868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassBump
   m_TagString: Untagged
   m_Icon: {fileID: 0}

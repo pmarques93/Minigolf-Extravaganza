@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 9195176781271875734}
   - component: {fileID: 6376855014789461084}
   - component: {fileID: 4863852042245772686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi DeadEnd
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4123600649219491415}
   - component: {fileID: 277490597374312579}
   - component: {fileID: 6898696938717588327}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor SciFi DeadEnd
   m_TagString: Ground
   m_Icon: {fileID: 0}

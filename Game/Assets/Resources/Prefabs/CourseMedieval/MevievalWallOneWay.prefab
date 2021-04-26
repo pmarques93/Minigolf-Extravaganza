@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8530356053662924276}
   - component: {fileID: 7043198415986694785}
   - component: {fileID: 8339779438011601386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassOneWay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 6496518394810462525}
   - component: {fileID: 9064816166750848503}
   - component: {fileID: 4531891149770132521}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MevievalWallOneWay
   m_TagString: Untagged
   m_Icon: {fileID: 0}

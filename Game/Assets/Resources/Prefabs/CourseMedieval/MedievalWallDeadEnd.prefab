@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8948168301786880717}
   - component: {fileID: 6614293482363825671}
   - component: {fileID: 8124435925203200651}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallDeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8823929344809540237}
   - component: {fileID: 4542728071382447754}
   - component: {fileID: 7205054315434432858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassDeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}

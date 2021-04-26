@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1264949969}
   - component: {fileID: 1264949968}
   - component: {fileID: 1264949967}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CubeSolid
   m_TagString: Hole
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 543450652812094243}
   - component: {fileID: 3469287836797019270}
   - component: {fileID: 1711813855955275852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DecoFlag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1575087672589799698}
   - component: {fileID: 1070495054887416006}
   - component: {fileID: 2623237545285416009}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HoleWallSimpleDeadEnd
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8103242137534041753}
   - component: {fileID: 5515727346216538608}
   - component: {fileID: 4121815757949313032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HoleGroundGrassDeadEnd
   m_TagString: Ground
   m_Icon: {fileID: 0}

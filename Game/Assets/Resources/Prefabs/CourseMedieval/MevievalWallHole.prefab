@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1812887741277879329}
   - component: {fileID: 4525093440200362219}
   - component: {fileID: 6692512161275474082}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MevievalWallHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8252119189378428856}
   - component: {fileID: 5702507727400093267}
   - component: {fileID: 2865284284530145742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}

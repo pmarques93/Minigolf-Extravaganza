@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 798096979182075369}
   - component: {fileID: 2400960150348372505}
   - component: {fileID: 2400960150348372506}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WindmillBlades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,9 +123,9 @@ GameObject:
   - component: {fileID: 8576280390027243836}
   - component: {fileID: 8308429323219310021}
   - component: {fileID: 170723215}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ObstacleWindmill
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

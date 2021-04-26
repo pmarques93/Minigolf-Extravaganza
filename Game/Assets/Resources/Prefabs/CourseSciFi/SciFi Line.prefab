@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3515142842648301579}
   - component: {fileID: 1669916834769396929}
   - component: {fileID: 877147441100506391}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi Line
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 8304063647060683281}
   - component: {fileID: 8264001395502992895}
   - component: {fileID: 8714673081737522260}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor SciFi Line
   m_TagString: Ground
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4926384774552632978}
   - component: {fileID: 2940145426026286257}
   - component: {fileID: 924512934986122262}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalGroundGrassFunnelR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1186762486351464029}
   - component: {fileID: 4007303685438567063}
   - component: {fileID: 3058320028019400111}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallFunnelR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

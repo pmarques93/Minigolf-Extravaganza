@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1305410701719122633}
   - component: {fileID: 6296639200028565198}
   - component: {fileID: 1967537056263223904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassDeadEnd
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1461245765985268361}
   - component: {fileID: 3720980452661036611}
   - component: {fileID: 2928299021148039063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleDeadEnd
   m_TagString: Wall
   m_Icon: {fileID: 0}

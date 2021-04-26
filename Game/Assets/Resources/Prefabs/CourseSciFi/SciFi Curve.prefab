@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2410501843400483966}
   - component: {fileID: 474889991191761076}
   - component: {fileID: 2059756964165124964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi Curve
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4094226465714545456}
   - component: {fileID: 2325996439719787625}
   - component: {fileID: 976585231451033661}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor SciFi Curve
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 6881795603652801354}
   - component: {fileID: 679928695447720070}
   - component: {fileID: 8188893138315130141}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall Scifi CurveInner
   m_TagString: Wall
   m_Icon: {fileID: 0}

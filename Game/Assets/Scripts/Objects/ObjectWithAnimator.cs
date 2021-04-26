@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// Class responsible for controlling animator speed of an object.
@@ -15,7 +16,12 @@ public class ObjectWithAnimator : MonoBehaviour, IUpdateConfigurations
 
     public void UpdateValues()
     {
-        anim.speed = config.WorldObstaclesSpeed;
+        StartCoroutine(UpdateValuesCoroutine());
     }
 
+    private IEnumerator UpdateValuesCoroutine()
+    {
+        yield return new WaitForFixedUpdate();
+        anim.speed = config.WorldObstaclesSpeed;
+    }
 }

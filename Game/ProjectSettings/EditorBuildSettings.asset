@@ -5,28 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b517c2ea00fa71e4980e2af50e8e95e3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Park/Park1.unity
     guid: acf3fa1e83375a2419f745b4cd091d06
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Park/Park2.unity
     guid: 03ea5b917632f9744a2a5cea64556bda
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Park/Park3.unity
     guid: 93f7bb6066916ba4b938b73118e86f2f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Park/Park4.unity
     guid: 242ff09aa1aafe745840d430df61efe3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Park/Park5.unity
     guid: ef06460ccd2af3a4da0833c14e297d7c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Test Scenes/SciFi/SciFi1.unity
     guid: 1043e77ef563956499565f45445daf01
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Presentation.unity
     guid: f9f77bf256d24034192bf36b852dc27a
   m_configObjects: {}

@@ -91,7 +91,7 @@ public class PauseMenu : MonoBehaviour
         uiPauseMenu.ObjectEnabledCoroutine = null;
 
         // ONLY FOR TESTING
-        if (TEMPFORWARD.FastForward) Time.timeScale = 2f;
+        if (TEMPFORWARD.FastForward) Time.timeScale = 1.5f;
         else Time.timeScale = 1f;
 
         GamePaused = false;

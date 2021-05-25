@@ -6985,7 +6985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 153524906}
-  m_PathPosition: 0
+  m_PathPosition: 0.6979771
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -40505,8 +40505,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8524828740979360595}
-  m_LocalRotation: {x: -0, y: 0.49764672, z: -0, w: 0.86737984}
-  m_LocalPosition: {x: -4.636928, y: 2.2, z: -1.8705342}
+  m_LocalRotation: {x: -0, y: 0.61461323, z: -0, w: 0.7888287}
+  m_LocalPosition: {x: 1.9941826, y: 2.2, z: 1.2831795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 386108712}

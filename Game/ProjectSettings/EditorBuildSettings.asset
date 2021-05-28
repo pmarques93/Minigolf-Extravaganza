@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Park/Park4.unity
     guid: 242ff09aa1aafe745840d430df61efe3
   - enabled: 1
-    path: Assets/Scenes/Levels/Park/Park5.unity
+    path: Assets/Scenes/Levels/Park/Park6.unity
     guid: ef06460ccd2af3a4da0833c14e297d7c
   - enabled: 1
     path: Assets/Scenes/Test Scenes/SciFi/SciFi1.unity

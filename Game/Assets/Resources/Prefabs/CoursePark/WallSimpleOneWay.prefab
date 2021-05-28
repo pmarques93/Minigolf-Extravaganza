@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3706541467254203157}
   - component: {fileID: 1483004354509264863}
   - component: {fileID: 1122606776375473677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleOneWay
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 2250088416348254172}
   - component: {fileID: 641329156293773481}
   - component: {fileID: 7450754870545047548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassOneWay
   m_TagString: Ground
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5938047475116441282}
   - component: {fileID: 7172070498230008991}
   - component: {fileID: 5209756416664974814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor SciFi Ramp2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8267696881434971714}
   - component: {fileID: 6149724439762811528}
   - component: {fileID: 4816046803631772816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SciFi Ramp2
   m_TagString: Wall
   m_Icon: {fileID: 0}

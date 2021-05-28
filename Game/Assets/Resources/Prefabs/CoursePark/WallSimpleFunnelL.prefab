@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8714568841300158313}
   - component: {fileID: 6851287272817611683}
   - component: {fileID: 4905639393955246709}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleFunnelL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 9053407323208746431}
   - component: {fileID: 8103576431499997094}
   - component: {fileID: 6332032227772285747}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassFunnelL
   m_TagString: Ground
   m_Icon: {fileID: 0}

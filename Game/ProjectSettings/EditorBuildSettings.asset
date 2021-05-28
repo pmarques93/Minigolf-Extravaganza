@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/SciFi/SciFi1.unity
     guid: 1043e77ef563956499565f45445daf01
+  - enabled: 0
+    path: Assets/Scenes/Presentation.unity
+    guid: f9f77bf256d24034192bf36b852dc27a
   m_configObjects: {}

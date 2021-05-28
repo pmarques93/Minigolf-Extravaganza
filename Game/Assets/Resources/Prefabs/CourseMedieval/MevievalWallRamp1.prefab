@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5217794510382650343}
   - component: {fileID: 4958057391845436890}
   - component: {fileID: 844514221383797292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalGroundGrassRamp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7668461143881002934}
   - component: {fileID: 5588737950008040316}
   - component: {fileID: 873592793466493823}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MevievalWallRamp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

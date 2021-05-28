@@ -442,6 +442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rendering
       objectReference: {fileID: 0}
+    - target: {fileID: 1705774101719239576, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
+      propertyPath: m_CollideAgainst.m_Bits
+      value: 1025
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd1e106c1c676346b4692ac2718ec7a, type: 3}
 --- !u!4 &7479080727526016988 stripped

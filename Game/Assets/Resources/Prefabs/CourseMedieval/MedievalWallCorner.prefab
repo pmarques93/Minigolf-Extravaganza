@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7702069385461470015}
   - component: {fileID: 341074830835793858}
   - component: {fileID: 836647960249455765}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallCornerInner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8539980364138348624}
   - component: {fileID: 5863948042446042266}
   - component: {fileID: 2308614135577207865}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 3959343986772993727}
   - component: {fileID: 4964646322369097336}
   - component: {fileID: 3063152466637281901}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

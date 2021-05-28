@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2933508887757809425}
   - component: {fileID: 7523035575324013121}
   - component: {fileID: 4204049867311470313}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassSplit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 714912400068059237}
   - component: {fileID: 3318895930258019503}
   - component: {fileID: 1461771050742056979}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallSplit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

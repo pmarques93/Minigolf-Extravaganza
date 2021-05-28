@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4237352523297344753}
   - component: {fileID: 6427538914875953377}
   - component: {fileID: 4970816469998145091}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalWallHoleDeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1921003254536212003}
   - component: {fileID: 2397770119617805602}
   - component: {fileID: 2620840182498200759}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MedievalHoleGroundGrassDeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}

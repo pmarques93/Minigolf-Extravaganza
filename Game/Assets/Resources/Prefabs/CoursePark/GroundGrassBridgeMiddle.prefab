@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5934146207562799446}
   - component: {fileID: 8484400995841076636}
   - component: {fileID: 7097444731796418846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassBridgeMiddle
   m_TagString: Ground
   m_Icon: {fileID: 0}

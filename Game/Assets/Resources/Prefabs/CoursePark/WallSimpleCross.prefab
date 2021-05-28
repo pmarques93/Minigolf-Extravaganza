@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 454894619868340807}
   - component: {fileID: 3602817761580035554}
   - component: {fileID: 33129689}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleCross
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 8498409761325761812}
   - component: {fileID: 6114498823074741945}
   - component: {fileID: 4938593339520616205}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassCross
   m_TagString: Ground
   m_Icon: {fileID: 0}

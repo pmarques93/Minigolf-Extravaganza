@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2978266319253307385}
   - component: {fileID: 1058374748834794291}
   - component: {fileID: 4208903730109543118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MevievalWallSimpleSides
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1775718625940012234}
   - component: {fileID: 8852438743501770837}
   - component: {fileID: 7138621804618563430}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassSides
   m_TagString: Untagged
   m_Icon: {fileID: 0}

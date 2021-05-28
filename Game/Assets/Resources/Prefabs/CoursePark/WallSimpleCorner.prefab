@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8989520206936178943}
   - component: {fileID: 6567875216116053045}
   - component: {fileID: 4622166315080078823}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleCorner
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4375036464095389200}
   - component: {fileID: 5665772001145777879}
   - component: {fileID: 7977192040638102742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassCorner
   m_TagString: Ground
   m_Icon: {fileID: 0}

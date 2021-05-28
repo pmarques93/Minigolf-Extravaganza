@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2157242121138987349}
   - component: {fileID: 4185224003179189663}
   - component: {fileID: 2383560331977864267}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleCurve
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 140872569334250566}
   - component: {fileID: 598320646409109630}
   - component: {fileID: 3857880206998398796}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundGrassCurve
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 3746801842518809596}
   - component: {fileID: 6631218106974132878}
   - component: {fileID: 4739073422206764618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallSimpleCurveInner
   m_TagString: Wall
   m_Icon: {fileID: 0}

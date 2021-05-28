@@ -104,6 +104,18 @@ public class BallCollisions : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("OoB"))
+        {
+            if (ballMovement.SpawningCoroutine == false)
+            {
+                StartCoroutine(ballMovement.ResetBall());
+                ballMovement.SpawningCoroutine = true;
+            }
+        }
+    }
+
 
     /// <summary>
     /// Plays ground hit sound. Has a delay so the sound doesn't repeat too often.

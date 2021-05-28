@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Flag
   m_Shader: {fileID: 4800000, guid: ab84e9659b3b408439bc686fb0c1559f, type: 3}
-  m_ShaderKeywords: _STATIC_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -52,7 +52,7 @@ Material:
     - _Fresnel: 0
     - _FresnelAmount: 0
     - _Seed: 6.35
-    - _Static: 1
+    - _Static: 0
     - _TransAmbient: 0.1
     - _TransDirect: 0.9
     - _TransNormal: 0.5

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 836647960249455765}
   m_Layer: 10
   m_Name: MedievalWallCornerInner
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2308614135577207865}
   m_Layer: 10
   m_Name: MedievalWallCorner
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 3063152466637281901}
   m_Layer: 10
   m_Name: GroundGrassCorner
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

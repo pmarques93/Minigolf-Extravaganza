@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7231514563042987589}
   m_Layer: 10
   m_Name: MedievalWallBump
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 7491192688966437868}
   m_Layer: 10
   m_Name: GroundGrassBump
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

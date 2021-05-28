@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4208903730109543118}
   m_Layer: 10
   m_Name: MevievalWallSimpleSides
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 7138621804618563430}
   m_Layer: 10
   m_Name: GroundGrassSides
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

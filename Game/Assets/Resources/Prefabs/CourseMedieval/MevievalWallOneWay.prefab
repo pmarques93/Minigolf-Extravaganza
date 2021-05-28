@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8339779438011601386}
   m_Layer: 10
   m_Name: GroundGrassOneWay
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4531891149770132521}
   m_Layer: 10
   m_Name: MevievalWallOneWay
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

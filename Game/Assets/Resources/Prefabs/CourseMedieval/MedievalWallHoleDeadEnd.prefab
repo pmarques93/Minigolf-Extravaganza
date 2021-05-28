@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4970816469998145091}
   m_Layer: 10
   m_Name: MedievalWallHoleDeadEnd
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 2620840182498200759}
   m_Layer: 10
   m_Name: MedievalHoleGroundGrassDeadEnd
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

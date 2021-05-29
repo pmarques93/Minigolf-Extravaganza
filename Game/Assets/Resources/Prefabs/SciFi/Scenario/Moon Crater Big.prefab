@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8294309812450741360}
   - component: {fileID: 4950745996962743253}
   - component: {fileID: 7156327598152627999}
+  - component: {fileID: 7777077246095682105}
   m_Layer: 0
   m_Name: Moon Crater Big
-  m_TagString: Untagged
+  m_TagString: OoB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7777077246095682105
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669603524521858762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8425129196557393086, guid: a97aa03daf0033c488474e2d6a247412, type: 3}

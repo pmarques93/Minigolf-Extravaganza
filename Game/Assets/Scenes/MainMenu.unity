@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: d6f6d64840aa7c84cbb09f3e03d9bd5d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9932,7 +9932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 84f7c1c71cdf9464b923e609c7682413, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -12113,7 +12113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 153524906}
-  m_PathPosition: 0.2010242
+  m_PathPosition: 0.2890332
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -27041,7 +27041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 9
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 070000000a0000000d000000
   starGroups:
   - {fileID: 253778688}
   - {fileID: 1968572836}
@@ -28302,7 +28302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 18f7e522a2f2de844b813e574ddb75ad, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -33314,7 +33314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 89613d7d00d97cc4ab3d80e4a9bd665e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -40376,7 +40376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 12
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 180000001d00000023000000
   starGroups:
   - {fileID: 228929531}
   - {fileID: 1942113587}
@@ -40591,7 +40591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 8de7525c6c2bb494abf559abef685dd8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -45465,7 +45465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 7
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 010000000200000004000000
   starGroups:
   - {fileID: 2089021729}
   - {fileID: 554497320}
@@ -51195,7 +51195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 11
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 0c0000000f00000012000000
   starGroups:
   - {fileID: 1932663155}
   - {fileID: 1524106745}
@@ -54920,7 +54920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 8
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 040000000600000008000000
   starGroups:
   - {fileID: 887940489}
   - {fileID: 1924725931}
@@ -63410,7 +63410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 10
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 090000000c0000000f000000
   starGroups:
   - {fileID: 55818720}
   - {fileID: 151012320}
@@ -63849,7 +63849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 5e84c1e01a7157748be617ca24f9ce4d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -67085,8 +67085,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8524828740979360595}
-  m_LocalRotation: {x: -0, y: 0.506439, z: -0, w: 0.86227584}
-  m_LocalPosition: {x: -2.712883, y: 2.2, z: -0.762982}
+  m_LocalRotation: {x: -0, y: 0.51602787, z: -0, w: 0.8565718}
+  m_LocalPosition: {x: -1.8725044, y: 2.2, z: -0.30574918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 386108712}

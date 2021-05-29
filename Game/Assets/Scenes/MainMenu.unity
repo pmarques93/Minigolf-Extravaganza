@@ -3179,7 +3179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 2
-  scoresEvaluation: 030000000400000009000000
+  scoresEvaluation: 05000000080000000b000000
   starGroups:
   - {fileID: 1941951365}
   - {fileID: 480265300}
@@ -17695,7 +17695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 55e4920581597534e8de9b96392fc6d8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -23926,7 +23926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 4
-  scoresEvaluation: 04000000050000000a000000
+  scoresEvaluation: 05000000080000000c000000
   starGroups:
   - {fileID: 1670092596}
   - {fileID: 845489205}
@@ -24497,7 +24497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 5
-  scoresEvaluation: 08000000090000000e000000
+  scoresEvaluation: 0e0000001100000014000000
   starGroups:
   - {fileID: 265422564}
   - {fileID: 1945257884}
@@ -34879,7 +34879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 1
-  scoresEvaluation: 030000000400000009000000
+  scoresEvaluation: 05000000080000000b000000
   starGroups:
   - {fileID: 140629529}
   - {fileID: 1127775222}
@@ -38253,7 +38253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 6
-  scoresEvaluation: 030000000400000005000000
+  scoresEvaluation: 0b0000000e00000014000000
   starGroups:
   - {fileID: 1036767901}
   - {fileID: 185905030}
@@ -40857,7 +40857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 3
-  scoresEvaluation: 04000000050000000a000000
+  scoresEvaluation: 05000000080000000c000000
   starGroups:
   - {fileID: 477783044}
   - {fileID: 33079653}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8500274616627618807}
   - component: {fileID: 1298984737016239788}
   - component: {fileID: 6974892224399729678}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: InvisWall SciFi DeadEnd
   m_TagString: InvisWall
   m_Icon: {fileID: 0}

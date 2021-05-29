@@ -989,5 +989,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrawBridge
       objectReference: {fileID: 0}
+    - target: {fileID: 5315917398201862051, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.29437995
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315917398201862051, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.6883433
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315917398201862051, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16181315
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315917398201862051, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6883433
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315917398201862051, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.16181318
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315917398201862051, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c5f26de9a0603a4fa259a0a8c443ccc, type: 3}

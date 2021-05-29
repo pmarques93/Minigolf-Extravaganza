@@ -15,6 +15,7 @@ public class UISettings : MonoBehaviour
     [SerializeField] private Slider powerTime;
     [SerializeField] private Slider powerMultiplier;
     [SerializeField] private Slider worldObstaclesSpeed;
+    [SerializeField] private Slider gameSpeed;
     [SerializeField] private TextMeshProUGUI graphicsQuality;
     [SerializeField] private TextMeshProUGUI windowMode;
     [SerializeField] private TextMeshProUGUI screenResolution;
@@ -93,6 +94,9 @@ public class UISettings : MonoBehaviour
         worldObstaclesSpeed.value = config.LoadSetting<float>(SettingsEnum.WorldObstaclesSpeed);
         worldObstaclesSpeed.minValue = config.MinWorldObstaclesSpeed;
         worldObstaclesSpeed.maxValue = config.MaxWorldObstaclesSpeed;
+        gameSpeed.value = config.LoadSetting<float>(SettingsEnum.GameSpeed);
+        gameSpeed.minValue = config.MinGameSpeed;
+        gameSpeed.maxValue = config.MaxGameSpeed;
         masterVolume.value = config.LoadSetting<float>(SettingsEnum.MasterVolume);
         masterVolume.minValue = config.MinMasterVolume;
         masterVolume.maxValue = config.MaxMasterVolume;
@@ -184,6 +188,13 @@ public class UISettings : MonoBehaviour
     public void WorldObstaclesSpeedValue(float value)
     {
         config.WorldObstaclesSpeed = value;
+        config.SaveSettings();
+        UpdateAllValuesWithInterfaces();
+    }
+
+    public void GameSpeedValue(float value)
+    {
+        config.GameSpeed = value;
         config.SaveSettings();
         UpdateAllValuesWithInterfaces();
     }

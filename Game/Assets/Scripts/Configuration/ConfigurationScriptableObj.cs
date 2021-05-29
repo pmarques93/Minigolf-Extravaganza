@@ -49,6 +49,14 @@ public class ConfigurationScriptableObj : ScriptableObject
     public float MinWorldObstaclesSpeed => minWorldObstaclesSpeed;
     public float MaxWorldObstaclesSpeed => maxWorldObstaclesSpeed;
 
+    [SerializeField] float defaultGameSpeed;
+    [SerializeField] float minGameSpeed;
+    [SerializeField] float maxGameSpeed;
+    public float GameSpeed { get; set; }
+    public float DefaultGameSpeed => defaultGameSpeed;
+    public float MinGameSpeed => minGameSpeed;
+    public float MaxGameSpeed => maxGameSpeed;
+
     [Header("Graphics Settings")]
     [SerializeField] int defaultGraphicsQuality;
     [SerializeField] int minGraphicsQuality;
@@ -141,6 +149,7 @@ public class ConfigurationScriptableObj : ScriptableObject
         PlayerPrefs.SetFloat("PowerTime", PowerTime);
         PlayerPrefs.SetFloat("PowerMultiplier", PowerMultiplier);
         PlayerPrefs.SetFloat("WorldObstaclesSpeed", WorldObstaclesSpeed);
+        PlayerPrefs.SetFloat("GameSpeed", GameSpeed);
         PlayerPrefs.SetInt("GraphicsQuality", GraphicsQuality);
         PlayerPrefs.SetInt("WindowMode", WindowMode);
         PlayerPrefs.SetInt("ScreenResolution", ScreenResolution);
@@ -159,6 +168,7 @@ public class ConfigurationScriptableObj : ScriptableObject
         PowerTime = PlayerPrefs.GetFloat("PowerTime", defaultPowerTime);
         PowerMultiplier = PlayerPrefs.GetFloat("PowerMultiplier", defaultPowerMultiplier);
         WorldObstaclesSpeed = PlayerPrefs.GetFloat("WorldObstaclesSpeed", defaultWorldObstaclesSpeed);
+        GameSpeed = PlayerPrefs.GetFloat("GameSpeed", defaultGameSpeed);
         GraphicsQuality = PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality);
         WindowMode = PlayerPrefs.GetInt("WindowMode", defaultWindowMode);
         ScreenResolution = PlayerPrefs.GetInt("ScreenResolution", defaultScreenResolution);
@@ -192,6 +202,9 @@ public class ConfigurationScriptableObj : ScriptableObject
                 break;
             case SettingsEnum.WorldObstaclesSpeed:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("WorldObstaclesSpeed", defaultWorldObstaclesSpeed), typeof(T));
+                break;
+            case SettingsEnum.GameSpeed:
+                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("GameSpeed", defaultGameSpeed), typeof(T));
                 break;
             case SettingsEnum.GraphicsQuality:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetInt("GraphicsQuality", defaultGraphicsQuality), typeof(T));

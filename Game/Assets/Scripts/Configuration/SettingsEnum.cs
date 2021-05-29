@@ -5,6 +5,7 @@ public enum SettingsEnum
     PowerTime,
     PowerMultiplier,
     WorldObstaclesSpeed,
+    GameSpeed,
     GraphicsQuality,
     WindowMode,
     ScreenResolution,

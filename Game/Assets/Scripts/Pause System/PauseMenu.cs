@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -10,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     // Components
     private PlayerInputCustom input;
     private BallShot ballShot;
+    private GameTimeScale gameTimeScale;
     [SerializeField] private UIPauseMenu uiPauseMenu;
 
     // Pause variables
@@ -19,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     {
         input = FindObjectOfType<PlayerInputCustom>();
         ballShot = FindObjectOfType<BallShot>();
+        gameTimeScale = FindObjectOfType<GameTimeScale>();
     }
 
     private void Start()
@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void UnpauseGame()
     {
-        if (FindObjectOfType<BallShot>().CanShot == true)
+        if (ballShot.CanShot == true)
         {
             input.SwitchControlsToGameplay();
         }
@@ -90,9 +90,7 @@ public class PauseMenu : MonoBehaviour
         // ObjectEnabledCoroutine to false so it can select resume button again
         uiPauseMenu.ObjectEnabledCoroutine = null;
 
-        // ONLY FOR TESTING
-        if (TEMPFORWARD.FastForward) Time.timeScale = 1.5f;
-        else Time.timeScale = 1f;
+        Time.timeScale = gameTimeScale.CurrentTimeScale;
 
         GamePaused = false;
     }

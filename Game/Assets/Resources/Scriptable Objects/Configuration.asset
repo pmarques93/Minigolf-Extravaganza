@@ -27,6 +27,9 @@ MonoBehaviour:
   defaultWorldObstaclesSpeed: 1
   minWorldObstaclesSpeed: 0.1
   maxWorldObstaclesSpeed: 1.5
+  defaultGameSpeed: 1.6
+  minGameSpeed: 1
+  maxGameSpeed: 2.5
   defaultGraphicsQuality: 2
   minGraphicsQuality: 0
   maxGraphicsQuality: 2

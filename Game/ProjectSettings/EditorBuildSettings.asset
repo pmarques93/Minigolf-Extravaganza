@@ -23,6 +23,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Park/Park6.unity
     guid: ef06460ccd2af3a4da0833c14e297d7c
+  - enabled: 1
+    path: Assets/Scenes/Medieval/Medieval1.unity
+    guid: b31352c725b06a545b2615a224d45aaa
+  - enabled: 1
+    path: Assets/Scenes/Medieval/Medieval2.unity
+    guid: a52e91beabafeaa46a01f6048fd545bd
+  - enabled: 1
+    path: Assets/Scenes/Medieval/Medieval3.unity
+    guid: 5f84ff6bc3e82424fa6d2b257b6ce5bd
+  - enabled: 1
+    path: Assets/Scenes/Medieval/Medieval4.unity
+    guid: 7835ce390e5bef847b05a03d37764912
+  - enabled: 1
+    path: Assets/Scenes/Medieval/Medieval5.unity
+    guid: f9905de8ae825014f8fe87444a9a59af
   - enabled: 0
     path: Assets/Scenes/Test Scenes/SciFi/SciFi1.unity
     guid: 1043e77ef563956499565f45445daf01

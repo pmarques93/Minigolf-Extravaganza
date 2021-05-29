@@ -36,7 +36,7 @@ public class BallHandler : MonoBehaviour
     private BallSounds ballSounds;
     public LineRenderer LineRenderer { get; set; }
     public float LineYValue { get; set; }
-    private float finalLineLength;
+    public float FinalLineLength { get; set; }
     [SerializeField] private LayerMask lineHitLayers;
 
     private void Awake()
@@ -71,7 +71,7 @@ public class BallHandler : MonoBehaviour
             LineYValue = Mathf.Lerp(LineYValue, LineYValue += 0.1f, Time.fixedDeltaTime * 20f);
 
             if (Vector3.Distance(transform.position, hit.transform.position) < 1.5)
-                finalLineLength = config.LineLength * 0.4f;
+                FinalLineLength = config.LineLength * 0.4f;
         }
         else
         {
@@ -87,13 +87,13 @@ public class BallHandler : MonoBehaviour
                 if (LineYValue > 0)
                     LineYValue = Mathf.Lerp(LineYValue, LineYValue -= 0.1f, Time.fixedDeltaTime * 20f);
 
-                finalLineLength = config.LineLength;
+                FinalLineLength = config.LineLength;
             }
         }
 
         LineRenderer.SetPosition(1, 
             new Vector3(transform.position.x, transform.position.y + LineYValue * 1.2f, transform.position.z) + 
-            transform.forward * finalLineLength);
+            transform.forward * FinalLineLength);
     }
 
     /// <summary>

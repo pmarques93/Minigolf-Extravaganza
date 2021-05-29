@@ -111,6 +111,7 @@ public class BallShot : MonoBehaviour
 
         // Resets line renderer final point back to 0
         ballHandler.LineYValue = 0;
+        ballHandler.FinalLineLength = ballHandler.Config.LineLength;
 
         VisualEffect vfx = 
             ballHandler.SpawnParticles(

@@ -59,6 +59,16 @@
                 "value": "{\"m_Value\":true}"
             },
             {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "RaiseLowerBrush.IgnoreOpenEdges",
+                "value": "{\"m_Value\":true}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "RaiseLowerBrush.StickToFirstAppliedDirection",
+                "value": "{\"m_Value\":true}"
+            },
+            {
                 "type": "UnityEngine.Polybrush.BrushMirror, Unity.Polybrush, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "Brush.MirrorAxis",
                 "value": "{\"m_Value\":0}"
@@ -74,9 +84,14 @@
                 "value": "{\"m_Value\":1}"
             },
             {
+                "type": "UnityEngine.Polybrush.PolyDirection, Unity.Polybrush, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "key": "RaiseLowerBrush.Direction",
+                "value": "{\"m_Value\":0}"
+            },
+            {
                 "type": "UnityEditor.Polybrush.PrefabLoadout, Unity.Polybrush.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ScatteringEditor.userLoadout",
-                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"bc1afd0a6b0be434ea5b00d3af19c160\",\"type\":2},\"prefab\":{\"fileID\":919132149155446097,\"guid\":\"5d640c0e86b05e849bd433743610eed5\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"bc1afd0a6b0be434ea5b00d3af19c160\",\"type\":2},\"prefab\":{\"fileID\":919132149155446097,\"guid\":\"92d082a5827abfb4b9a764caa1b8cf3e\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"bc1afd0a6b0be434ea5b00d3af19c160\",\"type\":2},\"prefab\":{\"fileID\":919132149155446097,\"guid\":\"692e81f26b9e6524abfbfd04ef2fe50e\",\"type\":3}}]}}"
+                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"bc1afd0a6b0be434ea5b00d3af19c160\",\"type\":2},\"prefab\":{\"fileID\":919132149155446097,\"guid\":\"647087fd1065f8a408054fd7922316d8\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"bc1afd0a6b0be434ea5b00d3af19c160\",\"type\":2},\"prefab\":{\"fileID\":919132149155446097,\"guid\":\"686fd5a0192117c43829c72fde0f8ff9\",\"type\":3}}]}}"
             },
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -102,6 +117,11 @@
                 "type": "System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "Brush.VertexBillboardSize",
                 "value": "{\"m_Value\":2.0}"
+            },
+            {
+                "type": "System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "RaiseLowerBrush.Strength",
+                "value": "{\"m_Value\":5.0}"
             }
         ]
     }

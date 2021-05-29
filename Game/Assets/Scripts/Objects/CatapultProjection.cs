@@ -8,22 +8,21 @@ public class CatapultProjection : MonoBehaviour
     // Trajetory variables
     [SerializeField] private LineRenderer lineRender;
     [SerializeField] private Transform projectionStartPos;
-    [SerializeField] private byte numberOfProjections;
-    [SerializeField] private float spaceBetweenProjections;
+    private readonly byte numberOfProjections = 20;
+    private readonly float spaceBetweenProjections = 0.15f;
     private Vector3 direction;
 
     // Components
     private Catapult catapult;
 
-    private void Awake()
-    {
-        catapult = GetComponent<Catapult>();
-    }
+    [Header("Default value = 0.15f when BallForce is 0.3f")]
+    [Range(0.01f, 0.5f)][SerializeField] private float projectionForce;
 
-    private void Start()
-    {
+    private void Awake() =>
+        catapult = GetComponent<Catapult>();
+
+    private void Start() =>
         lineRender.positionCount = numberOfProjections;
-    }
 
     /// <summary>
     /// Applies positions to line render to calculate trajetory.
@@ -57,7 +56,7 @@ public class CatapultProjection : MonoBehaviour
         Vector3 position = (Vector3)
             projectionStartPos.position +
             (direction.normalized * catapult.EndBallForce * t) +
-            0.15f * Physics.gravity *
+            projectionForce * Physics.gravity *
             (t * t);
 
         return position;

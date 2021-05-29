@@ -9,6 +9,8 @@ public class Catapult : MonoBehaviour
     [SerializeField] private ConfigurationScriptableObj config;
     [SerializeField] private CinemachineVirtualCamera cam;
     [SerializeField] private Transform ballPosition;
+
+    [Header("Default value = 0.3f when projectionForce is 0.15f")]
     [Range(0.25f,2f)][SerializeField] private float ballForce;
     public float EndBallForce { get; private set; }
 

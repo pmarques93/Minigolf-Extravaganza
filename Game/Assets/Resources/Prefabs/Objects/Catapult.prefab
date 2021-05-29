@@ -422,8 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRender: {fileID: 573012994}
   projectionStartPos: {fileID: 573012993}
-  numberOfProjections: 20
-  spaceBetweenProjections: 0.15
+  projectionForce: 0.15
 --- !u!114 &215925034406271621
 MonoBehaviour:
   m_ObjectHideFlags: 0

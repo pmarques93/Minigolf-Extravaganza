@@ -17,7 +17,7 @@ MonoBehaviour:
   maxRotationSpeed: 150
   defaultLineLength: 2
   minLineLength: 0.5
-  maxLineLength: 5
+  maxLineLength: 3
   defaultPowerTime: 0.15
   minPowerTime: 0.05
   maxPowerTime: 0.3

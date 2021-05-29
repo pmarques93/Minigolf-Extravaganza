@@ -36,6 +36,7 @@ public class BallHandler : MonoBehaviour
     private BallSounds ballSounds;
     public LineRenderer LineRenderer { get; set; }
     public float LineYValue { get; set; }
+    private float finalLineLength;
     [SerializeField] private LayerMask lineHitLayers;
 
     private void Awake()
@@ -61,12 +62,16 @@ public class BallHandler : MonoBehaviour
         Ray lineForward = new Ray(transform.position, LineRenderer.GetPosition(1) - transform.position);
         Ray normalForward = 
             new Ray(transform.position, 
-            new Vector3(LineRenderer.GetPosition(1).x, LineRenderer.GetPosition(1).y - 0.2f, LineRenderer.GetPosition(1).z) - transform.position);
+            new Vector3(transform.position.x, (transform.position.y + LineYValue * 1.2f) - 0.2f, transform.position.z) +
+            transform.forward * config.LineLength - transform.position);
 
         // Increments final line's point Y, so it goes up
-        if (Physics.Raycast(lineForward, config.LineLength, lineHitLayers) != false)
+        if (Physics.Raycast(lineForward, out RaycastHit hit, config.LineLength, lineHitLayers) != false)
         {
-            LineYValue += 0.1f;
+            LineYValue = Mathf.Lerp(LineYValue, LineYValue += 0.1f, Time.fixedDeltaTime * 20f);
+
+            if (Vector3.Distance(transform.position, hit.transform.position) < 1.5)
+                finalLineLength = config.LineLength * 0.4f;
         }
         else
         {
@@ -80,13 +85,15 @@ public class BallHandler : MonoBehaviour
             {
                 // Puts line back to normal 
                 if (LineYValue > 0)
-                    LineYValue -= 0.1f;
+                    LineYValue = Mathf.Lerp(LineYValue, LineYValue -= 0.1f, Time.fixedDeltaTime * 20f);
+
+                finalLineLength = config.LineLength;
             }
         }
 
         LineRenderer.SetPosition(1, 
             new Vector3(transform.position.x, transform.position.y + LineYValue * 1.2f, transform.position.z) + 
-            transform.forward * config.LineLength);
+            transform.forward * finalLineLength);
     }
 
     /// <summary>

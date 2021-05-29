@@ -136,7 +136,10 @@ MonoBehaviour:
   prefabSpawnParticles: {fileID: 19617751753561711, guid: e0436f3d0d5e7df46bdc1c0cae4bfa1e, type: 3}
   prefabConfettiParticles: {fileID: 188874850793244539, guid: 86b7fa8da7e886d49b72b5ba3d257d09, type: 3}
   prefabLightBridgeCollision: {fileID: 7839088885294078314, guid: c64a3850aa3523f4db4dbda2f441e0a6, type: 3}
-  bezerraTempParticles: 0
+  spaceParticles: 0
+  lineHitLayers:
+    serializedVersion: 2
+    m_Bits: 5137
 --- !u!114 &3920451552233936615
 MonoBehaviour:
   m_ObjectHideFlags: 0

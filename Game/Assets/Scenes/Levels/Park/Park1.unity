@@ -24627,6 +24627,18 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 7479080727368936947, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479080727368936949, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479080727368936949, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 5943
+      objectReference: {fileID: 0}
     - target: {fileID: 7479080727368936950, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.961033
@@ -24710,6 +24722,14 @@ PrefabInstance:
     - target: {fileID: 7479080727466094651, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479080727615841481, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479080727615841485, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7919287771765797697, guid: ee23f135dd01a06478d2c01d5adfc0dc, type: 3}
       propertyPath: m_IsActive

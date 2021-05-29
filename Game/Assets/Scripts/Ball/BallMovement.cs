@@ -9,7 +9,6 @@ public class BallMovement : MonoBehaviour
     public bool RotationAfterShot { get; set; }
     private float stoppedTime;
     private float stoppedTimeMax;
-    private Vector2 direction;
 
     // Previous transform variables
     private Vector3 previousPosition;

@@ -64,7 +64,7 @@ public class BallCollisions : MonoBehaviour
                 if (playGroundHitSound == null)
                     playGroundHitSound = StartCoroutine(PlayGroundHitSound());
 
-                if (ballHandler.BezerraTempParticles)
+                if (ballHandler.SpaceParticles)
                 {
                     Vector3 dir = collision.contacts[0].normal * 500 - collision.contacts[0].point;
 
@@ -82,7 +82,7 @@ public class BallCollisions : MonoBehaviour
         // Invisible wall particles
         if (collision.collider.CompareTag("InvisWall"))
         {
-            if (ballHandler.BezerraTempParticles)
+            if (ballHandler.SpaceParticles)
             {
                 Vector3 dir = collision.contacts[0].normal * 500 - collision.contacts[0].point;
 

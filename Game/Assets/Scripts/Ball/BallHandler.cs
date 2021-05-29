@@ -28,14 +28,15 @@ public class BallHandler : MonoBehaviour
     public GameObject PrefabLightBridgeCollision => prefabLightBridgeCollision;
 
     [Header("Turn on on space levels")]
-    [SerializeField] private bool bezerraTempParticles;
-    public bool BezerraTempParticles => bezerraTempParticles;
+    [SerializeField] private bool spaceParticles;
+    public bool SpaceParticles => spaceParticles;
 
     // Components
     private BallShot ballShot;
     private BallSounds ballSounds;
     public LineRenderer LineRenderer { get; set; }
-
+    public float LineYValue { get; set; }
+    [SerializeField] private LayerMask lineHitLayers;
 
     private void Awake()
     {
@@ -55,8 +56,37 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     public void DrawLine()
     {
-        LineRenderer.SetPosition(0, transform.position + transform.forward * 0.4f);
-        LineRenderer.SetPosition(1, transform.position + transform.forward * config.LineLength);
+        LineRenderer.SetPosition(0, transform.position);
+
+        Ray lineForward = new Ray(transform.position, LineRenderer.GetPosition(1) - transform.position);
+        Ray normalForward = 
+            new Ray(transform.position, 
+            new Vector3(LineRenderer.GetPosition(1).x, LineRenderer.GetPosition(1).y - 0.2f, LineRenderer.GetPosition(1).z) - transform.position);
+
+        // Increments final line's point Y, so it goes up
+        if (Physics.Raycast(lineForward, config.LineLength, lineHitLayers) != false)
+        {
+            LineYValue += 0.1f;
+        }
+        else
+        {
+            // If a ray below the current ray would hit something
+            if (Physics.Raycast(normalForward, config.LineLength, lineHitLayers) != false)
+            {
+                // Does nothing
+            }
+            // If it wouldn't hit something
+            else
+            {
+                // Puts line back to normal 
+                if (LineYValue > 0)
+                    LineYValue -= 0.1f;
+            }
+        }
+
+        LineRenderer.SetPosition(1, 
+            new Vector3(transform.position.x, transform.position.y + LineYValue * 1.2f, transform.position.z) + 
+            transform.forward * config.LineLength);
     }
 
     /// <summary>

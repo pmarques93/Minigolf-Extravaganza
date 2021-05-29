@@ -22,7 +22,7 @@ TagManager:
   - DrawInFront
   - CinemachineCollider
   - InvisibleCollider
-  - 
+  - NoCollisionWIthCinemachine
   - 
   - 
   - 

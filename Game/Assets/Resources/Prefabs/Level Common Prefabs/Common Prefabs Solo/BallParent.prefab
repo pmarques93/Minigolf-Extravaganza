@@ -139,7 +139,7 @@ MonoBehaviour:
   spaceParticles: 0
   lineHitLayers:
     serializedVersion: 2
-    m_Bits: 5137
+    m_Bits: 1041
 --- !u!114 &3920451552233936615
 MonoBehaviour:
   m_ObjectHideFlags: 0

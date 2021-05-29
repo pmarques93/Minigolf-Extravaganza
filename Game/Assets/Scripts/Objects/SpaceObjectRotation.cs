@@ -6,6 +6,6 @@ public class SpaceObjectRotation : MonoBehaviour
 {
     private void FixedUpdate()
     {
-        transform.eulerAngles += new Vector3(1, 1, 1) * Time.fixedDeltaTime;
+        transform.eulerAngles += new Vector3(3, 3, 3) * Time.fixedDeltaTime;
     }
 }

@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 543450652812094243}
   - component: {fileID: 3469287836797019270}
   - component: {fileID: 1711813855955275852}
+  - component: {fileID: 620673546530607074}
   m_Layer: 12
   m_Name: DecoFlag
   m_TagString: Untagged
@@ -177,6 +178,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &620673546530607074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148875784601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daa42b81853e4447b297c7e96616014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialName: Flag
 --- !u!1 &1070495054887416007
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,4 +13,10 @@ public enum LevelEnum
     SciFi4,
     SciFi5,
     SciFi6,
+    Castle1,
+    Castle2,
+    Castle3,
+    Castle4,
+    Castle5,
+    Castle6,
 }

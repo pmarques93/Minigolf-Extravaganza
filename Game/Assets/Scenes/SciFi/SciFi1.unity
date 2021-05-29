@@ -230,50 +230,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &30975829
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 30975831}
-  - component: {fileID: 30975830}
-  m_Layer: 0
-  m_Name: FAST FORWARD TEMP TEXT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &30975830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30975829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 971b324e568c3974a8c3e042492603e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fastFoward: 1
---- !u!4 &30975831
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30975829}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.101519, y: 3.6565495, z: 0.47779325}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &455625060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,6 +299,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485810929}
     m_Modifications:
+    - target: {fileID: 615707785363808993, guid: a8f19dcde809614449f7bfa27c4e5a40, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4863852042245772681, guid: a8f19dcde809614449f7bfa27c4e5a40, type: 3}
       propertyPath: m_Name
       value: SciFi DeadEnd.2
@@ -1098,6 +1058,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485810929}
     m_Modifications:
+    - target: {fileID: 4215534966078785365, guid: dc9af78e62b9af3489ff77d204476016, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6298731948630365299, guid: dc9af78e62b9af3489ff77d204476016, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1163,6 +1127,18 @@ PrefabInstance:
     - target: {fileID: 570897902876294966, guid: a10612df5b57bb745beaf5f8e1218347, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481345424981047016, guid: a10612df5b57bb745beaf5f8e1218347, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481345424981047016, guid: a10612df5b57bb745beaf5f8e1218347, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481345424981047021, guid: a10612df5b57bb745beaf5f8e1218347, type: 3}
+      propertyPath: far clip plane
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8481345425079315237, guid: a10612df5b57bb745beaf5f8e1218347, type: 3}
       propertyPath: m_Name

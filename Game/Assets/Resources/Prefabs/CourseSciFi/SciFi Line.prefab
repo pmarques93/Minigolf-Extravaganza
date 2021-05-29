@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 1186412050289990142}
   - component: {fileID: 227177102105689628}
   - component: {fileID: 7108615535162698182}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: InvisWall SciFi Line
   m_TagString: InvisWall
   m_Icon: {fileID: 0}

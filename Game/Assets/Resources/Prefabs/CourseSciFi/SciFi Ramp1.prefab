@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1282031381393722596}
   - component: {fileID: 4215534966078785365}
   - component: {fileID: 3732920481206280863}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'InvisWall SciFi Ramp1 '
   m_TagString: InvisWall
   m_Icon: {fileID: 0}

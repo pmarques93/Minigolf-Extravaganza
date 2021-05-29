@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 9187915422436598190}
   - component: {fileID: 5095496032525481062}
   - component: {fileID: 3818128228798708413}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: InvisWall SciFi Curve
   m_TagString: InvisWall
   m_Icon: {fileID: 0}

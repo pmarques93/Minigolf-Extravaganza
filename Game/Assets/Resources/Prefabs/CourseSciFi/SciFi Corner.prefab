@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1981496112817442715}
   - component: {fileID: 5450060702056585709}
   - component: {fileID: 7273412796229995313}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: InvisWall SciFi Corner
   m_TagString: InvisWall
   m_Icon: {fileID: 0}

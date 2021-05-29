@@ -21,7 +21,7 @@ TagManager:
   - Ball
   - DrawInFront
   - CinemachineCollider
-  - 
+  - InvisibleCollider
   - 
   - 
   - 

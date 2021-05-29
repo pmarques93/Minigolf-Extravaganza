@@ -53,55 +53,53 @@ public class UILevelSelection : MonoBehaviour
                     allWorlds[0].SetActive(true);
                     eventSys.SetSelectedGameObject(allLevels[5]);
                     break;
-                /*
-            case LevelEnum.SciFi1:
-                allWorlds[1].SetActive(true);
-                eventSys.SetSelectedGameObject(allLevels[0]);
-                break;
-            case LevelEnum.SciFi2:
-                allWorlds[1].SetActive(true);
-                eventSys.SetSelectedGameObject(allLevels[1]);
-                break;
-            case LevelEnum.SciFi3:
-                allWorlds[1].SetActive(true);
-                eventSys.SetSelectedGameObject(allLevels[2]);
-                break;
-            case LevelEnum.SciFi4:
-                allWorlds[1].SetActive(true);
-                eventSys.SetSelectedGameObject(allLevels[3]);
-                break;
-            case LevelEnum.SciFi5:
-                allWorlds[1].SetActive(true);
-                eventSys.SetSelectedGameObject(allLevels[4]);
-                break;
-            case LevelEnum.SciFi6:
-                allWorlds[1].SetActive(true);
-                eventSys.SetSelectedGameObject(allLevels[5]);
-                break;
-                */
+                case LevelEnum.SciFi1:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[6]);
+                    break;
+                case LevelEnum.SciFi2:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[7]);
+                    break;
+                case LevelEnum.SciFi3:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[8]);
+                    break;
+                case LevelEnum.SciFi4:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[9]);
+                    break;
+                case LevelEnum.SciFi5:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[10]);
+                    break;
+                case LevelEnum.SciFi6:
+                    allWorlds[1].SetActive(true);
+                    eventSys.SetSelectedGameObject(allLevels[11]);
+                    break;
                 case LevelEnum.Medieval1:
                     allWorlds[2].SetActive(true);
-                    eventSys.SetSelectedGameObject(allLevels[0]);
+                    eventSys.SetSelectedGameObject(allLevels[12]);
                     break;
                 case LevelEnum.Medieval2:
                     allWorlds[2].SetActive(true);
-                    eventSys.SetSelectedGameObject(allLevels[1]);
+                    eventSys.SetSelectedGameObject(allLevels[13]);
                     break;
                 case LevelEnum.Medieval3:
                     allWorlds[2].SetActive(true);
-                    eventSys.SetSelectedGameObject(allLevels[2]);
+                    eventSys.SetSelectedGameObject(allLevels[14]);
                     break;
                 case LevelEnum.Medieval4:
                     allWorlds[2].SetActive(true);
-                    eventSys.SetSelectedGameObject(allLevels[3]);
+                    eventSys.SetSelectedGameObject(allLevels[15]);
                     break;
                 case LevelEnum.Medieval5:
                     allWorlds[2].SetActive(true);
-                    eventSys.SetSelectedGameObject(allLevels[4]);
+                    eventSys.SetSelectedGameObject(allLevels[16]);
                     break;
                 case LevelEnum.Medieval6:
                     allWorlds[2].SetActive(true);
-                    eventSys.SetSelectedGameObject(allLevels[5]);
+                    eventSys.SetSelectedGameObject(allLevels[17]);
                     break;
             }
         }

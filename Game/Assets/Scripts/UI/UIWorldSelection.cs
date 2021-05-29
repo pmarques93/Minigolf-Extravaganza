@@ -13,6 +13,6 @@ public class UIWorldSelection : MonoBehaviour
 
     public void StopVideo(VideoPlayer video)
     {
-        video.Stop();
+        video.Pause();
     }
 }

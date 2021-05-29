@@ -12113,7 +12113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 153524906}
-  m_PathPosition: 0.2890332
+  m_PathPosition: 0.3515963
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -15491,11 +15491,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487003988}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 6ec38193677bd4f438a63c269ce7f322, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 8c35470cb208e1441b91ba4d705f7721, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -19807,7 +19807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 6a42cff3f4361dc4b948e9c1a9ad5540, type: 3}
+  m_Texture: {fileID: 2800000, guid: 944c0f452b53f5042910bee71c48c330, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -47470,7 +47470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 8c35470cb208e1441b91ba4d705f7721, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -51974,6 +51974,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 337995376}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 487003989}
+          m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -56622,6 +56634,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 487003989}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 337995376}
+          m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -67085,8 +67109,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8524828740979360595}
-  m_LocalRotation: {x: -0, y: 0.51602787, z: -0, w: 0.8565718}
-  m_LocalPosition: {x: -1.8725044, y: 2.2, z: -0.30574918}
+  m_LocalRotation: {x: -0, y: 0.5251249, z: -0, w: 0.8510252}
+  m_LocalPosition: {x: -1.2763581, y: 2.2, z: 0.0016945004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 386108712}

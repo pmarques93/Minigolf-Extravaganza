@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7702069385461470015}
   - component: {fileID: 341074830835793858}
   - component: {fileID: 836647960249455765}
+  - component: {fileID: 1144529618068288345}
   m_Layer: 10
   m_Name: MedievalWallCornerInner
   m_TagString: Wall
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1144529618068288345
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270085431568079151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2847407925421399109, guid: eed75d7c1264e474aa8dec3500859dca, type: 3}
 --- !u!1 &5359303198093366607
 GameObject:
   m_ObjectHideFlags: 0

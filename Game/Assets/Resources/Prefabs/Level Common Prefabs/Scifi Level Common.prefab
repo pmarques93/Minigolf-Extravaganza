@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8481345425079315238}
   m_Layer: 0
-  m_Name: LevelCommon
+  m_Name: Scifi Level Common
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,6 +215,10 @@ PrefabInstance:
     - target: {fileID: 7504921691555569694, guid: 8f2f6c605c7e41244af9e71af72d51a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504921693127573721, guid: 8f2f6c605c7e41244af9e71af72d51a7, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2f6c605c7e41244af9e71af72d51a7, type: 3}

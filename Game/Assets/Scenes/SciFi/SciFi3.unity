@@ -6108,6 +6108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Satellite2.2
       objectReference: {fileID: 0}
+    - target: {fileID: 790371372008635856, guid: 7bcf866ae6effc040a66fb555546ef78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcf866ae6effc040a66fb555546ef78, type: 3}
 --- !u!4 &1105529115 stripped
@@ -8869,6 +8873,10 @@ PrefabInstance:
     - target: {fileID: 790371372008635856, guid: 7bcf866ae6effc040a66fb555546ef78, type: 3}
       propertyPath: m_Name
       value: Satellite2
+      objectReference: {fileID: 0}
+    - target: {fileID: 790371372008635856, guid: 7bcf866ae6effc040a66fb555546ef78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3549451677043683692, guid: 7bcf866ae6effc040a66fb555546ef78, type: 3}
       propertyPath: m_LocalPosition.x

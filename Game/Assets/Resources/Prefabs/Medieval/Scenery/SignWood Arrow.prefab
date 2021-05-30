@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6690945268649734434}
   - component: {fileID: 7743052050635538055}
   - component: {fileID: 5516961878266169933}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SignWood Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

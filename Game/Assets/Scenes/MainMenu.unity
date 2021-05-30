@@ -3469,7 +3469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 17
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 0a0000000f00000014000000
   starGroups:
   - {fileID: 882614752}
   - {fileID: 365216690}
@@ -20353,7 +20353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 6260276d170aea346b1e3afe4c08dda6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

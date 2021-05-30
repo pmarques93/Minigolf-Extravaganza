@@ -14946,7 +14946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.746664
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14954,11 +14954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.435104
+      value: 13.75
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.617411
+      value: 0.981837
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14966,7 +14966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7866408
+      value: 0.18972695
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalRotation.z
@@ -14978,11 +14978,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 103.745
+      value: 21.874
       objectReference: {fileID: 0}
     - target: {fileID: 1882672094400821732, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161900901048891239, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}
+      propertyPath: m_text
+      value: Medieval 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf8ff7ed70636b449542476bd1c0c16, type: 3}

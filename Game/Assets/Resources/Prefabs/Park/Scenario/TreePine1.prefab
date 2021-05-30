@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2475742238356447486}
   - component: {fileID: 1581961832303013723}
   - component: {fileID: 3607584161251285905}
+  - component: {fileID: 2390772251252175082}
   m_Layer: 0
   m_Name: TreePine1
-  m_TagString: Untagged
+  m_TagString: OoB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2390772251252175082
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958947274574199364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4257562351363601510, guid: 5ee981323864ecb47911b7ca97afd0bf, type: 3}

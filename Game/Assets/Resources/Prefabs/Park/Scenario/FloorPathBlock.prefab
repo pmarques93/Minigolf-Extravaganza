@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5775672088914835651}
   - component: {fileID: 7460376321016149862}
   - component: {fileID: 4642195221222245292}
+  - component: {fileID: 7275416746347429088}
   m_Layer: 0
   m_Name: FloorPathBlock
-  m_TagString: Untagged
+  m_TagString: OoB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7275416746347429088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587815750199173753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8418001625631012235, guid: 2646860c440ce084687f5c075fdd7a6a, type: 3}

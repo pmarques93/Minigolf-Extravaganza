@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3067413767165020743}
   - component: {fileID: 2107261333044757986}
   - component: {fileID: 4240851865280737576}
+  - component: {fileID: 8253302258219486695}
   m_Layer: 0
   m_Name: FloorDirt
-  m_TagString: Untagged
+  m_TagString: OoB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8253302258219486695
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439389955021328637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8732798034224781443, guid: fb7862815c709564c9a9375d8c28376d, type: 3}

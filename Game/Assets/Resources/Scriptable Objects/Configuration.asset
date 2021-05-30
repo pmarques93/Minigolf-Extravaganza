@@ -18,9 +18,9 @@ MonoBehaviour:
   defaultLineLength: 2
   minLineLength: 0.5
   maxLineLength: 3
-  defaultPowerTime: 0.15
+  defaultPowerTime: 0.25
   minPowerTime: 0.05
-  maxPowerTime: 0.3
+  maxPowerTime: 0.7
   defaultPowerMultiplier: 22
   minPowerMultiplier: 17
   maxPowerMultiplier: 27

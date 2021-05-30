@@ -6,7 +6,7 @@ using System;
 /// <summary>
 /// Class responsible for controlling cinemachine cameras.
 /// </summary>
-public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
+public class CinemachineTarget : MonoBehaviour
 {
     // Values
     [SerializeField] private ConfigurationScriptableObj config;
@@ -23,9 +23,6 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     private BallMovement ballMovement;
     private PlayerInputCustom input;
 
-    private float xSpeedRotation;
-    private float ySpeedRotation;
-
     // Ball fixed camera direction vertical
     private float verticalPosition;
 
@@ -34,9 +31,6 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         ball = FindObjectOfType<BallHandler>();
         cineBrain = Camera.main.GetComponent<CinemachineBrain>();
         input = FindObjectOfType<PlayerInputCustom>();
-
-        xSpeedRotation = 0;
-        ySpeedRotation = 0;
     }
 
     private void OnEnable()
@@ -116,7 +110,7 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
         if (ballCameraComposer != null)
         {
             if (ballCameraComposer.m_TrackedObjectOffset.y <= 3.5f &&
-            ballCameraComposer.m_TrackedObjectOffset.y >= -0.5f)
+                ballCameraComposer.m_TrackedObjectOffset.y >= -0.5f)
             {
                 ballCameraComposer.m_TrackedObjectOffset =
                     new Vector3(0, verticalPosition, 0);
@@ -164,14 +158,5 @@ public class CinemachineTarget : MonoBehaviour, IUpdateConfigurations
     {
         if (cineBrain.IsBlending) return true;
         return false;
-    }
-
-    /// <summary>
-    /// Updates freelook camera rotation speeds.
-    /// </summary>
-    public void UpdateValues()
-    {
-        ySpeedRotation = config.RotationSpeed * 0.02f;
-        xSpeedRotation = config.RotationSpeed * 2f;
     }
 }

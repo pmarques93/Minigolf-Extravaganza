@@ -109,10 +109,6 @@ public class BallShot : MonoBehaviour
         Plays++;
         OnHit(Plays);
 
-        // Resets line renderer final point back to 0
-        ballHandler.LineYValue = 0;
-        ballHandler.FinalLineLength = ballHandler.LineLength;
-
         VisualEffect vfx = 
             ballHandler.SpawnParticles(
                 ballHandler.PrefabSpawnParticles, 3, transform.position);
@@ -142,7 +138,6 @@ public class BallShot : MonoBehaviour
         OnHit(Plays);
 
         ballMovement.OnTypeOfMovement(BallMovementEnum.Moving);
-        ballHandler.LineRenderer.enabled = false;
         ballMovement.RotationAfterShot = true;
     }
 

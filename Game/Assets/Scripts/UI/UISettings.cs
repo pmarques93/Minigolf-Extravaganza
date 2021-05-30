@@ -11,7 +11,6 @@ public class UISettings : MonoBehaviour
     [SerializeField] private ConfigurationScriptableObj config;
 
     [SerializeField] private Slider ballRotation;
-    [SerializeField] private Slider lineLength;
     [SerializeField] private Slider powerTime;
     [SerializeField] private Slider powerMultiplier;
     [SerializeField] private Slider worldObstaclesSpeed;
@@ -82,9 +81,6 @@ public class UISettings : MonoBehaviour
         ballRotation.value = config.LoadSetting<float>(SettingsEnum.BallRotationSpeed);
         ballRotation.minValue = config.MinRotationSpeed;
         ballRotation.maxValue = config.MaxRotationSpeed;
-        lineLength.value = config.LoadSetting<float>(SettingsEnum.LineLength);
-        lineLength.minValue = config.MinLineLength;
-        lineLength.maxValue = config.MaxLineLength;
         powerTime.value = config.LoadSetting<float>(SettingsEnum.PowerTime);
         powerTime.minValue = config.MinPowerTime;
         powerTime.maxValue = config.MaxPowerTime;
@@ -164,12 +160,6 @@ public class UISettings : MonoBehaviour
     public void BallRotationValue(float value)
     {
         config.RotationSpeed = value;
-        config.SaveSettings();
-    }
-
-    public void LineLengthValue(float value)
-    {
-        config.LineLength = value;
         config.SaveSettings();
     }
 

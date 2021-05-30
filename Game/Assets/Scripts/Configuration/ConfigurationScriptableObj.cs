@@ -17,14 +17,6 @@ public class ConfigurationScriptableObj : ScriptableObject
     public float MinRotationSpeed => minRotationSpeed;
     public float MaxRotationSpeed => maxRotationSpeed;
 
-    [SerializeField] float defaultLineLength;
-    [SerializeField] float minLineLength;
-    [SerializeField] float maxLineLength;
-    public float LineLength { get; set; }
-    public float DefaultLineLength => defaultLineLength;
-    public float MinLineLength => minLineLength;
-    public float MaxLineLength => maxLineLength;
-
     [SerializeField] float defaultPowerTime;
     [SerializeField] float minPowerTime;
     [SerializeField] float maxPowerTime;
@@ -113,10 +105,10 @@ public class ConfigurationScriptableObj : ScriptableObject
     public void ResetControlsSettings()
     {
         RotationSpeed = defaultRotationSpeed;
-        LineLength = defaultLineLength;
         PowerTime = defaultPowerTime;
         PowerMultiplier = defaultPowerMultiplier;
         WorldObstaclesSpeed = defaultWorldObstaclesSpeed;
+        GameSpeed = defaultGameSpeed;
     }
 
     /// <summary>
@@ -145,7 +137,6 @@ public class ConfigurationScriptableObj : ScriptableObject
     public void SaveSettings()
     {
         PlayerPrefs.SetFloat("RotationSpeed", RotationSpeed);
-        PlayerPrefs.SetFloat("LineLength", LineLength);
         PlayerPrefs.SetFloat("PowerTime", PowerTime);
         PlayerPrefs.SetFloat("PowerMultiplier", PowerMultiplier);
         PlayerPrefs.SetFloat("WorldObstaclesSpeed", WorldObstaclesSpeed);
@@ -164,7 +155,6 @@ public class ConfigurationScriptableObj : ScriptableObject
     public void LoadSettings()
     {
         RotationSpeed = PlayerPrefs.GetFloat("RotationSpeed", defaultRotationSpeed);
-        LineLength = PlayerPrefs.GetFloat("LineLength", defaultLineLength);
         PowerTime = PlayerPrefs.GetFloat("PowerTime", defaultPowerTime);
         PowerMultiplier = PlayerPrefs.GetFloat("PowerMultiplier", defaultPowerMultiplier);
         WorldObstaclesSpeed = PlayerPrefs.GetFloat("WorldObstaclesSpeed", defaultWorldObstaclesSpeed);
@@ -190,9 +180,6 @@ public class ConfigurationScriptableObj : ScriptableObject
         {
             case SettingsEnum.BallRotationSpeed:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("RotationSpeed", defaultRotationSpeed), typeof(T));
-                break;
-            case SettingsEnum.LineLength:
-                t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("LineLength", defaultLineLength), typeof(T));
                 break;
             case SettingsEnum.PowerTime:
                 t = (T)Convert.ChangeType(PlayerPrefs.GetFloat("PowerTime", defaultPowerTime), typeof(T));

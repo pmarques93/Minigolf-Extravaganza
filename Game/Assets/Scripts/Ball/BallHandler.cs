@@ -38,6 +38,7 @@ public class BallHandler : MonoBehaviour
     public float LineYValue { get; set; }
     public float FinalLineLength { get; set; }
     [SerializeField] private LayerMask lineHitLayers;
+    public float LineLength { get; private set; }
 
     private void Awake()
     {
@@ -50,6 +51,7 @@ public class BallHandler : MonoBehaviour
     {
         Victory = false;
         LineRenderer.enabled = false;
+        LineLength = 2f;
     }
 
     /// <summary>
@@ -63,20 +65,20 @@ public class BallHandler : MonoBehaviour
         Ray normalForward = 
             new Ray(transform.position, 
             new Vector3(transform.position.x, (transform.position.y + LineYValue * 1.2f) - 0.2f, transform.position.z) +
-            transform.forward * config.LineLength - transform.position);
+            transform.forward * LineLength - transform.position);
 
         // Increments final line's point Y, so it goes up
-        if (Physics.Raycast(lineForward, out RaycastHit hit, config.LineLength, lineHitLayers) != false)
+        if (Physics.Raycast(lineForward, out RaycastHit hit, LineLength, lineHitLayers) != false)
         {
             LineYValue = Mathf.Lerp(LineYValue, LineYValue += 0.1f, Time.fixedDeltaTime * 20f);
 
             if (Vector3.Distance(transform.position, hit.transform.position) < 1.5)
-                FinalLineLength = config.LineLength * 0.4f;
+                FinalLineLength = LineLength * 0.4f;
         }
         else
         {
             // If a ray below the current ray would hit something
-            if (Physics.Raycast(normalForward, config.LineLength, lineHitLayers) != false)
+            if (Physics.Raycast(normalForward, LineLength, lineHitLayers) != false)
             {
                 // Does nothing
             }
@@ -87,7 +89,7 @@ public class BallHandler : MonoBehaviour
                 if (LineYValue > 0)
                     LineYValue = Mathf.Lerp(LineYValue, LineYValue -= 0.1f, Time.fixedDeltaTime * 20f);
 
-                FinalLineLength = config.LineLength;
+                FinalLineLength = LineLength;
             }
         }
 

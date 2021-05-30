@@ -1,7 +1,6 @@
 public enum SettingsEnum 
 {
     BallRotationSpeed,
-    LineLength,
     PowerTime,
     PowerMultiplier,
     WorldObstaclesSpeed,

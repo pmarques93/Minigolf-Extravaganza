@@ -23,7 +23,6 @@ public class BallMovement : MonoBehaviour
     public Rigidbody Rb { get; private set; }
     private BallHandler ballHandler;
     private PlayerInputCustom input;
-    private CinemachineTarget cinemachine;
     private BallShot ballShot;
     
     private void Awake()
@@ -31,7 +30,6 @@ public class BallMovement : MonoBehaviour
         Rb = GetComponent<Rigidbody>();
         ballHandler = GetComponent<BallHandler>();
         input = FindObjectOfType<PlayerInputCustom>();
-        cinemachine = FindObjectOfType<CinemachineTarget>();
         ballShot = GetComponent<BallShot>();
         
     }
@@ -64,13 +62,6 @@ public class BallMovement : MonoBehaviour
                     // Rotates the ball to the previous angle
                     transform.eulerAngles = previousRotation;
                     RotationAfterShot = false;
-                }
-
-                // If the ball is grounded enables line renderer
-                if (IsGrounded && ballHandler.Victory == false)
-                {
-                    if (ballHandler.LineRenderer.enabled == false)
-                        ballHandler.LineRenderer.enabled = true;
                 }
 
                 // Rotates the ball with player's input

@@ -33,25 +33,56 @@ public class BallHandler : MonoBehaviour
 
     // Components
     private BallShot ballShot;
+    private BallMovement ballMovement;
     private BallSounds ballSounds;
-    public LineRenderer LineRenderer { get; set; }
-    public float LineYValue { get; set; }
-    public float FinalLineLength { get; set; }
-    [SerializeField] private LayerMask lineHitLayers;
-    public float LineLength { get; private set; }
+    private CinemachineTarget cinemachine;
+
+    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private GameObject lineRendererObject;
+    private float lineYValue;
+    [SerializeField] private Transform linePosition;
+    private Coroutine activateLineRenderer;
 
     private void Awake()
     {
         ballShot = GetComponent<BallShot>();
-        LineRenderer = GetComponentInChildren<LineRenderer>();
+        ballMovement = GetComponent<BallMovement>();
         ballSounds = GetComponent<BallSounds>();
+        cinemachine = FindObjectOfType<CinemachineTarget>();
     }
 
     private void Start()
     {
         Victory = false;
-        LineRenderer.enabled = false;
-        LineLength = 2f;
+        lineRendererObject.SetActive(false);
+        lineYValue = 1f;
+    }
+
+    private void Update()
+    {
+        if (cinemachine.IsCameraBlending())
+        {
+            if (lineRendererObject.activeSelf == true)
+            {
+                lineRendererObject.SetActive(false);
+            }
+
+            activateLineRenderer = null;
+        }
+        else if (cinemachine.IsCameraBlending() == false && 
+            cinemachine.BallCamera.Priority > cinemachine.AfterShotCamera.Priority &&
+            ballMovement.IsGrounded &&
+            Victory == false)
+        {
+            if (activateLineRenderer == null)
+                activateLineRenderer = StartCoroutine(ActivateLineRenderer()); 
+        }
+    }
+
+    private IEnumerator ActivateLineRenderer()
+    {
+        yield return new WaitForFixedUpdate();
+        lineRendererObject.SetActive(true);
     }
 
     /// <summary>
@@ -59,43 +90,13 @@ public class BallHandler : MonoBehaviour
     /// </summary>
     public void DrawLine()
     {
-        LineRenderer.SetPosition(0, transform.position);
-
-        Ray lineForward = new Ray(transform.position, LineRenderer.GetPosition(1) - transform.position);
-        Ray normalForward = 
-            new Ray(transform.position, 
-            new Vector3(transform.position.x, (transform.position.y + LineYValue) - 0.2f, transform.position.z) +
-            transform.forward * LineLength - transform.position);
-
-        // Increments final line's point Y, so it goes up
-        if (Physics.Raycast(lineForward, out RaycastHit hit, LineLength, lineHitLayers) != false)
+        if (lineRenderer.enabled)
         {
-            LineYValue = Mathf.Lerp(LineYValue, LineYValue += 0.1f, Time.fixedDeltaTime * 20f);
+            lineRenderer.SetPosition(0, linePosition.position);
 
-            if (Vector3.Distance(transform.position, hit.transform.position) < 1.5)
-                FinalLineLength = LineLength * 0.6f;
+            lineRenderer.SetPosition(1,
+                new Vector3(linePosition.position.x, linePosition.position.y + lineYValue, linePosition.position.z));
         }
-        else
-        {
-            // If a ray below the current ray would hit something
-            if (Physics.Raycast(normalForward, LineLength, lineHitLayers) != false)
-            {
-                // Does nothing
-            }
-            // If it wouldn't hit something
-            else
-            {
-                // Puts line back to normal 
-                if (LineYValue > 0)
-                    LineYValue = Mathf.Lerp(LineYValue, LineYValue -= 0.1f, Time.fixedDeltaTime * 20f);
-
-                FinalLineLength = LineLength;
-            }
-        }
-
-        LineRenderer.SetPosition(1, 
-            new Vector3(transform.position.x, transform.position.y + LineYValue * 1.2f, transform.position.z) + 
-            transform.forward * FinalLineLength);
     }
 
     /// <summary>

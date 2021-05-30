@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Medieval
     second: {fileID: 2100000, guid: 2aa2d288bd8f35e4fbfc4ea0b3e9f0f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medieval1
+    second: {fileID: 2100000, guid: 2aa2d288bd8f35e4fbfc4ea0b3e9f0f6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

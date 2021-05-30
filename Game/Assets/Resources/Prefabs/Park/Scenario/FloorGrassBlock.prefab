@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6308631684621214944}
   - component: {fileID: 6927407602520304453}
   - component: {fileID: 5172366352626802575}
+  - component: {fileID: 6106040783063475705}
   m_Layer: 0
   m_Name: FloorGrassBlock
-  m_TagString: Untagged
+  m_TagString: OoB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6106040783063475705
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685333866509467226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7429646088924558401, guid: fc9c75d3d6d7c9e4da39ed46a6e0431d, type: 3}

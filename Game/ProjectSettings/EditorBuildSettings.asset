@@ -56,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Medieval/Medieval5.unity
     guid: f9905de8ae825014f8fe87444a9a59af
+  - enabled: 1
+    path: Assets/Scenes/Medieval/Medieval6.unity
+    guid: a17f2f9f89dc6e546b2b5a380c4f4cd5
   - enabled: 0
     path: Assets/Scenes/Presentation.unity
     guid: f9f77bf256d24034192bf36b852dc27a

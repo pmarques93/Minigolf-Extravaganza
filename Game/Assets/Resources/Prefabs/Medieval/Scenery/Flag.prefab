@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6315457858224472260}
   - component: {fileID: 6920582248477773665}
   - component: {fileID: 5183132631385291691}
+  - component: {fileID: 8509123567703580693}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6696522631415011966}
-  m_LocalRotation: {x: -7.644692e-17, y: 0.9563947, z: 4.0677646e-17, w: 0.29207766}
+  m_LocalRotation: {x: 0, y: 0.956394, z: 0, w: 0.29207966}
   m_LocalPosition: {x: 7.7, y: 1.713, z: -5.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8509123567703580693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696522631415011966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daa42b81853e4447b297c7e96616014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialName: Flag

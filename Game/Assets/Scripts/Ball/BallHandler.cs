@@ -64,7 +64,7 @@ public class BallHandler : MonoBehaviour
         Ray lineForward = new Ray(transform.position, LineRenderer.GetPosition(1) - transform.position);
         Ray normalForward = 
             new Ray(transform.position, 
-            new Vector3(transform.position.x, (transform.position.y + LineYValue * 1.2f) - 0.2f, transform.position.z) +
+            new Vector3(transform.position.x, (transform.position.y + LineYValue) - 0.2f, transform.position.z) +
             transform.forward * LineLength - transform.position);
 
         // Increments final line's point Y, so it goes up
@@ -73,7 +73,7 @@ public class BallHandler : MonoBehaviour
             LineYValue = Mathf.Lerp(LineYValue, LineYValue += 0.1f, Time.fixedDeltaTime * 20f);
 
             if (Vector3.Distance(transform.position, hit.transform.position) < 1.5)
-                FinalLineLength = LineLength * 0.4f;
+                FinalLineLength = LineLength * 0.6f;
         }
         else
         {

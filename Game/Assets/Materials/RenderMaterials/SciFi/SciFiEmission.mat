@@ -104,7 +104,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionStrength: 1.99
+    - _EmissionStrength: 25.48
     - _EnvironmentReflections: 1
     - _Fresnel: 0
     - _FresnelAmount: 0

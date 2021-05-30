@@ -5320,7 +5320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 2
-  scoresEvaluation: 05000000080000000b000000
+  scoresEvaluation: 06000000090000000c000000
   starGroups:
   - {fileID: 1941951365}
   - {fileID: 480265300}
@@ -38006,7 +38006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 4
-  scoresEvaluation: 05000000080000000c000000
+  scoresEvaluation: 070000000a0000000e000000
   starGroups:
   - {fileID: 1670092596}
   - {fileID: 845489205}
@@ -61901,7 +61901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 6
-  scoresEvaluation: 0b0000000e00000014000000
+  scoresEvaluation: 0e0000001200000016000000
   starGroups:
   - {fileID: 1036767901}
   - {fileID: 185905030}
@@ -65917,7 +65917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 3
-  scoresEvaluation: 05000000080000000c000000
+  scoresEvaluation: 080000000b0000000f000000
   starGroups:
   - {fileID: 477783044}
   - {fileID: 33079653}

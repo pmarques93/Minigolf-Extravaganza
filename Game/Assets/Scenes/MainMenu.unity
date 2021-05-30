@@ -6916,7 +6916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 13
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 030000000500000007000000
   starGroups:
   - {fileID: 1660771515}
   - {fileID: 768911276}
@@ -55119,7 +55119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 14
-  scoresEvaluation: 010000000100000001000000
+  scoresEvaluation: 05000000070000000a000000
   starGroups:
   - {fileID: 1755286910}
   - {fileID: 946330397}

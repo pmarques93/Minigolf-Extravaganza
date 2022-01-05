@@ -5185,7 +5185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: a7ded1277c95ed3449e4de2e62f445af, type: 2}
   ballRotation: {fileID: 802330321692481904}
-  lineLength: {fileID: 0}
   powerTime: {fileID: 802330320737687233}
   powerMultiplier: {fileID: 802330322170934131}
   worldObstaclesSpeed: {fileID: 802330322430735477}
@@ -5255,7 +5254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663794106416777623}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 

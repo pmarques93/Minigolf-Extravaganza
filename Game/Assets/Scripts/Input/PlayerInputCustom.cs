@@ -20,19 +20,24 @@ public class PlayerInputCustom : MonoBehaviour
         pauseMenu = FindObjectOfType<PauseMenu>();
     }
 
-    private void Start()
+    private void Start() =>
+        SwitchControlsToPauseMenu();
+
+    public void SwitchControlsToGameplay()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        SwitchControlsToPauseMenu();
+        inputControl.SwitchCurrentActionMap("Gameplay");
     }
 
-    public void SwitchControlsToGameplay() => 
-        inputControl.SwitchCurrentActionMap("Gameplay");
+    public void SwitchControlsToPauseMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
-    public void SwitchControlsToPauseMenu() =>
         inputControl.SwitchCurrentActionMap("PauseMenu");
+    }
 
     public void SwitchControlsToCatapult() =>
         inputControl.SwitchCurrentActionMap("Catapult");

@@ -62,11 +62,11 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_ActionsAsset: {fileID: -944628639613478452, guid: e8b0453646379d24fb18540157c0ac31, type: 3}
-  m_PointAction: {fileID: 0}
+  m_PointAction: {fileID: 9171097503697907481, guid: e8b0453646379d24fb18540157c0ac31, type: 3}
   m_MoveAction: {fileID: 3617215866197761212, guid: e8b0453646379d24fb18540157c0ac31, type: 3}
   m_SubmitAction: {fileID: -9190495251888478755, guid: e8b0453646379d24fb18540157c0ac31, type: 3}
   m_CancelAction: {fileID: -8792046052914735415, guid: e8b0453646379d24fb18540157c0ac31, type: 3}
-  m_LeftClickAction: {fileID: 0}
+  m_LeftClickAction: {fileID: -894797189895872468, guid: e8b0453646379d24fb18540157c0ac31, type: 3}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 0}
@@ -235,53 +235,25 @@ MonoBehaviour:
     m_ActionId: aa2e403e-39c1-41cd-b41c-18259a2cd7ae
     m_ActionName: DisableControls/New action
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5185835280804991723}
-        m_TargetAssemblyTypeName: PlayerInputCustom, Assembly-CSharp
-        m_MethodName: HandleDirectionCatapult
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: be2ead72-5cb4-4fe1-8e5d-a38ca9d8c745
-    m_ActionName: Catapult/Direction[/Keyboard/a,/Keyboard/d,/Keyboard/w,/Keyboard/s]
+      m_Calls: []
+    m_ActionId: a35f5f64-1f42-4df1-8b0a-47c0d7cba61f
+    m_ActionName: PauseMenu/Point[/Mouse/position]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5185835280804991723}
-        m_TargetAssemblyTypeName: PlayerInputCustom, Assembly-CSharp
-        m_MethodName: HandleShotCatapult
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ea82cc78-d933-4910-9904-4f4ff6d8471c
-    m_ActionName: Catapult/Shot[/Mouse/leftButton,/Keyboard/enter]
+      m_Calls: []
+    m_ActionId: 88b2b1ee-3e2c-4efe-984f-f3d37c36a54d
+    m_ActionName: PauseMenu/Click[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5185835280804991723}
-        m_TargetAssemblyTypeName: PlayerInputCustom, Assembly-CSharp
-        m_MethodName: HandleCancelCatapult
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f72bd3af-f406-4bc9-9db4-5452bd2085f1
-    m_ActionName: Catapult/Cancel[/Mouse/rightButton,/Keyboard/space]
+      m_Calls: []
+    m_ActionId: c851ec6b-99ff-49cc-aa65-6d71666e5fc6
+    m_ActionName: Catapult/Direction[/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f57105fb-6b01-4339-88f2-c9c6ba6291fa
+    m_ActionName: Catapult/Shot[/Mouse/leftButton,/Keyboard/enter,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 76aa7f5c-fb6c-40db-a9f9-99b626692f11
+    m_ActionName: Catapult/Cancel[/Mouse/rightButton,/Keyboard/backspace,/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

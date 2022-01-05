@@ -25152,6 +25152,7 @@ GameObject:
   - component: {fileID: 823847832}
   - component: {fileID: 823847827}
   - component: {fileID: 823847831}
+  - component: {fileID: 823847833}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -25271,6 +25272,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823847826}
   m_CullTransparentMesh: 0
+--- !u!114 &823847833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823847826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &825600632
 GameObject:
   m_ObjectHideFlags: 0
@@ -63719,6 +63737,46 @@ PrefabInstance:
       propertyPath: m_FirstSelected
       value: 
       objectReference: {fileID: 1560738374}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 5c05bc7a-6921-401a-a396-b61059bbc40e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      value: c851ec6b-99ff-49cc-aa65-6d71666e5fc6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
+      value: f57105fb-6b01-4339-88f2-c9c6ba6291fa
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      value: 76aa7f5c-fb6c-40db-a9f9-99b626692f11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      value: Catapult/Direction[/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
+      value: Catapult/Shot[/Mouse/leftButton,/Keyboard/enter,/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      value: Catapult/Cancel[/Mouse/rightButton,/Keyboard/backspace,/Keyboard/escape]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603594572398349586, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6975987977416042649, guid: 655b4790955b19f4882d238b6882b8d6, type: 3}
       propertyPath: m_RootOrder
       value: 2
